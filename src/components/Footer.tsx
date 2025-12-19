@@ -17,7 +17,7 @@ const Footer = () => {
               AVsculpturedorure
             </p>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Sculptrice et doreuse sur bois
+              Sculptrice, ébéniste et doreuse sur bois
               <br />
               Artisane d'art
             </p>
