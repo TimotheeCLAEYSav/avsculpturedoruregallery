@@ -60,22 +60,13 @@ const Footer = () => {
             <h4 className="font-display text-lg mb-4 text-accent">Suivez-moi</h4>
             <div className="flex justify-center md:justify-end gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/av_sculpturedorure/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 border border-primary-foreground/30 hover:border-accent hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 border border-primary-foreground/30 hover:border-accent hover:text-accent transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
+                <Instagram size={20} />             
               </a>
               <a
                 href="mailto:contact@avsculpturedorure.com"
