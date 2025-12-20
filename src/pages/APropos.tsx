@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
+import portraitAurelie from "@/assets/portrait-aurelie.jpg";
 
 const APropos = () => {
   return (
@@ -30,12 +31,11 @@ const APropos = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Image Portrait - Placeholder */}
+            {/* Image Portrait */}
             <div className="relative">
               <div className="aspect-[3/4] bg-secondary overflow-hidden">
-                {/* REMPLACER PAR VOTRE PHOTO */}
                 <img
-                  src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&h=800&fit=crop"
+                  src={portraitAurelie}
                   alt="Portrait d'Aurélie Villemur dans son atelier"
                   className="w-full h-full object-cover"
                 />

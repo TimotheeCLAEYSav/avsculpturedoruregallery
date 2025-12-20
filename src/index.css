@@ -9,54 +9,54 @@
 
 @layer base {
   :root {
-    /* Fond principal - Blanc cassé élégant */
-    --background: 45 20% 97%;
-    --foreground: 150 20% 15%;
+    /* Fond principal - Beige doré élégant */
+    --background: 41 60% 92%;
+    --foreground: 98 36% 15%;
 
     /* Cartes et surfaces élevées */
-    --card: 45 25% 95%;
-    --card-foreground: 150 20% 15%;
+    --card: 41 55% 88%;
+    --card-foreground: 98 36% 15%;
 
     /* Popovers */
-    --popover: 45 25% 98%;
-    --popover-foreground: 150 20% 15%;
+    --popover: 41 55% 90%;
+    --popover-foreground: 98 36% 15%;
 
-    /* Couleur principale - Vert forêt profond */
-    --primary: 150 35% 25%;
-    --primary-foreground: 45 30% 95%;
+    /* Couleur principale - Vert forêt profond rgb(35, 53, 25) */
+    --primary: 98 36% 15%;
+    --primary-foreground: 41 60% 92%;
 
-    /* Couleur secondaire - Vert sauge doux */
-    --secondary: 140 15% 85%;
-    --secondary-foreground: 150 30% 20%;
+    /* Couleur secondaire - Beige doux */
+    --secondary: 41 50% 80%;
+    --secondary-foreground: 98 36% 15%;
 
     /* Textes atténués */
-    --muted: 140 10% 90%;
-    --muted-foreground: 150 10% 45%;
+    --muted: 41 40% 85%;
+    --muted-foreground: 98 20% 35%;
 
-    /* Accent - Doré subtil et raffiné */
-    --accent: 43 65% 55%;
-    --accent-foreground: 150 30% 15%;
+    /* Accent - Beige doré rgb(231, 197, 118) */
+    --accent: 42 68% 68%;
+    --accent-foreground: 98 36% 15%;
 
     /* Destructif */
     --destructive: 0 65% 50%;
     --destructive-foreground: 0 0% 100%;
 
     /* Bordures et inputs */
-    --border: 140 15% 85%;
-    --input: 140 15% 88%;
-    --ring: 43 65% 55%;
+    --border: 41 40% 75%;
+    --input: 41 45% 82%;
+    --ring: 42 68% 68%;
 
     --radius: 0.25rem;
 
     /* Couleurs personnalisées Art Déco */
-    --gold: 43 65% 55%;
-    --gold-light: 43 50% 75%;
-    --gold-dark: 43 70% 40%;
-    --forest: 150 35% 25%;
-    --forest-light: 150 25% 35%;
-    --sage: 140 20% 75%;
-    --cream: 45 30% 95%;
-    --charcoal: 150 15% 20%;
+    --gold: 42 68% 68%;
+    --gold-light: 42 55% 80%;
+    --gold-dark: 42 70% 50%;
+    --forest: 98 36% 15%;
+    --forest-light: 98 30% 25%;
+    --sage: 41 40% 75%;
+    --cream: 41 60% 92%;
+    --charcoal: 98 36% 12%;
 
     /* Sidebar */
     --sidebar-background: 150 30% 18%;
@@ -70,43 +70,43 @@
   }
 
   .dark {
-    /* Mode sombre - Atmosphère nocturne élégante */
-    --background: 150 25% 10%;
-    --foreground: 45 25% 92%;
+    /* Mode sombre - Vert forêt profond */
+    --background: 98 36% 10%;
+    --foreground: 41 60% 92%;
 
-    --card: 150 20% 14%;
-    --card-foreground: 45 25% 92%;
+    --card: 98 30% 14%;
+    --card-foreground: 41 60% 92%;
 
-    --popover: 150 20% 12%;
-    --popover-foreground: 45 25% 92%;
+    --popover: 98 30% 12%;
+    --popover-foreground: 41 60% 92%;
 
-    --primary: 43 65% 55%;
-    --primary-foreground: 150 30% 10%;
+    --primary: 42 68% 68%;
+    --primary-foreground: 98 36% 10%;
 
-    --secondary: 150 20% 20%;
-    --secondary-foreground: 45 25% 90%;
+    --secondary: 98 25% 20%;
+    --secondary-foreground: 41 55% 90%;
 
-    --muted: 150 15% 18%;
-    --muted-foreground: 140 10% 60%;
+    --muted: 98 20% 18%;
+    --muted-foreground: 41 30% 60%;
 
-    --accent: 43 65% 55%;
-    --accent-foreground: 150 30% 10%;
+    --accent: 42 68% 68%;
+    --accent-foreground: 98 36% 10%;
 
     --destructive: 0 60% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 150 15% 20%;
-    --input: 150 15% 22%;
-    --ring: 43 65% 55%;
+    --border: 98 20% 20%;
+    --input: 98 20% 22%;
+    --ring: 42 68% 68%;
 
-    --sidebar-background: 150 25% 8%;
-    --sidebar-foreground: 45 25% 92%;
-    --sidebar-primary: 43 65% 55%;
-    --sidebar-primary-foreground: 150 30% 10%;
-    --sidebar-accent: 150 20% 15%;
-    --sidebar-accent-foreground: 45 25% 92%;
-    --sidebar-border: 150 15% 18%;
-    --sidebar-ring: 43 65% 55%;
+    --sidebar-background: 98 36% 8%;
+    --sidebar-foreground: 41 60% 92%;
+    --sidebar-primary: 42 68% 68%;
+    --sidebar-primary-foreground: 98 36% 10%;
+    --sidebar-accent: 98 25% 15%;
+    --sidebar-accent-foreground: 41 60% 92%;
+    --sidebar-border: 98 20% 18%;
+    --sidebar-ring: 42 68% 68%;
   }
 }
 

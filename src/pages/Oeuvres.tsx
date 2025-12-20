@@ -1,10 +1,17 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
-import SectionHeading from "@/components/SectionHeading";
 import ImageCard from "@/components/ImageCard";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-type Category = "all" | "sculptures" | "dorures" | "restaurations";
+// Import des images
+import sculpture1 from "@/assets/sculpture-1.jpg";
+import sculpture2 from "@/assets/sculpture-2.jpg";
+import sculpture3 from "@/assets/sculpture-3.jpg";
+import sculpture4 from "@/assets/sculpture-4.jpg";
+import dorure1 from "@/assets/dorure-1.jpg";
+import dorure2 from "@/assets/dorure-2.jpg";
+
+type Category = "all" | "sculptures" | "dorures";
 
 interface Artwork {
   id: number;
@@ -16,100 +23,56 @@ interface Artwork {
   description?: string;
 }
 
-// IMAGES PLACEHOLDERS - À remplacer par vos vraies photos
 const artworks: Artwork[] = [
   // Sculptures
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1000&fit=crop",
-    alt: "Sculpture ornementale baroque",
-    title: "Ornement baroque",
+    src: sculpture1,
+    alt: "Sculpture Art Déco sur bois avec dorure",
+    title: "Sculpture Art Déco",
     category: "sculptures",
     categoryLabel: "Sculpture",
-    description: "Sculpture ornementale en tilleul, inspirée du style baroque français.",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&h=1000&fit=crop",
-    alt: "Bas-relief floral",
-    title: "Floraison",
+    src: sculpture2,
+    alt: "Détail de sculpture sur bois avec dorure",
+    title: "Détail sculpté",
     category: "sculptures",
     categoryLabel: "Sculpture",
-    description: "Bas-relief représentant un motif floral stylisé.",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=800&h=1000&fit=crop",
-    alt: "Sculpture de feuillage",
-    title: "Acanthes",
+    src: sculpture3,
+    alt: "Buste sculpté en bois",
+    title: "Buste sculpté",
     category: "sculptures",
     categoryLabel: "Sculpture",
-    description: "Feuilles d'acanthe sculptées en chêne.",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&h=1000&fit=crop",
-    alt: "Mascaron sculpté",
-    title: "Mascaron",
+    src: sculpture4,
+    alt: "Bas-relief sculpté avec dorure",
+    title: "Bas-relief",
     category: "sculptures",
     categoryLabel: "Sculpture",
-    description: "Mascaron sculpté dans la tradition classique.",
   },
   // Dorures
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800&h=1000&fit=crop",
-    alt: "Cadre doré à la feuille d'or",
-    title: "Cadre Louis XV",
+    src: dorure1,
+    alt: "Panneau doré à la feuille d'or",
+    title: "Panneau doré",
     category: "dorures",
     categoryLabel: "Dorure",
-    description: "Cadre sculpté et doré à la feuille d'or, style Louis XV.",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=800&h=1000&fit=crop",
-    alt: "Miroir doré",
-    title: "Miroir Régence",
+    src: dorure2,
+    alt: "Motif inca doré à la feuille d'or",
+    title: "Motif Inca",
     category: "dorures",
     categoryLabel: "Dorure",
-    description: "Miroir de style Régence, dorure à l'eau sur apprêt traditionnel.",
-  },
-  {
-    id: 7,
-    src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=1000&fit=crop",
-    alt: "Console dorée",
-    title: "Console dorée",
-    category: "dorures",
-    categoryLabel: "Dorure",
-    description: "Console en bois sculpté avec dorure à la feuille.",
-  },
-  // Restaurations
-  {
-    id: 8,
-    src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=1000&fit=crop",
-    alt: "Mobilier restauré",
-    title: "Commode XVIIIe",
-    category: "restaurations",
-    categoryLabel: "Restauration",
-    description: "Restauration complète d'une commode du XVIIIe siècle.",
-  },
-  {
-    id: 9,
-    src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=1000&fit=crop",
-    alt: "Boiseries restaurées",
-    title: "Boiseries de château",
-    category: "restaurations",
-    categoryLabel: "Restauration",
-    description: "Restauration de boiseries sculptées et dorées pour un château classé.",
-  },
-  {
-    id: 10,
-    src: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&h=1000&fit=crop",
-    alt: "Retable restauré",
-    title: "Retable d'église",
-    category: "restaurations",
-    categoryLabel: "Restauration",
-    description: "Restauration d'un retable baroque du XVIIe siècle.",
   },
 ];
 
@@ -117,7 +80,6 @@ const categories = [
   { id: "all" as Category, label: "Toutes" },
   { id: "sculptures" as Category, label: "Sculptures" },
   { id: "dorures" as Category, label: "Dorures" },
-  { id: "restaurations" as Category, label: "Restaurations" },
 ];
 
 const Oeuvres = () => {
@@ -146,7 +108,7 @@ const Oeuvres = () => {
               Mes Œuvres
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              Explorez mes créations et restaurations : sculptures sur bois, dorures à la feuille et chantiers patrimoniaux.
+              Explorez mes créations : sculptures sur bois et dorures à la feuille.
             </p>
           </div>
         </div>
