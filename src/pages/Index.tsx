@@ -6,25 +6,28 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, Hammer, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Images placeholders - À remplacer par vos vraies photos
+import sculpture2 from "@/assets/sculpture-2.jpg";
+import sculpture3 from "@/assets/sculpture-3.jpg";
+import dorure1 from "@/assets/dorure-1.jpg";
+
 const featuredWorks = [
   {
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=800&fit=crop",
-    alt: "Sculpture sur bois ornementale",
-    title: "Ornement baroque",
+    src: sculpture2,
+    alt: "Sculpture Enigma",
+    title: "Enigma",
     category: "Sculpture",
   },
   {
-    src: "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=600&h=800&fit=crop",
-    alt: "Cadre doré à la feuille d'or",
-    title: "Cadre Louis XV",
-    category: "Dorure",
+    src: sculpture3,
+    alt: "Buste sculpté en bois",
+    title: "Buste sculpté",
+    category: "Sculpture",
   },
   {
-    src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=800&fit=crop",
-    alt: "Restauration de mobilier ancien",
-    title: "Console restaurée",
-    category: "Restauration",
+    src: dorure1,
+    alt: "Panneau doré à la feuille d'or",
+    title: "Panneau doré",
+    category: "Dorure",
   },
 ];
 
