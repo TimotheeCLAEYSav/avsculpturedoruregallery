@@ -52,26 +52,6 @@ const processSteps = [
   },
 ];
 
-const projects = [
-  {
-    title: "Château de Fontainebleau",
-    type: "Monument Historique",
-    description: "Restauration des boiseries sculptées et dorées des appartements royaux.",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop",
-  },
-  {
-    title: "Église Saint-Germain",
-    type: "Édifice religieux",
-    description: "Restauration du retable principal et des stalles du chœur.",
-    image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&h=400&fit=crop",
-  },
-  {
-    title: "Hôtel particulier parisien",
-    type: "Demeure privée",
-    description: "Restauration des lambris et dessus-de-porte sculptés du grand salon.",
-    image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&h=400&fit=crop",
-  },
-];
 
 const SavoirFaire = () => {
   return (
@@ -150,62 +130,47 @@ const SavoirFaire = () => {
             subtitle="Une approche rigoureuse et respectueuse"
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
-            {/* Image */}
-            <div className="relative">
-              <div className="aspect-[4/3] bg-secondary overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=800&h=600&fit=crop"
-                  alt="Détail de restauration de boiseries"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-accent -z-10" />
+          <div className="max-w-3xl mx-auto mt-12">
+            <div className="flex items-center gap-4 mb-4">
+              <Shield className="text-accent" size={24} strokeWidth={1.5} />
+              <h3 className="font-display text-xl font-semibold text-foreground">
+                Principes de conservation
+              </h3>
             </div>
 
-            {/* Texte */}
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <Shield className="text-accent" size={24} strokeWidth={1.5} />
-                <h3 className="font-display text-xl font-semibold text-foreground">
-                  Principes de conservation
-                </h3>
-              </div>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Mes interventions sur le patrimoine historique s'inscrivent dans le respect des chartes internationales de conservation. Chaque décision est guidée par trois principes fondamentaux :
+            </p>
 
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Mes interventions sur le patrimoine historique s'inscrivent dans le respect des chartes internationales de conservation. Chaque décision est guidée par trois principes fondamentaux :
-              </p>
-
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rotate-45 bg-accent flex-shrink-0 mt-2" />
-                  <div>
-                    <strong className="text-foreground">Réversibilité</strong>
-                    <p className="text-sm text-muted-foreground">
-                      Toute intervention doit pouvoir être défaite sans altérer l'œuvre originale.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rotate-45 bg-accent flex-shrink-0 mt-2" />
-                  <div>
-                    <strong className="text-foreground">Lisibilité</strong>
-                    <p className="text-sm text-muted-foreground">
-                      Les parties restaurées doivent être identifiables par un œil averti.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rotate-45 bg-accent flex-shrink-0 mt-2" />
-                  <div>
-                    <strong className="text-foreground">Intervention minimale</strong>
-                    <p className="text-sm text-muted-foreground">
-                      Ne restaurer que ce qui est strictement nécessaire à la conservation de l'œuvre.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rotate-45 bg-accent flex-shrink-0 mt-2" />
+                <div>
+                  <strong className="text-foreground">Réversibilité</strong>
+                  <p className="text-sm text-muted-foreground">
+                    Toute intervention doit pouvoir être défaite sans altérer l'œuvre originale.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rotate-45 bg-accent flex-shrink-0 mt-2" />
+                <div>
+                  <strong className="text-foreground">Lisibilité</strong>
+                  <p className="text-sm text-muted-foreground">
+                    Les parties restaurées doivent être identifiables par un œil averti.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rotate-45 bg-accent flex-shrink-0 mt-2" />
+                <div>
+                  <strong className="text-foreground">Intervention minimale</strong>
+                  <p className="text-sm text-muted-foreground">
+                    Ne restaurer que ce qui est strictement nécessaire à la conservation de l'œuvre.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -239,54 +204,6 @@ const SavoirFaire = () => {
                 {index < processSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-accent/30 -translate-x-1/2" />
                 )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Chantiers de référence */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-px bg-accent" />
-              <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
-              <div className="w-12 h-px bg-accent" />
-            </div>
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-3">
-              Chantiers de référence
-            </h2>
-            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
-              Quelques exemples de projets de restauration auxquels j'ai participé
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={project.title}
-                className="group bg-primary-foreground/5 border border-primary-foreground/20 overflow-hidden hover:border-accent/50 transition-colors duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="aspect-[3/2] overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <span className="text-accent text-xs tracking-[0.15em] uppercase">
-                    {project.type}
-                  </span>
-                  <h3 className="font-display text-xl font-semibold mt-2 mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-primary-foreground/70 leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
               </div>
             ))}
           </div>

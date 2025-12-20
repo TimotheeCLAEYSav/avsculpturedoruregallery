@@ -4,7 +4,6 @@ import ImageCard from "@/components/ImageCard";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 // Import des images
-import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture2 from "@/assets/sculpture-2.jpg";
 import sculpture3 from "@/assets/sculpture-3.jpg";
 import sculpture4 from "@/assets/sculpture-4.jpg";
@@ -27,22 +26,14 @@ const artworks: Artwork[] = [
   // Sculptures
   {
     id: 1,
-    src: sculpture1,
-    alt: "Sculpture Art Déco sur bois avec dorure",
-    title: "Sculpture Art Déco",
+    src: sculpture2,
+    alt: "Sculpture Enigma",
+    title: "Enigma",
     category: "sculptures",
     categoryLabel: "Sculpture",
   },
   {
     id: 2,
-    src: sculpture2,
-    alt: "Détail de sculpture sur bois avec dorure",
-    title: "Détail sculpté",
-    category: "sculptures",
-    categoryLabel: "Sculpture",
-  },
-  {
-    id: 3,
     src: sculpture3,
     alt: "Buste sculpté en bois",
     title: "Buste sculpté",
@@ -50,7 +41,7 @@ const artworks: Artwork[] = [
     categoryLabel: "Sculpture",
   },
   {
-    id: 4,
+    id: 3,
     src: sculpture4,
     alt: "Bas-relief sculpté avec dorure",
     title: "Bas-relief",
@@ -59,7 +50,7 @@ const artworks: Artwork[] = [
   },
   // Dorures
   {
-    id: 5,
+    id: 4,
     src: dorure1,
     alt: "Panneau doré à la feuille d'or",
     title: "Panneau doré",
@@ -67,7 +58,7 @@ const artworks: Artwork[] = [
     categoryLabel: "Dorure",
   },
   {
-    id: 6,
+    id: 5,
     src: dorure2,
     alt: "Motif inca doré à la feuille d'or",
     title: "Motif Inca",

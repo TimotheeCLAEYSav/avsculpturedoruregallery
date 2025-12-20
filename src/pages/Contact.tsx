@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Instagram, Facebook, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Send } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -191,10 +191,10 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium text-foreground mb-1">Email</h3>
                       <a
-                        href="mailto:contact@avsculpturedorure.com"
+                        href="mailto:av.sculpturedorure@gmail.com"
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        contact@avsculpturedorure.com
+                        av.sculpturedorure@gmail.com
                       </a>
                     </div>
                   </div>
@@ -207,10 +207,10 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium text-foreground mb-1">Téléphone</h3>
                       <a
-                        href="tel:+33600000000"
+                        href="tel:+33629927475"
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        06 00 00 00 00
+                        06 29 92 74 75
                       </a>
                     </div>
                   </div>
@@ -245,15 +245,6 @@ const Contact = () => {
                     aria-label="Instagram"
                   >
                     <Instagram size={20} />
-                  </a>
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 flex items-center justify-center border border-border text-foreground hover:border-accent hover:text-accent transition-colors"
-                    aria-label="Facebook"
-                  >
-                    <Facebook size={20} />
                   </a>
                 </div>
               </div>
