@@ -5,6 +5,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 // Import des images
+import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture2 from "@/assets/sculpture-2.jpg";
 import sculpture3 from "@/assets/sculpture-3.jpg";
 import sculpture4 from "@/assets/sculpture-4.jpg";
@@ -36,7 +37,18 @@ const artworks: Artwork[] = [
   {
     id: 1,
     images: [
-      { src: sculpture2, alt: "Buste de Frida Kahlo - vue de face" },
+      { src: sculpture1, alt: "Enigma - vue principale" },
+      { src: sculpture2, alt: "Enigma - vue détaillée" },
+    ],
+    title: "Enigma",
+    category: "femmes",
+    categoryLabel: "Femmes",
+    description: "Sculpture représentant un profil de femme avec détails à la feuille d'or.",
+  },
+  {
+    id: 2,
+    images: [
+      { src: sculpture3, alt: "Buste de Frida Kahlo - vue de face" },
       { src: frida2, alt: "Buste de Frida Kahlo - vue de profil" },
       { src: frida3, alt: "Buste de Frida Kahlo - vue arrière" },
     ],
@@ -44,16 +56,6 @@ const artworks: Artwork[] = [
     category: "femmes",
     categoryLabel: "Femmes",
     description: "Buste sculpté en bois représentant Frida Kahlo, avec ornements floraux et détails dorés.",
-  },
-  {
-    id: 2,
-    images: [
-      { src: sculpture3, alt: "Bas-relief Enigma - visage de femme avec dorure" },
-    ],
-    title: "Enigma",
-    category: "femmes",
-    categoryLabel: "Femmes",
-    description: "Bas-relief sculpté représentant un profil de femme avec détails à la feuille d'or.",
   },
   // Faune
   {
