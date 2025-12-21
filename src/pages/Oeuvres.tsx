@@ -221,7 +221,7 @@ const Oeuvres = () => {
                 <img
                   src={selectedArtwork.images[currentImageIndex].src}
                   alt={selectedArtwork.images[currentImageIndex].alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-secondary"
                 />
                 
                 {/* Navigation entre images */}
