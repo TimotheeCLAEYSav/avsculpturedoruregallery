@@ -62,7 +62,7 @@ const APropos = () => {
                   Fascinée depuis l'enfance par la beauté des ornements sculptés et l'éclat mystérieux de la dorure, j'ai choisi de consacrer ma vie à ces métiers d'art ancestraux.
                 </p>
                 <p>
-                  Formée auprès de maîtres artisans reconnus, j'ai acquis les techniques traditionnelles de la sculpture sur bois et de la dorure à la feuille. Cette formation rigoureuse m'a permis de maîtriser les gestes précis transmis de génération en génération.
+                  Après une reconversion professionnelle, j'ai intégré la formation ESEA d'Avignon (promo 2022/2023), une formation d'excellence en sculpture et dorure. Cette formation rigoureuse m'a permis de maîtriser les techniques traditionnelles et les gestes précis transmis de génération en génération.
                 </p>
                 <p>
                   Aujourd'hui installée dans mon atelier, je mets ce savoir-faire au service de projets variés : créations contemporaines, restauration de mobilier ancien et chantiers de rénovation du patrimoine historique.

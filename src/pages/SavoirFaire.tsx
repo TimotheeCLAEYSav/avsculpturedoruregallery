@@ -27,6 +27,17 @@ const techniques = [
       "Argenture et feuille de cuivre",
     ],
   },
+  {
+    icon: Clock,
+    title: "Moulage et plâtre",
+    description: "Au-delà du bois, je réalise également des œuvres en plâtre grâce à des techniques de moulage traditionnelles. Cette discipline complémentaire permet de créer des reproductions fidèles ou des créations originales.",
+    details: [
+      "Moulage en creux et à bon-creux",
+      "Tirage au plâtre",
+      "Reproductions et éditions",
+      "Ornements architecturaux en staff",
+    ],
+  },
 ];
 
 const processSteps = [

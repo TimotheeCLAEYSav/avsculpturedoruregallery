@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 import ImageCard from "@/components/ImageCard";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 // Import des images
 import sculpture2 from "@/assets/sculpture-2.jpg";
@@ -9,13 +10,21 @@ import sculpture3 from "@/assets/sculpture-3.jpg";
 import sculpture4 from "@/assets/sculpture-4.jpg";
 import dorure1 from "@/assets/dorure-1.jpg";
 import dorure2 from "@/assets/dorure-2.jpg";
+import frida2 from "@/assets/frida-2.jpg";
+import frida3 from "@/assets/frida-3.jpg";
+import basRelief2 from "@/assets/bas-relief-2.jpg";
+import basRelief3 from "@/assets/bas-relief-3.jpg";
 
-type Category = "all" | "sculptures" | "dorures";
+type Category = "all" | "femmes" | "faune" | "flore" | "dorures";
+
+interface ArtworkImage {
+  src: string;
+  alt: string;
+}
 
 interface Artwork {
   id: number;
-  src: string;
-  alt: string;
+  images: ArtworkImage[];
   title: string;
   category: Category;
   categoryLabel: string;
@@ -23,44 +32,57 @@ interface Artwork {
 }
 
 const artworks: Artwork[] = [
-  // Sculptures
+  // Femmes
   {
     id: 1,
-    src: sculpture2,
-    alt: "Sculpture Enigma",
-    title: "Enigma",
-    category: "sculptures",
-    categoryLabel: "Sculpture",
+    images: [
+      { src: sculpture2, alt: "Buste de Frida Kahlo - vue de face" },
+      { src: frida2, alt: "Buste de Frida Kahlo - vue de profil" },
+      { src: frida3, alt: "Buste de Frida Kahlo - vue arrière" },
+    ],
+    title: "Frida Kahlo",
+    category: "femmes",
+    categoryLabel: "Femmes",
+    description: "Buste sculpté en bois représentant Frida Kahlo, avec ornements floraux et détails dorés.",
   },
   {
     id: 2,
-    src: sculpture3,
-    alt: "Buste sculpté en bois",
-    title: "Buste sculpté",
-    category: "sculptures",
-    categoryLabel: "Sculpture",
+    images: [
+      { src: sculpture3, alt: "Bas-relief Enigma - visage de femme avec dorure" },
+    ],
+    title: "Enigma",
+    category: "femmes",
+    categoryLabel: "Femmes",
+    description: "Bas-relief sculpté représentant un profil de femme avec détails à la feuille d'or.",
   },
+  // Faune
   {
     id: 3,
-    src: sculpture4,
-    alt: "Bas-relief sculpté avec dorure",
-    title: "Bas-relief",
-    category: "sculptures",
-    categoryLabel: "Sculpture",
+    images: [
+      { src: sculpture4, alt: "Bas-relief avec colibri et fleurs" },
+      { src: basRelief2, alt: "Bas-relief - détail du visage avec dorure" },
+      { src: basRelief3, alt: "Bas-relief - détail du colibri doré" },
+    ],
+    title: "Le Colibri",
+    category: "faune",
+    categoryLabel: "Faune",
+    description: "Bas-relief sculpté représentant un colibri parmi les fleurs, rehaussé de feuille d'or.",
   },
   // Dorures
   {
     id: 4,
-    src: dorure1,
-    alt: "Panneau doré à la feuille d'or",
+    images: [
+      { src: dorure1, alt: "Panneau doré à la feuille d'or" },
+    ],
     title: "Panneau doré",
     category: "dorures",
     categoryLabel: "Dorure",
   },
   {
     id: 5,
-    src: dorure2,
-    alt: "Motif inca doré à la feuille d'or",
+    images: [
+      { src: dorure2, alt: "Motif inca doré à la feuille d'or" },
+    ],
     title: "Motif Inca",
     category: "dorures",
     categoryLabel: "Dorure",
@@ -69,17 +91,42 @@ const artworks: Artwork[] = [
 
 const categories = [
   { id: "all" as Category, label: "Toutes" },
-  { id: "sculptures" as Category, label: "Sculptures" },
+  { id: "femmes" as Category, label: "Femmes" },
+  { id: "faune" as Category, label: "Faune" },
+  { id: "flore" as Category, label: "Flore" },
   { id: "dorures" as Category, label: "Dorures" },
 ];
 
 const Oeuvres = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("all");
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const filteredArtworks = activeCategory === "all"
     ? artworks
     : artworks.filter((artwork) => artwork.category === activeCategory);
+
+  const openArtwork = (artwork: Artwork) => {
+    setSelectedArtwork(artwork);
+    setCurrentImageIndex(0);
+  };
+
+  const closeDialog = () => {
+    setSelectedArtwork(null);
+    setCurrentImageIndex(0);
+  };
+
+  const nextImage = () => {
+    if (selectedArtwork && currentImageIndex < selectedArtwork.images.length - 1) {
+      setCurrentImageIndex(currentImageIndex + 1);
+    }
+  };
+
+  const prevImage = () => {
+    if (currentImageIndex > 0) {
+      setCurrentImageIndex(currentImageIndex - 1);
+    }
+  };
 
   return (
     <Layout>
@@ -99,7 +146,7 @@ const Oeuvres = () => {
               Mes Œuvres
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              Explorez mes créations : sculptures sur bois et dorures à la feuille.
+              Explorez mes créations : sculptures sur bois, plâtre et dorures à la feuille.
             </p>
           </div>
         </div>
@@ -134,12 +181,19 @@ const Oeuvres = () => {
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <ImageCard
-                  src={artwork.src}
-                  alt={artwork.alt}
+                  src={artwork.images[0].src}
+                  alt={artwork.images[0].alt}
                   title={artwork.title}
                   category={artwork.categoryLabel}
-                  onClick={() => setSelectedArtwork(artwork)}
+                  onClick={() => openArtwork(artwork)}
                 />
+                {artwork.images.length > 1 && (
+                  <div className="mt-2 text-center">
+                    <span className="text-xs text-muted-foreground">
+                      {artwork.images.length} photos
+                    </span>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -155,18 +209,63 @@ const Oeuvres = () => {
         </div>
       </section>
 
-      {/* Modal de détail */}
-      <Dialog open={!!selectedArtwork} onOpenChange={() => setSelectedArtwork(null)}>
-        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-card">
+      {/* Modal de détail avec galerie */}
+      <Dialog open={!!selectedArtwork} onOpenChange={closeDialog}>
+        <DialogContent className="max-w-5xl p-0 overflow-hidden bg-card">
           {selectedArtwork && (
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="aspect-[4/5] md:aspect-auto">
+              {/* Zone image avec navigation */}
+              <div className="relative aspect-[4/5] md:aspect-auto bg-secondary">
                 <img
-                  src={selectedArtwork.src}
-                  alt={selectedArtwork.alt}
+                  src={selectedArtwork.images[currentImageIndex].src}
+                  alt={selectedArtwork.images[currentImageIndex].alt}
                   className="w-full h-full object-cover"
                 />
+                
+                {/* Navigation entre images */}
+                {selectedArtwork.images.length > 1 && (
+                  <>
+                    {/* Bouton précédent */}
+                    <button
+                      onClick={prevImage}
+                      disabled={currentImageIndex === 0}
+                      className={`absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-background/80 text-foreground rounded-full transition-opacity ${
+                        currentImageIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:bg-background"
+                      }`}
+                    >
+                      <ChevronLeft size={24} />
+                    </button>
+                    
+                    {/* Bouton suivant */}
+                    <button
+                      onClick={nextImage}
+                      disabled={currentImageIndex === selectedArtwork.images.length - 1}
+                      className={`absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-background/80 text-foreground rounded-full transition-opacity ${
+                        currentImageIndex === selectedArtwork.images.length - 1 ? "opacity-30 cursor-not-allowed" : "hover:bg-background"
+                      }`}
+                    >
+                      <ChevronRight size={24} />
+                    </button>
+                    
+                    {/* Indicateurs */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                      {selectedArtwork.images.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setCurrentImageIndex(idx)}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            idx === currentImageIndex
+                              ? "bg-accent w-4"
+                              : "bg-background/60 hover:bg-background"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
+              
+              {/* Informations */}
               <div className="p-8 flex flex-col justify-center">
                 <span className="text-accent text-xs tracking-[0.2em] uppercase mb-2">
                   {selectedArtwork.categoryLabel}
@@ -175,9 +274,37 @@ const Oeuvres = () => {
                   {selectedArtwork.title}
                 </h3>
                 {selectedArtwork.description && (
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     {selectedArtwork.description}
                   </p>
+                )}
+                
+                {/* Miniatures */}
+                {selectedArtwork.images.length > 1 && (
+                  <div className="mt-auto">
+                    <p className="text-xs text-muted-foreground mb-3">
+                      Cliquez pour voir les autres vues
+                    </p>
+                    <div className="flex gap-2 flex-wrap">
+                      {selectedArtwork.images.map((image, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setCurrentImageIndex(idx)}
+                          className={`w-16 h-16 overflow-hidden border-2 transition-all ${
+                            idx === currentImageIndex
+                              ? "border-accent"
+                              : "border-transparent hover:border-accent/50"
+                          }`}
+                        >
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-full object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
             </div>
