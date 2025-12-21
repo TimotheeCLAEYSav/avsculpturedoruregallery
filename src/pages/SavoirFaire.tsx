@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Hammer, Sparkles, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Photos atelier
+import atelierModelage from "@/assets/atelier-modelage.jpg";
+import atelierDorure1 from "@/assets/atelier-dorure-1.jpg";
+import atelierDorure2 from "@/assets/atelier-dorure-2.jpg";
+
 const techniques = [
   {
     icon: Hammer,
@@ -129,6 +134,43 @@ const SavoirFaire = () => {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* L'atelier en action */}
+      <section className="py-16 bg-background border-t border-border">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="w-8 h-px bg-accent" />
+            <span className="text-accent text-sm tracking-[0.2em] uppercase">
+              L'atelier en action
+            </span>
+            <div className="w-8 h-px bg-accent" />
+          </div>
+          
+          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <div className="aspect-[3/4] overflow-hidden">
+              <img
+                src={atelierModelage}
+                alt="Aurélie travaillant le modelage en terre"
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="aspect-[3/4] overflow-hidden">
+              <img
+                src={atelierDorure1}
+                alt="Aurélie appliquant la feuille d'or sur un cadre"
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="aspect-[3/4] overflow-hidden">
+              <img
+                src={atelierDorure2}
+                alt="Aurélie en train de dorer un ornement"
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </div>
         </div>
       </section>
