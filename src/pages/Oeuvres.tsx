@@ -57,7 +57,6 @@ const artworks: Artwork[] = [
     categoryLabel: "Femmes",
     description: "Buste sculpté en bois représentant Frida Kahlo, avec ornements floraux et détails dorés.",
   },
-  // Faune
   {
     id: 3,
     images: [
@@ -66,8 +65,8 @@ const artworks: Artwork[] = [
       { src: basRelief3, alt: "Bas-relief - détail du colibri doré" },
     ],
     title: "Le Colibri",
-    category: "faune",
-    categoryLabel: "Faune",
+    category: "femmes",
+    categoryLabel: "Femmes",
     description: "Bas-relief sculpté représentant un colibri parmi les fleurs, rehaussé de feuille d'or.",
   },
   // Dorures

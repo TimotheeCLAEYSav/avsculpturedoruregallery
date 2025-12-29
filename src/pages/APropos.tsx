@@ -59,13 +59,13 @@ const APropos = () => {
 
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Fascinée depuis l'enfance par la beauté des ornements sculptés et l'éclat mystérieux de la dorure, j'ai choisi de consacrer ma vie à ces métiers d'art ancestraux.
+                  Fascinée depuis l'enfance par la beauté des ornements sculptés et l'éclat mystérieux de la dorure, j'ai choisi de consacrer ma vie à ces métiers d'art ancestraux. La période Art Déco m'inspire tout particulièrement : ses lignes géométriques épurées, ses motifs stylisés et son élégance intemporelle nourrissent profondément mon travail créatif.
                 </p>
                 <p>
                   Après une reconversion professionnelle, j'ai intégré la formation ESEA d'Avignon (promo 2022/2023), une formation d'excellence en sculpture et dorure. Cette formation rigoureuse m'a permis de maîtriser les techniques traditionnelles et les gestes précis transmis de génération en génération.
                 </p>
                 <p>
-                  Aujourd'hui installée dans mon atelier, je mets ce savoir-faire au service de projets variés : créations contemporaines, restauration de mobilier ancien et chantiers de rénovation du patrimoine historique.
+                  Aujourd'hui installée dans mon atelier, je mets ce savoir-faire au service de projets variés : créations contemporaines inspirées de l'Art Déco, restauration de mobilier ancien et chantiers de rénovation du patrimoine historique.
                 </p>
               </div>
             </div>
