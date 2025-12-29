@@ -3,24 +3,19 @@ import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
 import ImageCard from "@/components/ImageCard";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Hammer, Building } from "lucide-react";
+import { ArrowRight, Sparkles, Hammer, Building, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture2 from "@/assets/sculpture-2.jpg";
 import sculpture3 from "@/assets/sculpture-3.jpg";
 import dorure1 from "@/assets/dorure-1.jpg";
 
 const featuredWorks = [
   {
-    src: sculpture2,
-    alt: "Sculpture Enigma",
-    title: "Enigma",
-    category: "Sculpture",
-  },
-  {
     src: sculpture3,
-    alt: "Buste sculpté en bois",
-    title: "Buste sculpté",
+    alt: "Buste Frida Kahlo",
+    title: "Frida Kahlo",
     category: "Sculpture",
   },
   {
@@ -91,15 +86,74 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section Œuvres en vedette */}
+      {/* Section Chef-d'œuvre - Enigma */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image principale */}
+            <div className="relative group">
+              <div className="aspect-[3/4] overflow-hidden bg-card">
+                <img
+                  src={sculpture1}
+                  alt="Enigma - Chef d'œuvre d'Aurélie Villemur"
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              {/* Badge chef-d'œuvre */}
+              <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-4 py-2 flex items-center gap-2">
+                <Star size={16} fill="currentColor" />
+                <span className="text-xs font-medium tracking-wider uppercase">Chef-d'œuvre</span>
+              </div>
+              {/* Cadre décoratif */}
+              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-accent -z-10" />
+            </div>
+
+            {/* Description */}
+            <div className="lg:pl-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-px bg-accent" />
+                <span className="text-accent text-sm tracking-[0.2em] uppercase">
+                  Œuvre phare
+                </span>
+              </div>
+
+              <h2 className="font-display text-4xl font-semibold text-foreground mb-4">
+                Enigma
+              </h2>
+
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Cette sculpture incarne l'essence de mon travail : un profil féminin mystérieux, sublimé par la délicatesse de la feuille d'or. Inspirée par l'élégance géométrique de l'Art Déco, Enigma représente la fusion parfaite entre tradition et modernité.
+              </p>
+
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Chaque détail a été sculpté avec une précision absolue, puis rehaussé de dorure à la feuille pour capturer la lumière et créer ce jeu subtil d'ombres et d'éclats qui donne vie à l'œuvre.
+              </p>
+
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+              >
+                <Link to="/oeuvres" className="inline-flex items-center gap-2">
+                  Découvrir toutes mes œuvres
+                  <ArrowRight size={18} />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Œuvres en vedette */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
           <SectionHeading
-            title="Œuvres récentes"
-            subtitle="Un aperçu de mes dernières créations et restaurations"
+            title="Autres créations"
+            subtitle="Un aperçu de mes dernières réalisations"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 max-w-3xl mx-auto">
             {featuredWorks.map((work, index) => (
               <div
                 key={work.title}
