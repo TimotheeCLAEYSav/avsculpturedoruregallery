@@ -45,28 +45,6 @@ const techniques = [
   },
 ];
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Diagnostic",
-    description: "Analyse approfondie de l'état de conservation, identification des techniques d'origine et des interventions antérieures.",
-  },
-  {
-    number: "02",
-    title: "Proposition",
-    description: "Élaboration d'un protocole de restauration adapté, en accord avec les principes de conservation préventive.",
-  },
-  {
-    number: "03",
-    title: "Intervention",
-    description: "Réalisation des travaux selon les techniques traditionnelles, avec des matériaux compatibles et réversibles.",
-  },
-  {
-    number: "04",
-    title: "Documentation",
-    description: "Rapport détaillé des interventions réalisées, incluant photographies avant/après et recommandations d'entretien.",
-  },
-];
 
 
 const SavoirFaire = () => {
@@ -224,41 +202,6 @@ const SavoirFaire = () => {
                 </div>
               </li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Processus */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <SectionHeading
-            title="Mon processus"
-            subtitle="Une méthodologie rigoureuse pour chaque projet"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {processSteps.map((step, index) => (
-              <div
-                key={step.number}
-                className="relative text-center animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-5xl font-display text-accent/30 mb-4">
-                  {step.number}
-                </div>
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
-
-                {/* Ligne de connexion */}
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-accent/30 -translate-x-1/2" />
-                )}
-              </div>
-            ))}
           </div>
         </div>
       </section>
