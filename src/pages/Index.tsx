@@ -51,7 +51,7 @@ const Index = () => {
       <HeroSection
         title="Aurélie Villemur"
         subtitle="Sculptrice & Doreuse sur bois"
-        description="Artisane d'art passionnée, je perpétue les gestes ancestraux de la sculpture et de la dorure sur bois. De la création à la restauration du patrimoine, chaque œuvre est un dialogue entre tradition et sensibilité contemporaine."
+        description="Un savoir-faire artisanal au service du patrimoine et de la création contemporaine. Des pièces uniques qui font dialoguer tradition et modernité."
         ctaText="Découvrir mon travail"
         ctaLink="/oeuvres"
       />
@@ -193,7 +193,7 @@ const Index = () => {
             </div>
 
             <blockquote className="font-display text-2xl md:text-3xl italic leading-relaxed mb-8">
-              "Chaque pièce de bois porte en elle une histoire à révéler. Mon rôle est de lui donner vie, de magnifier sa noblesse par la sculpture et l'éclat de l'or."
+              "La lumière de l'or pour sublimer le bois et révéler ses détails."
             </blockquote>
 
             <p className="text-accent tracking-[0.2em] uppercase text-sm">

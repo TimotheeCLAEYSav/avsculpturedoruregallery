@@ -67,7 +67,7 @@ const Contact = () => {
               Contact
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              Création sur mesure, restauration de patrimoine ou simple question : n'hésitez pas à me contacter.
+              Chaque projet est unique. Je suis à votre écoute pour imaginer et réaliser des créations sur mesure, adaptées à vos besoins, qu'il s'agisse de restauration, de décoration ou de sculpture contemporaine.
             </p>
           </div>
         </div>
