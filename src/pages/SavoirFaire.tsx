@@ -13,22 +13,22 @@ const techniques = [
   {
     icon: Hammer,
     title: "Sculpture sur bois",
-    description: "La sculpture sur bois requiert une maîtrise parfaite des outils traditionnels : gouges, ciseaux, rifloirs. Chaque essence de bois – tilleul, chêne, noyer – demande une approche spécifique.",
+    description: "Chaque sculpture est une rencontre entre le bois et la lumière. Inspirée par la nature, les voyages et les symboles, je conçois des pièces uniques qui mêlent tradition et contemporanéité.",
     details: [
       "Bas-reliefs et hauts-reliefs",
       "Ornements architecturaux",
       "Sculptures en ronde-bosse",
-      "Moulures et corniches",
+      "Pièces destinées à un intérieur, une collection ou une exposition",
     ],
   },
   {
     icon: Sparkles,
     title: "Dorure à la feuille",
-    description: "La dorure à la feuille d'or est un art délicat qui demande patience et précision. Deux techniques principales : la dorure à l'eau (brillante) et la dorure à la mixtion (mate).",
+    description: "La dorure à la feuille est un art délicat qui sublime le bois et révèle ses reliefs. J'utilise des techniques ancestrales pour appliquer l'or, l'argent ou d'autres métaux précieux, selon des méthodes respectueuses de la tradition.",
     details: [
-      "Dorure à l'eau sur apprêt",
+      "Dorure à la détrempe (à l'eau)",
       "Dorure à la mixtion",
-      "Patines et effets vieillis",
+      "Jeu subtil entre éclat et profondeur",
       "Argenture et feuille de cuivre",
     ],
   },
@@ -170,7 +170,10 @@ const SavoirFaire = () => {
             </div>
 
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Mes interventions sur le patrimoine historique s'inscrivent dans le respect des chartes internationales de conservation. Chaque décision est guidée par trois principes fondamentaux :
+              Restaurer une œuvre, c'est lui redonner son intégrité tout en respectant son histoire. J'interviens sur des éléments en bois sculpté, doré ou polychrome provenant de monuments historiques, d'objets d'art ou de mobilier ancien. Mon approche allie rigueur technique, respect des matériaux originaux et recherche d'une harmonie visuelle fidèle à l'esprit de l'œuvre.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              J'ai collaboré avec plusieurs artisans d'art notamment sur les travaux de restauration de l'Église Notre Dame du Taur à Toulouse et sur les retables des Églises de Camurac et de Labarthe Inard.
             </p>
 
             <ul className="space-y-4">

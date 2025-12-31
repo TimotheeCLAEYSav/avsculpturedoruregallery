@@ -59,13 +59,13 @@ const APropos = () => {
 
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Fascinée depuis l'enfance par la beauté des ornements sculptés et l'éclat mystérieux de la dorure, j'ai choisi de consacrer ma vie à ces métiers d'art ancestraux. La période Art Déco m'inspire tout particulièrement : ses lignes géométriques épurées, ses motifs stylisés et son élégance intemporelle nourrissent profondément mon travail créatif.
+                  À travers mon atelier, je mets mon savoir-faire au service de la restauration du patrimoine, de la création décorative et de la production artistique contemporaine.
                 </p>
                 <p>
-                  Après une reconversion professionnelle, j'ai intégré la formation ESEA d'Avignon (promo 2022/2023), une formation d'excellence en sculpture et dorure. Cette formation rigoureuse m'a permis de maîtriser les techniques traditionnelles et les gestes précis transmis de génération en génération.
+                  Mon parcours atypique nourrit ma pratique : après plusieurs années d'engagement dans le secteur associatif et humanitaire, j'ai éprouvé le besoin de renouer avec un travail manuel, au plus près de la matière. Il me pousse à chercher dans chaque œuvre un équilibre entre respect de l'histoire, transmission des savoir-faire traditionnels et expression personnelle.
                 </p>
                 <p>
-                  Aujourd'hui installée dans mon atelier, je mets ce savoir-faire au service de projets variés : créations contemporaines inspirées de l'Art Déco, restauration de mobilier ancien et chantiers de rénovation du patrimoine historique.
+                  La période Art Déco m'inspire tout particulièrement : ses lignes géométriques épurées, ses motifs stylisés et son élégance intemporelle nourrissent profondément mon travail créatif. Aujourd'hui, je suis artisan d'art spécialisée en sculpture sur bois et dorure à la feuille.
                 </p>
               </div>
             </div>
