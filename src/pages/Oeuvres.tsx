@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import ImageCard from "@/components/ImageCard";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import Lightbox from "@/components/Lightbox";
 
 // Import des images
 import sculpture1 from "@/assets/sculpture-1.jpg";
@@ -173,30 +172,37 @@ const Oeuvres = () => {
             ))}
           </div>
 
-          {/* Grille d'images */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredArtworks.map((artwork, index) => (
-              <div
-                key={artwork.id}
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                <ImageCard
-                  src={artwork.images[0].src}
-                  alt={artwork.images[0].alt}
-                  title={artwork.title}
-                  category={artwork.categoryLabel}
-                  onClick={() => openArtwork(artwork)}
-                />
-                {artwork.images.length > 1 && (
-                  <div className="mt-2 text-center">
-                    <span className="text-xs text-muted-foreground">
-                      {artwork.images.length} photos
-                    </span>
-                  </div>
-                )}
-              </div>
-            ))}
+          {/* Galerie Masonry */}
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+            {filteredArtworks.map((artwork, index) => {
+              // Variation de tailles pour l'effet masonry
+              const sizes: Array<"small" | "medium" | "large"> = ["medium", "large", "small", "large", "medium"];
+              const size = sizes[index % sizes.length];
+              
+              return (
+                <div
+                  key={artwork.id}
+                  className="break-inside-avoid animate-fade-in"
+                  style={{ animationDelay: `${index * 0.08}s` }}
+                >
+                  <ImageCard
+                    src={artwork.images[0].src}
+                    alt={artwork.images[0].alt}
+                    title={artwork.title}
+                    category={artwork.categoryLabel}
+                    onClick={() => openArtwork(artwork)}
+                    size={size}
+                  />
+                  {artwork.images.length > 1 && (
+                    <div className="mt-2 text-center">
+                      <span className="text-xs text-muted-foreground italic">
+                        {artwork.images.length} vues disponibles
+                      </span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           {/* Message si aucune œuvre */}
@@ -210,108 +216,21 @@ const Oeuvres = () => {
         </div>
       </section>
 
-      {/* Modal de détail avec galerie */}
-      <Dialog open={!!selectedArtwork} onOpenChange={closeDialog}>
-        <DialogContent className="max-w-5xl p-0 overflow-hidden bg-card">
-          {selectedArtwork && (
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              {/* Zone image avec navigation */}
-              <div className="relative aspect-[4/5] md:aspect-auto bg-secondary">
-                <img
-                  src={selectedArtwork.images[currentImageIndex].src}
-                  alt={selectedArtwork.images[currentImageIndex].alt}
-                  className="w-full h-full object-contain bg-secondary"
-                />
-                
-                {/* Navigation entre images */}
-                {selectedArtwork.images.length > 1 && (
-                  <>
-                    {/* Bouton précédent */}
-                    <button
-                      onClick={prevImage}
-                      disabled={currentImageIndex === 0}
-                      className={`absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-background/80 text-foreground rounded-full transition-opacity ${
-                        currentImageIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:bg-background"
-                      }`}
-                    >
-                      <ChevronLeft size={24} />
-                    </button>
-                    
-                    {/* Bouton suivant */}
-                    <button
-                      onClick={nextImage}
-                      disabled={currentImageIndex === selectedArtwork.images.length - 1}
-                      className={`absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-background/80 text-foreground rounded-full transition-opacity ${
-                        currentImageIndex === selectedArtwork.images.length - 1 ? "opacity-30 cursor-not-allowed" : "hover:bg-background"
-                      }`}
-                    >
-                      <ChevronRight size={24} />
-                    </button>
-                    
-                    {/* Indicateurs */}
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                      {selectedArtwork.images.map((_, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => setCurrentImageIndex(idx)}
-                          className={`w-2 h-2 rounded-full transition-all ${
-                            idx === currentImageIndex
-                              ? "bg-accent w-4"
-                              : "bg-background/60 hover:bg-background"
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
-              
-              {/* Informations */}
-              <div className="p-8 flex flex-col justify-center">
-                <span className="text-accent text-xs tracking-[0.2em] uppercase mb-2">
-                  {selectedArtwork.categoryLabel}
-                </span>
-                <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
-                  {selectedArtwork.title}
-                </h3>
-                {selectedArtwork.description && (
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    {selectedArtwork.description}
-                  </p>
-                )}
-                
-                {/* Miniatures */}
-                {selectedArtwork.images.length > 1 && (
-                  <div className="mt-auto">
-                    <p className="text-xs text-muted-foreground mb-3">
-                      Cliquez pour voir les autres vues
-                    </p>
-                    <div className="flex gap-2 flex-wrap">
-                      {selectedArtwork.images.map((image, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => setCurrentImageIndex(idx)}
-                          className={`w-16 h-16 overflow-hidden border-2 transition-all ${
-                            idx === currentImageIndex
-                              ? "border-accent"
-                              : "border-transparent hover:border-accent/50"
-                          }`}
-                        >
-                          <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-full object-cover"
-                          />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
+      {/* Lightbox immersive */}
+      {selectedArtwork && (
+        <Lightbox
+          images={selectedArtwork.images}
+          currentIndex={currentImageIndex}
+          isOpen={!!selectedArtwork}
+          onClose={closeDialog}
+          onNext={nextImage}
+          onPrev={prevImage}
+          onIndexChange={setCurrentImageIndex}
+          title={selectedArtwork.title}
+          category={selectedArtwork.categoryLabel}
+          description={selectedArtwork.description}
+        />
+      )}
     </Layout>
   );
 };
