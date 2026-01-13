@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
-import portraitAurelie from "@/assets/portrait-aurelie.jpg";
+import aProposPortrait from "@/assets/a-propos-portrait.jpg";
+import patrimoine1 from "@/assets/patrimoine-1.jpg";
 
 const APropos = () => {
   return (
@@ -35,8 +36,8 @@ const APropos = () => {
             <div className="relative">
               <div className="aspect-[3/4] bg-secondary overflow-hidden">
                 <img
-                  src={portraitAurelie}
-                  alt="Portrait d'Aurélie Villemur dans son atelier"
+                  src={aProposPortrait}
+                  alt="Portrait d'Aurélie Villemur dans un musée de sculptures"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -81,7 +82,7 @@ const APropos = () => {
             subtitle="Entre tradition et sensibilité contemporaine"
           />
 
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-card p-8 border border-border">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-4">
@@ -99,6 +100,9 @@ const APropos = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   Si mes techniques sont anciennes, mon regard est résolument contemporain. Je crée des pièces qui dialoguent avec notre époque tout en honorant l'héritage des maîtres anciens.
                 </p>
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  Dans le même temps, je reste attentive aux évolutions de mon métier, aux nouvelles techniques et aux technologies contemporaines qui viennent enrichir la pratique sans en trahir l'esprit.
+                </p>
               </div>
             </div>
 
@@ -106,8 +110,14 @@ const APropos = () => {
               <h3 className="font-display text-xl font-semibold text-foreground mb-4">
                 L'écoute du matériau
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 Le bois est un matériau vivant, chaque essence possède son caractère. Avant de sculpter, je prends le temps d'observer, de comprendre les veines, les nœuds, les tensions du bois. C'est ce dialogue silencieux qui guide ma main et donne à chaque œuvre son âme unique.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                La terre, elle, se prête au modelage avec une réceptivité presque immédiate. Souple ou résistante selon son degré d'humidité, elle enregistre chaque pression, chaque intention. Je travaille avec elle dans un échange direct, attentif à ses réactions, à ses limites, laissant la forme émerger progressivement.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Le plâtre, plus exigeant, impose le temps et la précision. Sa prise rapide demande une présence totale, une anticipation du geste. Qu'il soit coulé ou sculpté, il oblige à écouter le moment juste, à accepter l'irréversibilité. Dans tous les cas, c'est l'attention portée au matériau qui détermine la justesse du geste et la force de la forme.
               </p>
             </div>
           </div>
@@ -147,10 +157,9 @@ const APropos = () => {
             {/* Image */}
             <div className="relative order-1 lg:order-2">
               <div className="aspect-[4/3] bg-secondary overflow-hidden">
-                {/* REMPLACER PAR UNE PHOTO DE CHANTIER */}
                 <img
-                  src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&h=600&fit=crop"
-                  alt="Détail de restauration de boiseries dorées"
+                  src={patrimoine1}
+                  alt="Aurélie Villemur sur un chantier de restauration patrimoniale"
                   className="w-full h-full object-cover"
                 />
               </div>

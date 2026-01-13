@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import { Link } from "react-router-dom";
-import { ArrowRight, Hammer, Sparkles, Shield, Clock } from "lucide-react";
+import { ArrowRight, Hammer, Sparkles, Shield, Clock, Palette, Box } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Photos atelier
@@ -33,6 +33,17 @@ const techniques = [
     ],
   },
   {
+    icon: Box,
+    title: "Modelage",
+    description: "Le modelage est la première étape de nombreuses créations. Travailler la terre permet de donner forme à une idée avec une grande liberté, avant de la transposer dans d'autres matériaux.",
+    details: [
+      "Modelage en terre",
+      "Ébauches et maquettes",
+      "Études de volumes et proportions",
+      "Création de modèles originaux",
+    ],
+  },
+  {
     icon: Clock,
     title: "Moulage et plâtre",
     description: "Au-delà du bois, je réalise également des œuvres en plâtre grâce à des techniques de moulage traditionnelles. Cette discipline complémentaire permet de créer des reproductions fidèles ou des créations originales.",
@@ -43,9 +54,18 @@ const techniques = [
       "Ornements architecturaux en staff",
     ],
   },
+  {
+    icon: Palette,
+    title: "Patine / Finition",
+    description: "La patine et les finitions donnent leur caractère final aux œuvres. Qu'il s'agisse de vieillir artificiellement une pièce, de créer un faux marbre ou d'appliquer des glacis subtils, ces techniques requièrent patience et savoir-faire.",
+    details: [
+      "Patines acryliques et à l'huile",
+      "Faux marbres et faux bois",
+      "Glacis et effets de matière",
+      "Finitions protectrices",
+    ],
+  },
 ];
-
-
 
 const SavoirFaire = () => {
   return (
@@ -174,6 +194,9 @@ const SavoirFaire = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               J'ai collaboré avec plusieurs artisans d'art notamment sur les travaux de restauration de l'Église Notre Dame du Taur à Toulouse et sur les retables des Églises de Camurac et de Labarthe Inard.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8 bg-card p-4 border-l-4 border-accent">
+              <strong className="text-foreground">Restauration pour particuliers :</strong> Je restaure également des meubles et pièces appartenant à des particuliers, en plus des éléments patrimoniaux. Chaque objet mérite une attention particulière pour retrouver sa splendeur d'origine.
             </p>
 
             <ul className="space-y-4">

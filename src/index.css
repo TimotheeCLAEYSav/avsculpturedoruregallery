@@ -9,64 +9,64 @@
 
 @layer base {
   :root {
-    /* Fond principal - Beige doré élégant */
-    --background: 41 60% 92%;
-    --foreground: 98 36% 15%;
+    /* Fond principal - Beige R224/V201/B160 => hsl(37, 52%, 75%) */
+    --background: 37 52% 90%;
+    --foreground: 76 17% 37%;
 
     /* Cartes et surfaces élevées */
-    --card: 41 55% 88%;
-    --card-foreground: 98 36% 15%;
+    --card: 37 48% 85%;
+    --card-foreground: 76 17% 37%;
 
     /* Popovers */
-    --popover: 41 55% 90%;
-    --popover-foreground: 98 36% 15%;
+    --popover: 37 50% 88%;
+    --popover-foreground: 76 17% 37%;
 
-    /* Couleur principale - Vert forêt profond rgb(35, 53, 25) */
-    --primary: 98 36% 15%;
-    --primary-foreground: 41 60% 92%;
+    /* Couleur principale - Vert R108/V112/B79 => hsl(76, 17%, 37%) */
+    --primary: 76 17% 37%;
+    --primary-foreground: 37 52% 92%;
 
     /* Couleur secondaire - Beige doux */
-    --secondary: 41 50% 80%;
-    --secondary-foreground: 98 36% 15%;
+    --secondary: 37 45% 78%;
+    --secondary-foreground: 76 17% 37%;
 
     /* Textes atténués */
-    --muted: 41 40% 85%;
-    --muted-foreground: 98 20% 35%;
+    --muted: 37 35% 82%;
+    --muted-foreground: 76 15% 45%;
 
-    /* Accent - Beige doré rgb(231, 197, 118) */
-    --accent: 42 68% 68%;
-    --accent-foreground: 98 36% 15%;
+    /* Accent - Beige doré R224/V201/B160 */
+    --accent: 37 52% 75%;
+    --accent-foreground: 76 17% 25%;
 
     /* Destructif */
     --destructive: 0 65% 50%;
     --destructive-foreground: 0 0% 100%;
 
     /* Bordures et inputs */
-    --border: 41 40% 75%;
-    --input: 41 45% 82%;
-    --ring: 42 68% 68%;
+    --border: 37 35% 70%;
+    --input: 37 40% 78%;
+    --ring: 37 52% 75%;
 
     --radius: 0.25rem;
 
     /* Couleurs personnalisées Art Déco */
-    --gold: 42 68% 68%;
-    --gold-light: 42 55% 80%;
-    --gold-dark: 42 70% 50%;
-    --forest: 98 36% 15%;
-    --forest-light: 98 30% 25%;
-    --sage: 41 40% 75%;
-    --cream: 41 60% 92%;
-    --charcoal: 98 36% 12%;
+    --gold: 37 52% 75%;
+    --gold-light: 37 45% 85%;
+    --gold-dark: 37 55% 60%;
+    --forest: 76 17% 37%;
+    --forest-light: 76 15% 50%;
+    --sage: 37 35% 70%;
+    --cream: 37 52% 92%;
+    --charcoal: 76 17% 25%;
 
     /* Sidebar */
-    --sidebar-background: 150 30% 18%;
-    --sidebar-foreground: 45 30% 95%;
-    --sidebar-primary: 43 65% 55%;
-    --sidebar-primary-foreground: 150 30% 15%;
-    --sidebar-accent: 150 25% 25%;
-    --sidebar-accent-foreground: 45 30% 95%;
-    --sidebar-border: 150 20% 25%;
-    --sidebar-ring: 43 65% 55%;
+    --sidebar-background: 76 17% 30%;
+    --sidebar-foreground: 37 52% 92%;
+    --sidebar-primary: 37 52% 75%;
+    --sidebar-primary-foreground: 76 17% 25%;
+    --sidebar-accent: 76 15% 40%;
+    --sidebar-accent-foreground: 37 52% 92%;
+    --sidebar-border: 76 15% 35%;
+    --sidebar-ring: 37 52% 75%;
   }
 
   .dark {
