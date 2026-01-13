@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import ImageCard from "@/components/ImageCard";
 import Lightbox from "@/components/Lightbox";
+import { ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 // Import des images
 import sculpture1 from "@/assets/sculpture-1.jpg";
@@ -15,8 +18,6 @@ import frida3 from "@/assets/frida-3.jpg";
 import basRelief2 from "@/assets/bas-relief-2.jpg";
 import basRelief3 from "@/assets/bas-relief-3.jpg";
 
-type Category = "all" | "femmes" | "faune" | "flore" | "dorures";
-
 interface ArtworkImage {
   src: string;
   alt: string;
@@ -26,13 +27,13 @@ interface Artwork {
   id: number;
   images: ArtworkImage[];
   title: string;
-  category: Category;
+  collection: string;
   categoryLabel: string;
   description?: string;
 }
 
-const artworks: Artwork[] = [
-  // Femmes
+const allArtworks: Artwork[] = [
+  // Collection Femme
   {
     id: 1,
     images: [
@@ -40,8 +41,8 @@ const artworks: Artwork[] = [
       { src: sculpture2, alt: "Enigma - vue détaillée" },
     ],
     title: "Enigma",
-    category: "femmes",
-    categoryLabel: "Femmes",
+    collection: "femme",
+    categoryLabel: "Femme",
     description: "Sculpture représentant un profil de femme avec détails à la feuille d'or.",
   },
   {
@@ -52,10 +53,11 @@ const artworks: Artwork[] = [
       { src: frida3, alt: "Buste de Frida Kahlo - vue arrière" },
     ],
     title: "Frida Kahlo",
-    category: "femmes",
-    categoryLabel: "Femmes",
+    collection: "femme",
+    categoryLabel: "Femme",
     description: "Buste sculpté en bois représentant Frida Kahlo, avec ornements floraux et détails dorés.",
   },
+  // Collection Faune
   {
     id: 3,
     images: [
@@ -64,47 +66,62 @@ const artworks: Artwork[] = [
       { src: basRelief3, alt: "Bas-relief - détail du colibri doré" },
     ],
     title: "Le Colibri",
-    category: "femmes",
-    categoryLabel: "Femmes",
+    collection: "faune",
+    categoryLabel: "Faune",
     description: "Bas-relief sculpté représentant un colibri parmi les fleurs, rehaussé de feuille d'or.",
   },
-  // Dorures
+  // Collection Contour
   {
     id: 4,
     images: [
       { src: dorure1, alt: "Panneau doré à la feuille d'or" },
     ],
     title: "Panneau doré",
-    category: "dorures",
-    categoryLabel: "Dorure",
+    collection: "contour",
+    categoryLabel: "Contour",
   },
+  // Collection Abstrait
   {
     id: 5,
     images: [
       { src: dorure2, alt: "Motif inca doré à la feuille d'or" },
     ],
     title: "Motif Inca",
-    category: "dorures",
-    categoryLabel: "Dorure",
+    collection: "abstrait",
+    categoryLabel: "Abstrait",
   },
 ];
 
-const categories = [
-  { id: "all" as Category, label: "Toutes" },
-  { id: "femmes" as Category, label: "Femmes" },
-  { id: "faune" as Category, label: "Faune" },
-  { id: "flore" as Category, label: "Flore" },
-  { id: "dorures" as Category, label: "Dorures" },
-];
+const collectionTitles: Record<string, { title: string; description: string }> = {
+  femme: {
+    title: "Femme",
+    description: "Portraits et figures féminines sculptées, célébrant la grâce et la beauté.",
+  },
+  faune: {
+    title: "Faune",
+    description: "Le monde animal capturé dans le bois et sublimé par la feuille d'or.",
+  },
+  contour: {
+    title: "Contour",
+    description: "Lignes épurées et formes géométriques, inspirées de l'Art Déco.",
+  },
+  enfance: {
+    title: "Enfance",
+    description: "Collection en préparation.",
+  },
+  abstrait: {
+    title: "Abstrait",
+    description: "Expressions abstraites et formes libres.",
+  },
+};
 
-const Oeuvres = () => {
-  const [activeCategory, setActiveCategory] = useState<Category>("all");
+const CollectionDetail = () => {
+  const { collectionId } = useParams<{ collectionId: string }>();
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const filteredArtworks = activeCategory === "all"
-    ? artworks
-    : artworks.filter((artwork) => artwork.category === activeCategory);
+  const collectionInfo = collectionId ? collectionTitles[collectionId] : null;
+  const artworks = allArtworks.filter((artwork) => artwork.collection === collectionId);
 
   const openArtwork = (artwork: Artwork) => {
     setSelectedArtwork(artwork);
@@ -128,6 +145,19 @@ const Oeuvres = () => {
     }
   };
 
+  if (!collectionInfo) {
+    return (
+      <Layout>
+        <section className="py-24 bg-background text-center">
+          <p className="text-muted-foreground">Collection non trouvée.</p>
+          <Button asChild variant="outline" className="mt-4">
+            <Link to="/collections">Retour aux collections</Link>
+          </Button>
+        </section>
+      </Layout>
+    );
+  }
+
   return (
     <Layout>
       {/* Hero */}
@@ -140,83 +170,75 @@ const Oeuvres = () => {
               <div className="w-12 h-px bg-accent" />
             </div>
             <p className="text-accent text-sm tracking-[0.25em] uppercase mb-4">
-              Portfolio
+              Collection
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Mes Œuvres
+              {collectionInfo.title}
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              Explorez mes créations : sculptures sur bois, plâtre et dorures à la feuille.
+              {collectionInfo.description}
             </p>
           </div>
         </div>
       </section>
 
+      {/* Navigation retour */}
+      <section className="bg-background border-b border-border">
+        <div className="container mx-auto px-6 py-4">
+          <Button asChild variant="ghost" className="text-foreground hover:text-accent">
+            <Link to="/collections" className="inline-flex items-center gap-2">
+              <ArrowLeft size={18} />
+              Retour aux collections
+            </Link>
+          </Button>
+        </div>
+      </section>
+
       {/* Galerie */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          {/* Filtres */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-2 text-sm font-medium tracking-wide border transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-transparent text-foreground border-border hover:border-accent hover:text-accent"
-                }`}
-              >
-                {category.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Galerie Masonry */}
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-            {filteredArtworks.map((artwork, index) => {
-              // Variation de tailles pour l'effet masonry
-              const sizes: Array<"small" | "medium" | "large"> = ["medium", "large", "small", "large", "medium"];
-              const size = sizes[index % sizes.length];
-              
-              return (
-                <div
-                  key={artwork.id}
-                  className="break-inside-avoid animate-fade-in"
-                  style={{ animationDelay: `${index * 0.08}s` }}
-                >
-                  <ImageCard
-                    src={artwork.images[0].src}
-                    alt={artwork.images[0].alt}
-                    title={artwork.title}
-                    category={artwork.categoryLabel}
-                    onClick={() => openArtwork(artwork)}
-                    size={size}
-                  />
-                  {artwork.images.length > 1 && (
-                    <div className="mt-2 text-center">
-                      <span className="text-xs text-muted-foreground italic">
-                        {artwork.images.length} vues disponibles
-                      </span>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Message si aucune œuvre */}
-          {filteredArtworks.length === 0 && (
+          {artworks.length > 0 ? (
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+              {artworks.map((artwork, index) => {
+                const sizes: Array<"small" | "medium" | "large"> = ["medium", "large", "small", "large", "medium"];
+                const size = sizes[index % sizes.length];
+                
+                return (
+                  <div
+                    key={artwork.id}
+                    className="break-inside-avoid animate-fade-in"
+                    style={{ animationDelay: `${index * 0.08}s` }}
+                  >
+                    <ImageCard
+                      src={artwork.images[0].src}
+                      alt={artwork.images[0].alt}
+                      title={artwork.title}
+                      category={artwork.categoryLabel}
+                      onClick={() => openArtwork(artwork)}
+                      size={size}
+                    />
+                    {artwork.images.length > 1 && (
+                      <div className="mt-2 text-center">
+                        <span className="text-xs text-muted-foreground italic">
+                          {artwork.images.length} vues disponibles
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
             <div className="text-center py-12">
               <p className="text-muted-foreground">
-                Aucune œuvre dans cette catégorie pour le moment.
+                Aucune œuvre dans cette collection pour le moment.
               </p>
             </div>
           )}
         </div>
       </section>
 
-      {/* Lightbox immersive */}
+      {/* Lightbox */}
       {selectedArtwork && (
         <Lightbox
           images={selectedArtwork.images}
@@ -235,4 +257,4 @@ const Oeuvres = () => {
   );
 };
 
-export default Oeuvres;
+export default CollectionDetail;
