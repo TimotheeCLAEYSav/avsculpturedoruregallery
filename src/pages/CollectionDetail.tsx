@@ -21,6 +21,7 @@ import basRelief3 from "@/assets/bas-relief-3.jpg";
 interface ArtworkImage {
   src: string;
   alt: string;
+  objectPosition?: "center" | "top";
 }
 
 interface Artwork {
@@ -37,7 +38,7 @@ const allArtworks: Artwork[] = [
   {
     id: 1,
     images: [
-      { src: sculpture1, alt: "Enigma - vue principale" },
+      { src: sculpture1, alt: "Enigma - vue principale", objectPosition: "top" },
       { src: sculpture2, alt: "Enigma - vue détaillée" },
     ],
     title: "Enigma",
@@ -216,6 +217,7 @@ const CollectionDetail = () => {
                       category={artwork.categoryLabel}
                       onClick={() => openArtwork(artwork)}
                       size={size}
+                      objectPosition={artwork.images[0].objectPosition}
                     />
                     {artwork.images.length > 1 && (
                       <div className="mt-2 text-center">

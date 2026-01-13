@@ -5,13 +5,19 @@ interface ImageCardProps {
   category?: string;
   onClick?: () => void;
   size?: "small" | "medium" | "large";
+  objectPosition?: "center" | "top";
 }
 
-const ImageCard = ({ src, alt, title, category, onClick, size = "medium" }: ImageCardProps) => {
+const ImageCard = ({ src, alt, title, category, onClick, size = "medium", objectPosition = "center" }: ImageCardProps) => {
   const aspectClasses = {
     small: "aspect-square",
     medium: "aspect-[4/5]",
     large: "aspect-[3/4]",
+  };
+  
+  const positionClasses = {
+    center: "object-center",
+    top: "object-top",
   };
 
   return (
@@ -28,7 +34,7 @@ const ImageCard = ({ src, alt, title, category, onClick, size = "medium" }: Imag
         <img
           src={src}
           alt={alt}
-          className="w-full h-full object-cover object-top transition-all duration-700 ease-out group-hover:scale-110"
+          className={`w-full h-full object-cover ${positionClasses[objectPosition]} transition-all duration-700 ease-out group-hover:scale-110`}
           loading="lazy"
         />
       </div>

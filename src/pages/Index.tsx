@@ -68,7 +68,7 @@ const Index = () => {
         style={{
           backgroundImage: `url(${sculpture1})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'top',
         }}
       >
         {/* Overlay */}
