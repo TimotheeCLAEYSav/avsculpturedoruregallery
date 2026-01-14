@@ -102,6 +102,10 @@ const collectionTitles: Record<string, { title: string; description: string }> =
     title: "Faune",
     description: "Le monde animal capturé dans le bois et sublimé par la feuille d'or.",
   },
+  flore: {
+    title: "Flore",
+    description: "Le monde végétal sculpté dans le bois avec délicatesse.",
+  },
   contour: {
     title: "Contour",
     description: "Lignes épurées et formes géométriques, inspirées de l'Art Déco.",
