@@ -71,8 +71,7 @@ const Index = () => {
           backgroundPosition: 'top',
         }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
+        {/* Pas d'overlay - image visible directement */}
         
         {/* Contenu */}
         <div className="relative z-10 container mx-auto px-6 text-center">
@@ -156,6 +155,7 @@ const Index = () => {
                     src={area.image}
                     alt={area.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    style={area.title === "Restauration patrimoine" ? { objectPosition: 'center 30%', transform: 'scale(1.3)' } : undefined}
                   />
                 </div>
                 {/* Overlay avec texte */}
