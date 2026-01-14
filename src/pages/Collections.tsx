@@ -6,6 +6,7 @@ import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture3 from "@/assets/sculpture-3.jpg";
 import sculpture4 from "@/assets/sculpture-4.jpg";
 import dorure1 from "@/assets/dorure-1.jpg";
+import flore1 from "@/assets/flore-1.png";
 
 interface Collection {
   id: string;
@@ -28,6 +29,13 @@ const collections: Collection[] = [
     title: "Faune",
     description: "Le monde animal en sculpture",
     image: sculpture4,
+    available: true,
+  },
+  {
+    id: "flore",
+    title: "Flore",
+    description: "Le monde végétal sculpté dans le bois",
+    image: flore1,
     available: true,
   },
   {
