@@ -161,10 +161,10 @@ const Index = () => {
                 </div>
                 {/* Overlay avec texte */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-transparent flex flex-col justify-end p-6">
-                  <h3 className="font-display text-xl font-semibold text-primary-foreground mb-2">
+                  <h3 className="font-display text-2xl font-semibold text-primary-foreground mb-2">
                     {area.title}
                   </h3>
-                  <p className="text-primary-foreground/80 text-sm leading-relaxed">
+                  <p className="text-primary-foreground/80 text-base leading-relaxed">
                     {area.description}
                   </p>
                 </div>
