@@ -98,6 +98,7 @@ const Collections = () => {
                         src={collection.image}
                         alt={collection.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        style={collection.id === "femme" ? { objectPosition: 'top' } : undefined}
                       />
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
