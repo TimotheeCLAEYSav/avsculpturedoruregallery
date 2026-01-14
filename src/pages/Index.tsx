@@ -71,20 +71,21 @@ const Index = () => {
           backgroundPosition: 'top',
         }}
       >
-        {/* Pas d'overlay - image visible directement */}
+        {/* Overlay léger */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/60" />
         
         {/* Contenu */}
         <div className="relative z-10 container mx-auto px-6 text-center">
           {/* Ornement supérieur */}
           <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in">
-            <div className="w-16 md:w-24 h-px bg-primary" />
-            <div className="w-2 h-2 rotate-45 bg-primary" />
-            <div className="w-16 md:w-24 h-px bg-primary" />
+            <div className="w-16 md:w-24 h-px bg-accent" />
+            <div className="w-2 h-2 rotate-45 bg-accent" />
+            <div className="w-16 md:w-24 h-px bg-accent" />
           </div>
 
           {/* Sous-titre */}
           <p 
-            className="text-primary text-sm md:text-base tracking-[0.25em] uppercase mb-4 animate-fade-in font-medium"
+            className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4 animate-fade-in"
             style={{ animationDelay: '0.1s' }}
           >
             Sculptrice & Doreuse sur bois
@@ -92,7 +93,7 @@ const Index = () => {
 
           {/* Titre principal */}
           <h1 
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-primary mb-6 animate-fade-in drop-shadow-sm"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground mb-6 animate-fade-in"
             style={{ animationDelay: '0.2s' }}
           >
             Aurélie Villemur
@@ -100,7 +101,7 @@ const Index = () => {
 
           {/* Description */}
           <p 
-            className="text-primary/90 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in font-medium"
+            className="text-primary-foreground/90 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
             style={{ animationDelay: '0.3s' }}
           >
             Création d'ornements, bas-reliefs et sculptures en ronde-bosse dans la tradition des maîtres anciens, tout en introduisant des techniques plus contemporaines.
@@ -114,7 +115,7 @@ const Index = () => {
             <Button 
               asChild 
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium tracking-wide px-8"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 font-medium tracking-wide px-8"
             >
               <Link to="/collections" className="inline-flex items-center gap-2">
                 Découvrir mon travail
@@ -128,9 +129,9 @@ const Index = () => {
             className="flex items-center justify-center gap-4 mt-12 animate-fade-in"
             style={{ animationDelay: '0.5s' }}
           >
-            <div className="w-8 h-px bg-primary/50" />
-            <div className="w-1 h-1 rotate-45 bg-primary/50" />
-            <div className="w-8 h-px bg-primary/50" />
+            <div className="w-8 h-px bg-accent/50" />
+            <div className="w-1 h-1 rotate-45 bg-accent/50" />
+            <div className="w-8 h-px bg-accent/50" />
           </div>
         </div>
       </section>
