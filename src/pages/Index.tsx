@@ -9,7 +9,10 @@ import sculpture3 from "@/assets/sculpture-3.jpg";
 import dorure1 from "@/assets/dorure-1.jpg";
 import sculptureGenerale1 from "@/assets/sculpture-generale-1.jpg";
 import dorureSavoirFaire from "@/assets/dorure-savoirfaire.jpg";
-import restaurationPatrimoine from "@/assets/restauration-patrimoine.jpg";
+import patrimoine3 from "@/assets/patrimoine-3.jpeg";
+import modelage2 from "@/assets/modelage-2.jpeg";
+import moulage1 from "@/assets/moulage-1.jpg";
+import patineFinition from "@/assets/patine-finition.png";
 
 const featuredWorks = [
   {
@@ -30,31 +33,31 @@ const expertiseAreas = [
   {
     image: sculptureGenerale1,
     title: "Sculpture",
-    description: "Création d'ornements, bas-reliefs et sculptures en ronde-bosse dans la tradition des maîtres anciens.",
+    description: "Création d'ornements, bas-reliefs et sculptures en ronde-bosse dans la tradition des maîtres anciens, tout en introduisant des techniques plus contemporaines.",
   },
   {
     image: dorureSavoirFaire,
     title: "Dorure",
-    description: "Application de feuilles d'or et d'argent selon les techniques traditionnelles.",
+    description: "Application de feuilles d'or, d'argent et de cuivre selon les techniques traditionnelles.",
   },
   {
-    image: restaurationPatrimoine,
+    image: patrimoine3,
     title: "Restauration patrimoine",
     description: "Conservation et restauration d'éléments sculptés et dorés pour monuments historiques.",
   },
   {
-    image: sculptureGenerale1,
+    image: modelage2,
     title: "Modelage",
     description: "Modelage en terre et création de formes originales.",
   },
   {
-    image: dorureSavoirFaire,
+    image: moulage1,
     title: "Moulage",
     description: "Moulage traditionnel en plâtre et reproductions fidèles.",
   },
   {
-    image: restaurationPatrimoine,
-    title: "Patine / Finition",
+    image: patineFinition,
+    title: "Patine et Finition",
     description: "Patines et finitions pour sublimer chaque œuvre.",
   },
 ];
@@ -88,7 +91,7 @@ const Index = () => {
             className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4 animate-fade-in"
             style={{ animationDelay: '0.1s' }}
           >
-            Sculptrice & Doreuse sur bois
+            Artisane d'Art, Sculptrice & Doreuse sur bois
           </p>
 
           {/* Titre principal */}
@@ -104,7 +107,7 @@ const Index = () => {
             className="text-primary-foreground/90 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
             style={{ animationDelay: '0.3s' }}
           >
-            Création d'ornements, bas-reliefs et sculptures en ronde-bosse dans la tradition des maîtres anciens, tout en introduisant des techniques plus contemporaines.
+            Atelier de création d'ouvrages sculptés, dorés et de restauration patrimoniale
           </p>
 
           {/* Bouton CTA */}
@@ -156,7 +159,7 @@ const Index = () => {
                     src={area.image}
                     alt={area.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    style={area.title === "Restauration patrimoine" ? { objectPosition: 'center 30%', transform: 'scale(1.3)' } : undefined}
+                    style={area.title === "Restauration patrimoine" ? { objectPosition: 'center 30%' } : undefined}
                   />
                 </div>
                 {/* Overlay avec texte */}
@@ -249,7 +252,7 @@ const Index = () => {
             </blockquote>
 
             <p className="text-accent tracking-[0.2em] uppercase text-sm">
-              — Aurélie Villemur
+              — Aurélie Villemur, Artisane d'Art, sculptrice & doreuse sur bois
             </p>
           </div>
         </div>

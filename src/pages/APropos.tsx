@@ -18,7 +18,7 @@ const APropos = () => {
             <p className="text-accent text-sm tracking-[0.25em] uppercase mb-4">
               Artisane d'art
             </p>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6">
               À propos
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
@@ -31,14 +31,14 @@ const APropos = () => {
       {/* Portrait et Parcours */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Image Portrait */}
             <div className="relative">
-              <div className="aspect-[3/4] bg-secondary overflow-hidden">
+              <div className="bg-secondary overflow-hidden">
                 <img
                   src={aProposPortrait}
                   alt="Portrait d'Aurélie Villemur dans un musée de sculptures"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-cover"
                 />
               </div>
               {/* Cadre décoratif */}
@@ -49,14 +49,14 @@ const APropos = () => {
             <div className="lg:pl-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-px bg-accent" />
-                <span className="text-accent text-sm tracking-[0.2em] uppercase">
+                <h2 className="font-display text-3xl font-semibold text-amber-800">
                   Mon parcours
-                </span>
+                </h2>
               </div>
 
-              <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
+              <h3 className="font-display text-2xl font-semibold text-foreground mb-6">
                 Une passion devenue vocation
-              </h2>
+              </h3>
 
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -132,14 +132,14 @@ const APropos = () => {
             <div className="lg:pr-8 order-2 lg:order-1">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-px bg-accent" />
-                <span className="text-accent text-sm tracking-[0.2em] uppercase">
+                <h2 className="font-display text-3xl font-semibold text-amber-800">
                   Patrimoine
-                </span>
+                </h2>
               </div>
 
-              <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
+              <h3 className="font-display text-2xl font-semibold text-foreground mb-6">
                 Au service du patrimoine historique
-              </h2>
+              </h3>
 
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>

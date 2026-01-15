@@ -11,13 +11,15 @@ import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture2 from "@/assets/sculpture-2.jpg";
 import sculpture3 from "@/assets/sculpture-3.jpg";
 import sculpture4 from "@/assets/sculpture-4.jpg";
-import dorure1 from "@/assets/dorure-1.jpg";
-import dorure2 from "@/assets/dorure-2.jpg";
 import frida2 from "@/assets/frida-2.jpg";
 import frida3 from "@/assets/frida-3.jpg";
 import basRelief2 from "@/assets/bas-relief-2.jpg";
 import basRelief3 from "@/assets/bas-relief-3.jpg";
 import flore1 from "@/assets/flore-1.png";
+import contour from "@/assets/contour.jpg";
+import faune from "@/assets/faune.jpg";
+import faune1 from "@/assets/faune-1.jpg";
+import faune2 from "@/assets/faune-2.jpg";
 
 interface ArtworkImage {
   src: string;
@@ -59,76 +61,71 @@ const allArtworks: Artwork[] = [
     categoryLabel: "Femme",
     description: "Buste sculpté en bois représentant Frida Kahlo, avec ornements floraux et détails dorés.",
   },
-  // Collection Faune
   {
     id: 3,
     images: [
-      { src: sculpture4, alt: "Bas-relief avec colibri et fleurs" },
-      { src: basRelief2, alt: "Bas-relief - détail du visage avec dorure" },
-      { src: basRelief3, alt: "Bas-relief - détail du colibri doré" },
+      { src: sculpture4, alt: "Le voyage - vue principale" },
+      { src: basRelief2, alt: "Le voyage - détail du visage avec dorure" },
+      { src: basRelief3, alt: "Le voyage - détail doré" },
     ],
-    title: "Le Colibri",
-    collection: "faune",
-    categoryLabel: "Faune",
-    description: "Bas-relief sculpté représentant un colibri parmi les fleurs, rehaussé de feuille d'or.",
+    title: "Le voyage",
+    collection: "femme",
+    categoryLabel: "Femme",
+    description: "Bas-relief sculpté représentant un voyage onirique, rehaussé de feuille d'or.",
   },
-  // Collection Flore
+  // Collection Faune
   {
     id: 4,
     images: [
-      { src: flore1, alt: "Fleur sculptée en bois" },
+      { src: faune, alt: "Le scarabée - vue principale" },
+      { src: faune1, alt: "Le scarabée - vue détaillée" },
+      { src: faune2, alt: "Le scarabée - autre vue" },
     ],
-    title: "La Fleur",
-    collection: "flore",
-    categoryLabel: "Flore",
-    description: "Fleur sculptée dans le bois avec délicatesse.",
+    title: "Le scarabée",
+    collection: "faune",
+    categoryLabel: "Faune",
+    description: "Sculpture représentant un scarabée, symbole de renaissance et de transformation.",
   },
-  // Collection Contour
+  // Collection Flore
   {
     id: 5,
     images: [
-      { src: dorure1, alt: "Panneau doré à la feuille d'or" },
+      { src: flore1, alt: "La pivoine - sculpture florale" },
     ],
-    title: "Panneau doré",
-    collection: "contour",
-    categoryLabel: "Contour",
+    title: "La pivoine",
+    collection: "flore",
+    categoryLabel: "Flore",
+    description: "Pivoine sculptée dans le bois avec délicatesse et sensibilité.",
   },
-  // Collection Abstrait
+  // Collection Contour
   {
     id: 6,
     images: [
-      { src: dorure2, alt: "Motif inca doré à la feuille d'or" },
+      { src: contour, alt: "Miroir Louis XVI - vue principale" },
     ],
-    title: "Motif Inca",
-    collection: "abstrait",
-    categoryLabel: "Abstrait",
+    title: "Miroir Louis XVI",
+    collection: "contour",
+    categoryLabel: "Contour",
+    description: "Cadre sculpté et doré dans le style Louis XVI, sublimant le miroir qu'il entoure.",
   },
 ];
 
 const collectionTitles: Record<string, { title: string; description: string }> = {
   femme: {
     title: "Femme",
-    description: "Portraits et figures féminines sculptées, célébrant la grâce et la beauté.",
+    description: "La collection Femme explore la figure féminine à travers des formes sculptées. Les corps y sont abordés comme des territoires sensibles, porteurs de force, de fragilité, d'histoire et de présence silencieuse.",
   },
   faune: {
     title: "Faune",
-    description: "Le monde animal capturé dans le bois et sublimé par la feuille d'or.",
+    description: "La collection Faune s'inspire du monde animal et de son énergie propre. Les sculptures cherchent à restituer le mouvement, la tension et la vitalité du vivant, sans recherche de naturalisme strict.",
   },
   flore: {
     title: "Flore",
-    description: "Le monde végétal sculpté dans le bois avec délicatesse.",
+    description: "La collection Flore propose une interprétation sculptée du végétal. Les formes y sont organiques, parfois stylisées et toujours ornementales.",
   },
   contour: {
     title: "Contour",
-    description: "Lignes épurées et formes géométriques, inspirées de l'Art Déco.",
-  },
-  enfance: {
-    title: "Enfance",
-    description: "Collection en préparation.",
-  },
-  abstrait: {
-    title: "Abstrait",
-    description: "Expressions abstraites et formes libres.",
+    description: "Des cadres qui s'attachent à la ligne, au tracé et à la limite de la forme pour sublimer le contenu.",
   },
 };
 
@@ -189,7 +186,7 @@ const CollectionDetail = () => {
             <p className="text-accent text-sm tracking-[0.25em] uppercase mb-4">
               Collection
             </p>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6">
               {collectionInfo.title}
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">

@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import { Link } from "react-router-dom";
-import { ArrowRight, Hammer, Sparkles, Shield, Clock, Palette, Box } from "lucide-react";
+import { ArrowRight, Hammer, Sparkles, Shield, Clock, Palette, Box, Brush } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Photos atelier
@@ -45,8 +45,8 @@ const techniques = [
   },
   {
     icon: Clock,
-    title: "Moulage et plâtre",
-    description: "Au-delà du bois, je réalise également des œuvres en plâtre grâce à des techniques de moulage traditionnelles. Cette discipline complémentaire permet de créer des reproductions fidèles ou des créations originales.",
+    title: "Plâtre",
+    description: "Le travail du plâtre est une discipline complémentaire essentielle. Il permet de créer des reproductions fidèles, des moulages ou des créations originales avec une grande finesse de détail.",
     details: [
       "Moulage en creux et à bon-creux",
       "Tirage au plâtre",
@@ -56,11 +56,11 @@ const techniques = [
   },
   {
     icon: Palette,
-    title: "Patine / Finition",
-    description: "La patine et les finitions donnent leur caractère final aux œuvres. Qu'il s'agisse de vieillir artificiellement une pièce, de créer un faux marbre ou d'appliquer des glacis subtils, ces techniques requièrent patience et savoir-faire.",
+    title: "Patine",
+    description: "La patine donne son caractère final aux œuvres. Qu'il s'agisse de vieillir artificiellement une pièce, de créer un faux marbre ou d'appliquer des glacis subtils, ces techniques requièrent patience et savoir-faire.",
     details: [
-      "Patines acryliques et à l'huile",
-      "Faux marbres et faux bois",
+      "Patines acryliques",
+      "Faux marbres",
       "Glacis et effets de matière",
       "Finitions protectrices",
     ],
@@ -82,7 +82,7 @@ const SavoirFaire = () => {
             <p className="text-accent text-sm tracking-[0.25em] uppercase mb-4">
               Expertise & Patrimoine
             </p>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6">
               Savoir-faire & Patrimoine
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
