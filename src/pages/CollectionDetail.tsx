@@ -17,6 +17,7 @@ import frida2 from "@/assets/frida-2.jpg";
 import frida3 from "@/assets/frida-3.jpg";
 import basRelief2 from "@/assets/bas-relief-2.jpg";
 import basRelief3 from "@/assets/bas-relief-3.jpg";
+import flore1 from "@/assets/flore-1.png";
 
 interface ArtworkImage {
   src: string;
@@ -71,9 +72,20 @@ const allArtworks: Artwork[] = [
     categoryLabel: "Faune",
     description: "Bas-relief sculpté représentant un colibri parmi les fleurs, rehaussé de feuille d'or.",
   },
+  // Collection Flore
+  {
+    id: 6,
+    images: [
+      { src: flore1, alt: "Fleur sculptée en bois" },
+    ],
+    title: "La Fleur",
+    collection: "flore",
+    categoryLabel: "Flore",
+    description: "Fleur sculptée dans le bois avec délicatesse.",
+  },
   // Collection Contour
   {
-    id: 4,
+    id: 7,
     images: [
       { src: dorure1, alt: "Panneau doré à la feuille d'or" },
     ],
@@ -83,7 +95,39 @@ const allArtworks: Artwork[] = [
   },
   // Collection Abstrait
   {
+    id: 8,
+    images: [
+      { src: dorure2, alt: "Motif inca doré à la feuille d'or" },
+    ],
+    title: "Motif Inca",
+    collection: "abstrait",
+    categoryLabel: "Abstrait",
+    description: "Bas-relief sculpté représentant un colibri parmi les fleurs, rehaussé de feuille d'or.",
+  },
+  // Collection Flore
+  {
+    id: 4,
+    images: [
+      { src: flore1, alt: "Fleur sculptée en bois" },
+    ],
+    title: "La Fleur",
+    collection: "flore",
+    categoryLabel: "Flore",
+    description: "Fleur sculptée dans le bois avec délicatesse.",
+  },
+  // Collection Contour
+  {
     id: 5,
+    images: [
+      { src: dorure1, alt: "Panneau doré à la feuille d'or" },
+    ],
+    title: "Panneau doré",
+    collection: "contour",
+    categoryLabel: "Contour",
+  },
+  // Collection Abstrait
+  {
+    id: 6,
     images: [
       { src: dorure2, alt: "Motif inca doré à la feuille d'or" },
     ],
