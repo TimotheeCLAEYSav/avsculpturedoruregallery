@@ -3,15 +3,13 @@ import Layout from "@/components/Layout";
 
 // Import des images pour les collections
 import sculpture1 from "@/assets/sculpture-1.jpg";
-import sculpture3 from "@/assets/sculpture-3.jpg";
-import sculpture4 from "@/assets/sculpture-4.jpg";
-import dorure1 from "@/assets/dorure-1.jpg";
 import flore1 from "@/assets/flore-1.png";
+import contour from "@/assets/contour.jpg";
+import faune from "@/assets/faune.jpg";
 
 interface Collection {
   id: string;
   title: string;
-  description: string;
   image: string;
   available: boolean;
 }
@@ -20,43 +18,25 @@ const collections: Collection[] = [
   {
     id: "femme",
     title: "Femme",
-    description: "Portraits et figures féminines sculptées",
     image: sculpture1,
     available: true,
   },
   {
     id: "faune",
     title: "Faune",
-    description: "Le monde animal en sculpture",
-    image: sculpture4,
+    image: faune,
     available: true,
   },
   {
     id: "flore",
     title: "Flore",
-    description: "Le monde végétal sculpté dans le bois",
     image: flore1,
     available: true,
   },
   {
     id: "contour",
     title: "Contour",
-    description: "Lignes et formes épurées",
-    image: dorure1,
-    available: true,
-  },
-  {
-    id: "enfance",
-    title: "Enfance",
-    description: "Contenu à venir",
-    image: sculpture3,
-    available: false,
-  },
-  {
-    id: "abstrait",
-    title: "Abstrait",
-    description: "Formes et expressions abstraites",
-    image: dorure1,
+    image: contour,
     available: true,
   },
 ];
@@ -76,11 +56,13 @@ const Collections = () => {
             <p className="text-accent text-sm tracking-[0.25em] uppercase mb-4">
               Portfolio
             </p>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6">
               Collections
             </h1>
-            <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              Explorez mes créations organisées par thématiques : sculptures sur bois, plâtre et dorures à la feuille.
+            <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
+              Les créations de l'atelier sont des pièces uniques, réalisées entièrement à la main.
+              Elles se déclinent en plusieurs collections, conçues comme des champs de recherche formelle et sensible, nourris par les univers des cabinets de curiosités, du naturalisme, de la sculpture décorative et de mes voyages.
+              Chaque œuvre est pensée comme un objet singulier, destiné à dialoguer avec l'espace et le regard.
             </p>
           </div>
         </div>
@@ -89,7 +71,7 @@ const Collections = () => {
       {/* Grille des collections */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {collections.map((collection, index) => (
               <div
                 key={collection.id}
@@ -114,12 +96,9 @@ const Collections = () => {
                     
                     {/* Contenu */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
-                      <h2 className="font-display text-2xl font-semibold text-primary-foreground mb-2">
+                      <h2 className="font-display text-2xl font-semibold text-primary-foreground">
                         {collection.title}
                       </h2>
-                      <p className="text-primary-foreground/70 text-sm">
-                        {collection.description}
-                      </p>
                     </div>
                   </Link>
                 ) : (
@@ -135,12 +114,9 @@ const Collections = () => {
                     
                     {/* Contenu */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
-                      <h2 className="font-display text-2xl font-semibold text-primary-foreground mb-2">
+                      <h2 className="font-display text-2xl font-semibold text-primary-foreground">
                         {collection.title}
                       </h2>
-                      <p className="text-primary-foreground/70 text-sm italic">
-                        {collection.description}
-                      </p>
                     </div>
                   </div>
                 )}
