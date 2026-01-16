@@ -238,7 +238,7 @@ const Contact = () => {
                 </h3>
                 <div className="flex gap-4">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/av_sculpturedorure/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center border border-border text-foreground hover:border-accent hover:text-accent transition-colors"
