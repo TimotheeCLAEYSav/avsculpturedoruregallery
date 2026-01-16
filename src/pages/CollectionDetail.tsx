@@ -20,6 +20,15 @@ import contour from "@/assets/contour.jpg";
 import faune from "@/assets/faune.jpg";
 import faune1 from "@/assets/faune-1.jpg";
 import faune2 from "@/assets/faune-2.jpg";
+import frida1 from "@/assets/frida-1.jpg";
+import fridaDetail2 from "@/assets/frida-detail-2.jpg";
+import fridaDetail3 from "@/assets/frida-detail-3.jpg";
+import enigma1 from "@/assets/enigma-1.jpg";
+import enigma2 from "@/assets/enigma-2.jpg";
+import enigma3 from "@/assets/enigma-3.jpg";
+import hokusai from "@/assets/hokusai.jpg";
+import hokusai1 from "@/assets/hokusai-1.jpg";
+import hokusai2 from "@/assets/hokusai-2.jpg";
 
 interface ArtworkImage {
   src: string;
@@ -43,6 +52,9 @@ const allArtworks: Artwork[] = [
     images: [
       { src: sculpture1, alt: "Enigma - vue principale", objectPosition: "top" },
       { src: sculpture2, alt: "Enigma - vue détaillée" },
+      { src: enigma1, alt: "Enigma - détail visage" },
+      { src: enigma2, alt: "Enigma - détail base" },
+      { src: enigma3, alt: "Enigma - vue de dos" },
     ],
     title: "Enigma",
     collection: "femme",
@@ -55,6 +67,9 @@ const allArtworks: Artwork[] = [
       { src: sculpture3, alt: "Buste de Frida Kahlo - vue de face" },
       { src: frida2, alt: "Buste de Frida Kahlo - vue de profil" },
       { src: frida3, alt: "Buste de Frida Kahlo - vue arrière" },
+      { src: frida1, alt: "Frida Kahlo - détail couronne florale" },
+      { src: fridaDetail2, alt: "Frida Kahlo - détail collier" },
+      { src: fridaDetail3, alt: "Frida Kahlo - détail chevelure" },
     ],
     title: "Frida Kahlo",
     collection: "femme",
@@ -96,6 +111,18 @@ const allArtworks: Artwork[] = [
     collection: "flore",
     categoryLabel: "Flore",
     description: "Pivoine sculptée dans le bois avec délicatesse et sensibilité.",
+  },
+  {
+    id: 7,
+    images: [
+      { src: hokusai, alt: "Hokusai - vue principale" },
+      { src: hokusai1, alt: "Hokusai - autre angle" },
+      { src: hokusai2, alt: "Hokusai - détail" },
+    ],
+    title: "Hokusai",
+    collection: "flore",
+    categoryLabel: "Flore",
+    description: "Panneau doré d'inspiration japonaise, hommage à l'art d'Hokusai.",
   },
   // Collection Contour
   {
