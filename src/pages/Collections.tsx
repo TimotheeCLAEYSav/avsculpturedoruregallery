@@ -87,7 +87,11 @@ const Collections = () => {
                       <img
                         src={collection.image}
                         alt={collection.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
+                          collection.id === "faune" || collection.id === "contour" 
+                            ? "object-contain bg-card" 
+                            : "object-cover"
+                        }`}
                         style={collection.id === "femme" ? { objectPosition: 'top' } : undefined}
                       />
                       {/* Overlay */}
