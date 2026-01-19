@@ -34,31 +34,37 @@ const expertiseAreas = [
     image: sculptureGenerale1,
     title: "Sculpture",
     description: "Création d'ornements, bas-reliefs et sculptures en ronde-bosse dans la tradition des maîtres anciens, tout en introduisant des techniques plus contemporaines.",
+    anchor: "sculpture",
   },
   {
     image: dorureSavoirFaire,
     title: "Dorure",
     description: "Application de feuilles d'or, d'argent et de cuivre selon les techniques traditionnelles.",
+    anchor: "dorure",
   },
   {
     image: patrimoine3,
     title: "Restauration patrimoine",
     description: "Conservation et restauration d'éléments sculptés et dorés pour monuments historiques.",
+    anchor: "restauration",
   },
   {
     image: modelage2,
     title: "Modelage",
     description: "Modelage en terre et création de formes originales.",
+    anchor: "modelage",
   },
   {
     image: moulage1,
     title: "Moulage",
     description: "Moulage traditionnel en plâtre et reproductions fidèles.",
+    anchor: "platre",
   },
   {
     image: patineFinition,
     title: "Patine et Finition",
     description: "Patines et finitions pour sublimer chaque œuvre.",
+    anchor: "patine",
   },
 ];
 
@@ -149,9 +155,10 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {expertiseAreas.map((area, index) => (
-              <div
+              <Link
                 key={area.title}
-                className="relative group overflow-hidden animate-fade-in cursor-pointer"
+                to={`/savoir-faire#${area.anchor}`}
+                className="relative group overflow-hidden animate-fade-in cursor-pointer block"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="aspect-[4/3] overflow-hidden">
@@ -171,7 +178,7 @@ const Index = () => {
                     {area.description}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -203,14 +210,14 @@ const Index = () => {
             <div className="lg:pl-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-px bg-accent" />
-                <span className="text-accent text-sm tracking-[0.2em] uppercase">
+                <h2 className="font-display text-3xl font-semibold text-amber-800">
                   Œuvre phare
-                </span>
+                </h2>
               </div>
 
-              <h2 className="font-display text-4xl font-semibold text-foreground mb-4">
+              <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
                 Enigma
-              </h2>
+              </h3>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Cette sculpture incarne l'essence de mon travail : un profil féminin mystérieux, sublimé par la délicatesse de la feuille d'or. Inspirée par l'élégance géométrique de l'Art Déco, Enigma représente la fusion parfaite entre tradition et modernité.
@@ -252,7 +259,7 @@ const Index = () => {
             </blockquote>
 
             <p className="text-accent tracking-[0.2em] uppercase text-sm">
-              — Aurélie Villemur, Artisane d'Art, sculptrice & doreuse sur bois
+              — Aurélie Villemur, Artisane d'Art, Sculptrice, Doreuse sur bois
             </p>
           </div>
         </div>

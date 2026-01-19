@@ -223,7 +223,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium text-foreground mb-1">Atelier</h3>
                       <p className="text-muted-foreground">
-                        France<br />
+                        Toulouse<br />
                         <span className="text-sm italic">Sur rendez-vous uniquement</span>
                       </p>
                     </div>
