@@ -34,7 +34,7 @@ const Navbar = () => {
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className={`art-deco-link text-sm font-medium tracking-wide transition-colors duration-300 ${
+                  className={`art-deco-link text-base font-semibold tracking-wide transition-colors duration-300 ${
                     location.pathname === link.path
                       ? "text-accent"
                       : "text-foreground/80 hover:text-foreground"

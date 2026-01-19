@@ -1,18 +1,22 @@
+import { useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
-import { Link } from "react-router-dom";
-import { ArrowRight, Hammer, Sparkles, Shield, Clock, Palette, Box, Brush } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Photos atelier
-import atelierModelage from "@/assets/atelier-modelage.jpg";
-import atelierDorure1 from "@/assets/atelier-dorure-1.jpg";
-import atelierDorure2 from "@/assets/atelier-dorure-2.jpg";
+// Photos savoir-faire
+import sculptureGenerale1 from "@/assets/sculpture-generale-1.jpg";
+import dorure1 from "@/assets/dorure-1.jpg";
+import modelage2 from "@/assets/modelage-2.jpeg";
+import moulage1 from "@/assets/moulage-1.jpg";
+import patineFinition from "@/assets/patine-finition.png";
 
-const techniques = [
+const savoirFaireItems = [
   {
-    icon: Hammer,
+    id: "sculpture",
     title: "Sculpture sur bois",
+    image: sculptureGenerale1,
     description: "Chaque sculpture est une rencontre entre le bois et la lumière. Inspirée par la nature, les voyages et les symboles, je conçois des pièces uniques qui mêlent tradition et contemporanéité.",
     details: [
       "Bas-reliefs et hauts-reliefs",
@@ -22,8 +26,9 @@ const techniques = [
     ],
   },
   {
-    icon: Sparkles,
+    id: "dorure",
     title: "Dorure à la feuille",
+    image: dorure1,
     description: "La dorure à la feuille est un art délicat qui sublime le bois et révèle ses reliefs. J'utilise des techniques ancestrales pour appliquer l'or, l'argent ou d'autres métaux précieux, selon des méthodes respectueuses de la tradition.",
     details: [
       "Dorure à la détrempe (à l'eau)",
@@ -33,8 +38,9 @@ const techniques = [
     ],
   },
   {
-    icon: Box,
+    id: "modelage",
     title: "Modelage",
+    image: modelage2,
     description: "Le modelage est la première étape de nombreuses créations. Travailler la terre permet de donner forme à une idée avec une grande liberté, avant de la transposer dans d'autres matériaux.",
     details: [
       "Modelage en terre",
@@ -44,19 +50,20 @@ const techniques = [
     ],
   },
   {
-    icon: Clock,
+    id: "platre",
     title: "Plâtre",
+    image: moulage1,
     description: "Le travail du plâtre est une discipline complémentaire essentielle. Il permet de créer des reproductions fidèles, des moulages ou des créations originales avec une grande finesse de détail.",
     details: [
       "Moulage en creux et à bon-creux",
       "Tirage au plâtre",
       "Reproductions et éditions",
-      "Ornements architecturaux en staff",
     ],
   },
   {
-    icon: Palette,
+    id: "patine",
     title: "Patine",
+    image: patineFinition,
     description: "La patine donne son caractère final aux œuvres. Qu'il s'agisse de vieillir artificiellement une pièce, de créer un faux marbre ou d'appliquer des glacis subtils, ces techniques requièrent patience et savoir-faire.",
     details: [
       "Patines acryliques",
@@ -68,6 +75,19 @@ const techniques = [
 ];
 
 const SavoirFaire = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
+
   return (
     <Layout>
       {/* Hero */}
@@ -92,7 +112,7 @@ const SavoirFaire = () => {
         </div>
       </section>
 
-      {/* Techniques */}
+      {/* Savoir-faire items */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <SectionHeading
@@ -100,81 +120,61 @@ const SavoirFaire = () => {
             subtitle="Un savoir-faire transmis de génération en génération"
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-            {techniques.map((technique) => (
+          <div className="mt-12 space-y-20">
+            {savoirFaireItems.map((item, index) => (
               <div
-                key={technique.title}
-                className="bg-card p-8 border border-border hover:border-accent/50 transition-colors duration-300"
+                key={item.id}
+                id={item.id}
+                className="scroll-mt-24"
               >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 flex items-center justify-center border border-accent text-accent">
-                    <technique.icon size={24} strokeWidth={1.5} />
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                  {/* Image */}
+                  <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                    <div className="aspect-[4/3] bg-secondary overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {/* Cadre décoratif */}
+                    <div className={`absolute -bottom-4 ${index % 2 === 1 ? '-left-4' : '-right-4'} w-full h-full border-2 border-accent -z-10`} />
                   </div>
-                  <h3 className="font-display text-2xl font-semibold text-foreground">
-                    {technique.title}
-                  </h3>
+
+                  {/* Texte */}
+                  <div className={`${index % 2 === 1 ? 'lg:order-1 lg:pr-8' : 'lg:pl-8'}`}>
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-px bg-accent" />
+                      <h2 className="font-display text-3xl font-semibold text-amber-800">
+                        {item.title}
+                      </h2>
+                    </div>
+
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      {item.description}
+                    </p>
+
+                    <ul className="space-y-2">
+                      {item.details.map((detail) => (
+                        <li
+                          key={detail}
+                          className="flex items-center gap-3 text-sm text-foreground"
+                        >
+                          <span className="w-1.5 h-1.5 rotate-45 bg-accent flex-shrink-0" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {technique.description}
-                </p>
-
-                <ul className="space-y-2">
-                  {technique.details.map((detail) => (
-                    <li
-                      key={detail}
-                      className="flex items-center gap-3 text-sm text-foreground"
-                    >
-                      <span className="w-1.5 h-1.5 rotate-45 bg-accent flex-shrink-0" />
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* L'atelier en action */}
-      <section className="py-16 bg-background border-t border-border">
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="w-8 h-px bg-accent" />
-            <span className="text-accent text-sm tracking-[0.2em] uppercase">
-              L'atelier en action
-            </span>
-            <div className="w-8 h-px bg-accent" />
-          </div>
-          
-          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
-            <div className="aspect-[3/4] overflow-hidden">
-              <img
-                src={atelierModelage}
-                alt="Aurélie travaillant le modelage en terre"
-                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="aspect-[3/4] overflow-hidden">
-              <img
-                src={atelierDorure1}
-                alt="Aurélie appliquant la feuille d'or sur un cadre"
-                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="aspect-[3/4] overflow-hidden">
-              <img
-                src={atelierDorure2}
-                alt="Aurélie en train de dorer un ornement"
-                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Restauration du Patrimoine */}
-      <section className="py-20 bg-secondary/30">
+      <section id="restauration" className="py-20 bg-secondary/30 scroll-mt-24">
         <div className="container mx-auto px-6">
           <SectionHeading
             title="Restauration du patrimoine"

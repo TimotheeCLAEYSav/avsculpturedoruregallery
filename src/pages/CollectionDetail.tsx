@@ -59,7 +59,7 @@ const allArtworks: Artwork[] = [
     title: "Enigma",
     collection: "femme",
     categoryLabel: "Femme",
-    description: "Sculpture représentant un profil de femme avec détails à la feuille d'or.",
+    description: "Ronde bosse sur socle (meuble). Luminaire d'inspiration Max Le Verrier, de style Art Déco en noyer, dorure, patine et faux marbre.\nDimensions (mm): 1500 x 400 x 330\n2023",
   },
   {
     id: 2,
@@ -74,7 +74,7 @@ const allArtworks: Artwork[] = [
     title: "Frida Kahlo",
     collection: "femme",
     categoryLabel: "Femme",
-    description: "Buste sculpté en bois représentant Frida Kahlo, avec ornements floraux et détails dorés.",
+    description: "Ronde bosse sur socle en bois tourné inspirée de l'artiste Frida Kahlo. Tilleul, faux marbre, teinte, cire, bronzine, patine et fleurs artificielles.\nDimensions (mm): 650 x 230 x 210\n2023",
   },
   {
     id: 3,
@@ -83,10 +83,10 @@ const allArtworks: Artwork[] = [
       { src: basRelief2, alt: "Le voyage - détail du visage avec dorure" },
       { src: basRelief3, alt: "Le voyage - détail doré" },
     ],
-    title: "Le voyage",
+    title: "Le Voyage",
     collection: "femme",
     categoryLabel: "Femme",
-    description: "Bas-relief sculpté représentant un voyage onirique, rehaussé de feuille d'or.",
+    description: "Bas relief inspiré par les créations d'Alphonse Mucha et de voyages. Noyer, dorure à la mixtion avec feuille d'or, cire, patine et insertion d'une boussole.\nDimensions (mm): 480 x 670 x 70\n2023",
   },
   // Collection Faune
   {
@@ -96,10 +96,10 @@ const allArtworks: Artwork[] = [
       { src: faune1, alt: "Le scarabée - vue détaillée" },
       { src: faune2, alt: "Le scarabée - autre vue" },
     ],
-    title: "Le scarabée",
+    title: "Le Scarabée",
     collection: "faune",
     categoryLabel: "Faune",
-    description: "Sculpture représentant un scarabée, symbole de renaissance et de transformation.",
+    description: "Sculpture représentant un scarabée, symbole de renaissance et de transformation. Différents modèles existent en bois de noyer et en plâtre polychrome.\nDimensions (mm): 180 x 140 x 35\n2025",
   },
   // Collection Flore
   {
@@ -107,22 +107,22 @@ const allArtworks: Artwork[] = [
     images: [
       { src: flore1, alt: "La pivoine - sculpture florale" },
     ],
-    title: "La pivoine",
+    title: "La Pivoine",
     collection: "flore",
     categoryLabel: "Flore",
-    description: "Pivoine sculptée dans le bois avec délicatesse et sensibilité.",
+    description: "Pivoine sculptée dans le bois avec délicatesse et sensibilité, en noyer, cire et patine.\nDimensions (mm): diamètre 125\n2025",
   },
   {
     id: 7,
     images: [
-      { src: hokusai, alt: "Hokusai - vue principale" },
-      { src: hokusai1, alt: "Hokusai - autre angle" },
-      { src: hokusai2, alt: "Hokusai - détail" },
+      { src: hokusai, alt: "Plongeon - vue principale" },
+      { src: hokusai1, alt: "Plongeon - autre angle" },
+      { src: hokusai2, alt: "Plongeon - détail" },
     ],
-    title: "Hokusai",
+    title: "Plongeon",
     collection: "flore",
     categoryLabel: "Flore",
-    description: "Panneau doré d'inspiration japonaise, hommage à l'art d'Hokusai.",
+    description: "Dorure à la détrempe avec feuille d'or inspirée d'une estampe d'Hokusai, Hortensia et hirondelle.\nDimensions (mm): 360 x 190 x 22\n2023",
   },
   // Collection Contour
   {
@@ -133,7 +133,7 @@ const allArtworks: Artwork[] = [
     title: "Miroir Louis XVI",
     collection: "contour",
     categoryLabel: "Contour",
-    description: "Cadre sculpté et doré dans le style Louis XVI, sublimant le miroir qu'il entoure.",
+    description: "Châssis et éléments sculptés. Tilleul, dorure à la détrempe, peinture.\nDimensions (mm): 740 x 390 x 120\n2023",
   },
 ];
 
