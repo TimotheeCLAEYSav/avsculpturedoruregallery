@@ -34,6 +34,7 @@ interface ArtworkImage {
   src: string;
   alt: string;
   objectPosition?: "center" | "top";
+  objectFit?: "cover" | "contain";
 }
 
 interface Artwork {
@@ -128,7 +129,7 @@ const allArtworks: Artwork[] = [
   {
     id: 6,
     images: [
-      { src: contour, alt: "Miroir Louis XVI - vue principale" },
+      { src: contour, alt: "Miroir Louis XVI - vue principale", objectFit: "contain" },
     ],
     title: "Miroir Louis XVI",
     collection: "contour",
@@ -258,6 +259,7 @@ const CollectionDetail = () => {
                       onClick={() => openArtwork(artwork)}
                       size={size}
                       objectPosition={artwork.images[0].objectPosition}
+                      objectFit={artwork.images[0].objectFit}
                     />
                     {artwork.images.length > 1 && (
                       <div className="mt-2 text-center">

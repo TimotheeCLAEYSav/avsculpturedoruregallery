@@ -6,9 +6,10 @@ interface ImageCardProps {
   onClick?: () => void;
   size?: "small" | "medium" | "large";
   objectPosition?: "center" | "top";
+  objectFit?: "cover" | "contain";
 }
 
-const ImageCard = ({ src, alt, title, category, onClick, size = "medium", objectPosition = "center" }: ImageCardProps) => {
+const ImageCard = ({ src, alt, title, category, onClick, size = "medium", objectPosition = "center", objectFit = "cover" }: ImageCardProps) => {
   const aspectClasses = {
     small: "aspect-square",
     medium: "aspect-[4/5]",
@@ -18,6 +19,11 @@ const ImageCard = ({ src, alt, title, category, onClick, size = "medium", object
   const positionClasses = {
     center: "object-center",
     top: "object-top",
+  };
+
+  const fitClasses = {
+    cover: "object-cover",
+    contain: "object-contain",
   };
 
   return (
@@ -34,7 +40,7 @@ const ImageCard = ({ src, alt, title, category, onClick, size = "medium", object
         <img
           src={src}
           alt={alt}
-          className={`w-full h-full object-cover ${positionClasses[objectPosition]} transition-all duration-700 ease-out group-hover:scale-110`}
+          className={`w-full h-full ${fitClasses[objectFit]} ${positionClasses[objectPosition]} transition-all duration-700 ease-out group-hover:scale-110`}
           loading="lazy"
         />
       </div>
