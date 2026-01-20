@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import { ArrowRight, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Lightbox from "@/components/Lightbox";
 
 // Photos savoir-faire - nouvelles images
 import sculptureSavoirfaire from "@/assets/sculpture-savoirfaire.jpg";
@@ -89,6 +90,13 @@ const patrimoineGallery = [
 
 const SavoirFaire = () => {
   const location = useLocation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
 
   useEffect(() => {
     if (location.hash) {
@@ -244,21 +252,32 @@ const SavoirFaire = () => {
 
             {/* Galerie photos patrimoine */}
             <div className="mt-12">
-              <h3 className="font-display text-xl font-semibold text-foreground mb-6">
-                Quelques réalisations
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 gap-6">
                 {patrimoineGallery.map((photo, index) => (
-                  <div key={index} className="aspect-square overflow-hidden bg-secondary">
+                  <div 
+                    key={index} 
+                    className="aspect-[4/3] overflow-hidden bg-secondary cursor-pointer group"
+                    onClick={() => openLightbox(index)}
+                  >
                     <img
                       src={photo.src}
                       alt={photo.alt}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 ))}
               </div>
             </div>
+
+            <Lightbox
+              images={patrimoineGallery}
+              currentIndex={lightboxIndex}
+              isOpen={lightboxOpen}
+              onClose={() => setLightboxOpen(false)}
+              onNext={() => setLightboxIndex((prev) => (prev + 1) % patrimoineGallery.length)}
+              onPrev={() => setLightboxIndex((prev) => (prev - 1 + patrimoineGallery.length) % patrimoineGallery.length)}
+              onIndexChange={setLightboxIndex}
+            />
           </div>
         </div>
       </section>
