@@ -9,7 +9,7 @@ import sculpture3 from "@/assets/sculpture-3.jpg";
 import dorure1 from "@/assets/dorure-1.jpg";
 import sculptureGenerale1 from "@/assets/sculpture-generale-1.jpg";
 import dorureSavoirFaire from "@/assets/dorure-savoirfaire.jpg";
-import patrimoine3 from "@/assets/patrimoine-3.jpeg";
+import restaurationPatrimoineNew from "@/assets/restauration-patrimoine-new.jpeg";
 import modelage2 from "@/assets/modelage-2.jpeg";
 import moulage1 from "@/assets/moulage-1.jpg";
 import patineFinition from "@/assets/patine-finition.png";
@@ -43,7 +43,7 @@ const expertiseAreas = [
     anchor: "dorure",
   },
   {
-    image: patrimoine3,
+    image: restaurationPatrimoineNew,
     title: "Restauration patrimoine",
     description: "Conservation et restauration d'éléments sculptés et dorés pour monuments historiques.",
     anchor: "restauration",
@@ -188,8 +188,8 @@ const Index = () => {
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Image principale */}
-            <div className="relative group">
+            {/* Image principale - lien vers l'œuvre */}
+            <Link to="/collections/femme" className="relative group block">
               <div className="aspect-[3/4] overflow-hidden bg-card">
                 <img
                   src={sculpture1}
@@ -204,7 +204,7 @@ const Index = () => {
               </div>
               {/* Cadre décoratif */}
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-accent -z-10" />
-            </div>
+            </Link>
 
             {/* Description */}
             <div className="lg:pl-8">
@@ -259,7 +259,13 @@ const Index = () => {
             </blockquote>
 
             <p className="text-accent tracking-[0.2em] uppercase text-sm">
-              — Aurélie Villemur, Artisane d'Art, Sculptrice, Doreuse sur bois
+              — Aurélie Villemur
+            </p>
+            <p className="text-accent/80 tracking-[0.15em] uppercase text-xs mt-1">
+              Artisane d'Art
+            </p>
+            <p className="text-accent/80 tracking-[0.15em] uppercase text-xs">
+              Sculptrice, Ébéniste et Doreuse sur bois
             </p>
           </div>
         </div>

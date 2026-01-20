@@ -5,18 +5,24 @@ import SectionHeading from "@/components/SectionHeading";
 import { ArrowRight, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Photos savoir-faire
-import sculptureGenerale1 from "@/assets/sculpture-generale-1.jpg";
-import dorure1 from "@/assets/dorure-1.jpg";
-import modelage2 from "@/assets/modelage-2.jpeg";
-import moulage1 from "@/assets/moulage-1.jpg";
-import patineFinition from "@/assets/patine-finition.png";
+// Photos savoir-faire - nouvelles images
+import sculptureSavoirfaire from "@/assets/sculpture-savoirfaire.jpg";
+import dorureSavoirfaireNew from "@/assets/dorure-savoirfaire-new.jpeg";
+import modelageSavoirfaire from "@/assets/modelage-savoirfaire.jpg";
+import platreSavoirfaire from "@/assets/platre-savoirfaire.jpg";
+import patineSavoirfaire from "@/assets/patine-savoirfaire.jpg";
+
+// Photos patrimoine
+import patrimoine4 from "@/assets/patrimoine-4.jpg";
+import patrimoine6 from "@/assets/patrimoine-6.jpg";
+import patrimoine7 from "@/assets/patrimoine-7.jpg";
+import patrimoine8 from "@/assets/patrimoine-8.jpg";
 
 const savoirFaireItems = [
   {
     id: "sculpture",
     title: "Sculpture sur bois",
-    image: sculptureGenerale1,
+    image: sculptureSavoirfaire,
     description: "Chaque sculpture est une rencontre entre le bois et la lumière. Inspirée par la nature, les voyages et les symboles, je conçois des pièces uniques qui mêlent tradition et contemporanéité.",
     details: [
       "Bas-reliefs et hauts-reliefs",
@@ -28,7 +34,7 @@ const savoirFaireItems = [
   {
     id: "dorure",
     title: "Dorure à la feuille",
-    image: dorure1,
+    image: dorureSavoirfaireNew,
     description: "La dorure à la feuille est un art délicat qui sublime le bois et révèle ses reliefs. J'utilise des techniques ancestrales pour appliquer l'or, l'argent ou d'autres métaux précieux, selon des méthodes respectueuses de la tradition.",
     details: [
       "Dorure à la détrempe (à l'eau)",
@@ -40,7 +46,7 @@ const savoirFaireItems = [
   {
     id: "modelage",
     title: "Modelage",
-    image: modelage2,
+    image: modelageSavoirfaire,
     description: "Le modelage est la première étape de nombreuses créations. Travailler la terre permet de donner forme à une idée avec une grande liberté, avant de la transposer dans d'autres matériaux.",
     details: [
       "Modelage en terre",
@@ -52,7 +58,7 @@ const savoirFaireItems = [
   {
     id: "platre",
     title: "Plâtre",
-    image: moulage1,
+    image: platreSavoirfaire,
     description: "Le travail du plâtre est une discipline complémentaire essentielle. Il permet de créer des reproductions fidèles, des moulages ou des créations originales avec une grande finesse de détail.",
     details: [
       "Moulage en creux et à bon-creux",
@@ -63,7 +69,7 @@ const savoirFaireItems = [
   {
     id: "patine",
     title: "Patine",
-    image: patineFinition,
+    image: patineSavoirfaire,
     description: "La patine donne son caractère final aux œuvres. Qu'il s'agisse de vieillir artificiellement une pièce, de créer un faux marbre ou d'appliquer des glacis subtils, ces techniques requièrent patience et savoir-faire.",
     details: [
       "Patines acryliques",
@@ -72,6 +78,13 @@ const savoirFaireItems = [
       "Finitions protectrices",
     ],
   },
+];
+
+const patrimoineGallery = [
+  { src: patrimoine4, alt: "Restauration de fresques murales" },
+  { src: patrimoine6, alt: "Détail de sculpture restaurée" },
+  { src: patrimoine7, alt: "Boiseries sculptées en cours de restauration" },
+  { src: patrimoine8, alt: "Intérieur restauré avec boiseries" },
 ];
 
 const SavoirFaire = () => {
@@ -228,6 +241,24 @@ const SavoirFaire = () => {
                 </div>
               </li>
             </ul>
+
+            {/* Galerie photos patrimoine */}
+            <div className="mt-12">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-6">
+                Quelques réalisations
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {patrimoineGallery.map((photo, index) => (
+                  <div key={index} className="aspect-square overflow-hidden bg-secondary">
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
