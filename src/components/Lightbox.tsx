@@ -121,7 +121,7 @@ const Lightbox = ({
             </h2>
           )}
           {description && (
-            <p className="text-white/70 leading-relaxed mb-6">{description}</p>
+            <p className="text-white/70 leading-relaxed mb-6 whitespace-pre-line">{description}</p>
           )}
 
           {/* Indicateur de position */}
