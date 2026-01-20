@@ -17,9 +17,9 @@ const Footer = () => {
               AVsculpturedorure
             </p>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Sculptrice, ébéniste et doreuse sur bois
-              <br />
               Artisane d'art
+              <br />
+              Sculptrice, ébéniste et doreuse sur bois
             </p>
           </div>
 
@@ -69,7 +69,7 @@ const Footer = () => {
                 <Instagram size={20} />             
               </a>
               <a
-                href="mailto:contact@avsculpturedorure.com"
+                href="mailto:av.sculpturedorure@gmail.com"
                 className="p-2 border border-primary-foreground/30 hover:border-accent hover:text-accent transition-colors"
                 aria-label="Email"
               >
