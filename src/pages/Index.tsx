@@ -189,7 +189,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image principale - lien vers l'œuvre */}
-            <Link to="/collections/femme" className="relative group block">
+            <Link to="/collections/femme?artwork=enigma" className="relative group block">
               <div className="aspect-[3/4] overflow-hidden bg-card">
                 <img
                   src={sculpture1}
