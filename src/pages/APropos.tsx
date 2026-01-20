@@ -33,7 +33,7 @@ const APropos = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Image Portrait */}
-            <div className="relative">
+            <div className="relative max-w-md mx-auto lg:mx-0">
               <div className="bg-secondary overflow-hidden">
                 <img
                   src={aProposPortrait}

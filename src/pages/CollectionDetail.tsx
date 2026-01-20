@@ -60,7 +60,7 @@ const allArtworks: Artwork[] = [
     title: "Enigma",
     collection: "femme",
     categoryLabel: "Femme",
-    description: "Ronde bosse sur socle (meuble). Luminaire d'inspiration Max Le Verrier, de style Art Déco en noyer, dorure, patine et faux marbre.\nDimensions (mm): 1500 x 400 x 330\n2023",
+    description: "Ronde bosse sur socle (meuble). Luminaire d'inspiration Max Le Verrier, de style Art Déco en noyer, dorure, patine et faux marbre.\n\nDimensions (mm): 1500 x 400 x 330\n\n2023",
   },
   {
     id: 2,
@@ -75,7 +75,7 @@ const allArtworks: Artwork[] = [
     title: "Frida Kahlo",
     collection: "femme",
     categoryLabel: "Femme",
-    description: "Ronde bosse sur socle en bois tourné inspirée de l'artiste Frida Kahlo. Tilleul, faux marbre, teinte, cire, bronzine, patine et fleurs artificielles.\nDimensions (mm): 650 x 230 x 210\n2023",
+    description: "Ronde bosse sur socle en bois tourné inspirée de l'artiste Frida Kahlo. Tilleul, faux marbre, teinte, cire, bronzine, patine et fleurs artificielles.\n\nDimensions (mm): 650 x 230 x 210\n\n2023",
   },
   {
     id: 3,
@@ -87,7 +87,7 @@ const allArtworks: Artwork[] = [
     title: "Le Voyage",
     collection: "femme",
     categoryLabel: "Femme",
-    description: "Bas relief inspiré par les créations d'Alphonse Mucha et de voyages. Noyer, dorure à la mixtion avec feuille d'or, cire, patine et insertion d'une boussole.\nDimensions (mm): 480 x 670 x 70\n2023",
+    description: "Bas relief inspiré par les créations d'Alphonse Mucha et de voyages. Noyer, dorure à la mixtion avec feuille d'or, cire, patine et insertion d'une boussole.\n\nDimensions (mm): 480 x 670 x 70\n\n2023",
   },
   // Collection Faune
   {
@@ -100,7 +100,7 @@ const allArtworks: Artwork[] = [
     title: "Le Scarabée",
     collection: "faune",
     categoryLabel: "Faune",
-    description: "Sculpture représentant un scarabée, symbole de renaissance et de transformation. Différents modèles existent en bois de noyer et en plâtre polychrome.\nDimensions (mm): 180 x 140 x 35\n2025",
+    description: "Sculpture représentant un scarabée, symbole de renaissance et de transformation. Différents modèles existent en bois de noyer et en plâtre polychrome.\n\nDimensions (mm): 180 x 140 x 35\n\n2025",
   },
   // Collection Flore
   {
@@ -111,7 +111,7 @@ const allArtworks: Artwork[] = [
     title: "La Pivoine",
     collection: "flore",
     categoryLabel: "Flore",
-    description: "Pivoine sculptée dans le bois avec délicatesse et sensibilité, en noyer, cire et patine.\nDimensions (mm): diamètre 125\n2025",
+    description: "Pivoine sculptée dans le bois avec délicatesse et sensibilité, en noyer, cire et patine.\n\nDimensions (mm): diamètre 125\n\n2025",
   },
   {
     id: 7,
@@ -123,7 +123,7 @@ const allArtworks: Artwork[] = [
     title: "Plongeon",
     collection: "flore",
     categoryLabel: "Flore",
-    description: "Dorure à la détrempe avec feuille d'or inspirée d'une estampe d'Hokusai, Hortensia et hirondelle.\nDimensions (mm): 360 x 190 x 22\n2023",
+    description: "Dorure à la détrempe avec feuille d'or inspirée d'une estampe d'Hokusai, Hortensia et hirondelle.\n\nDimensions (mm): 360 x 190 x 22\n\n2023",
   },
   // Collection Contour
   {
@@ -134,7 +134,7 @@ const allArtworks: Artwork[] = [
     title: "Miroir Louis XVI",
     collection: "contour",
     categoryLabel: "Contour",
-    description: "Châssis et éléments sculptés. Tilleul, dorure à la détrempe, peinture.\nDimensions (mm): 740 x 390 x 120\n2023",
+    description: "Châssis et éléments sculptés. Tilleul, dorure à la détrempe, peinture.\n\nDimensions (mm): 740 x 390 x 120\n\n2023",
   },
 ];
 
