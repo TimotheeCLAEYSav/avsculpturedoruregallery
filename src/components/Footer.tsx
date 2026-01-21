@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -44,7 +44,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/savoir-faire" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Savoir-faire & Patrimoine
+                  Savoir-faire
                 </Link>
               </li>
               <li>
@@ -67,6 +67,15 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <Instagram size={20} />             
+              </a>
+              <a
+                href="https://www.linkedin.com/in/aur%C3%A9lie-villemur-64b51378/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 border border-primary-foreground/30 hover:border-accent hover:text-accent transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
               </a>
               <a
                 href="mailto:av.sculpturedorure@gmail.com"
