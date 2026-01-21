@@ -124,7 +124,7 @@ const SavoirFaire = () => {
               Expertise & Patrimoine
             </p>
             <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6">
-              Savoir-faire & Patrimoine
+              Savoir-faire
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
               Des techniques ancestrales au service de la conservation et de la restauration du patrimoine historique.

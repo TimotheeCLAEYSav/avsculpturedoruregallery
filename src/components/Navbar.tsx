@@ -23,7 +23,7 @@ const Navbar = () => {
             <span className="font-display text-xl md:text-2xl font-semibold text-primary tracking-wide">
               Aurélie Villemur
             </span>
-            <span className="text-xs md:text-sm text-accent font-medium tracking-[0.2em] uppercase">
+            <span className="text-xs md:text-sm text-forest font-medium tracking-[0.2em] uppercase">
               AVsculpturedorure
             </span>
           </Link>
@@ -36,8 +36,8 @@ const Navbar = () => {
                   to={link.path}
                   className={`art-deco-link text-base font-semibold tracking-wide transition-colors duration-300 ${
                     location.pathname === link.path
-                      ? "text-accent"
-                      : "text-foreground/80 hover:text-foreground"
+                      ? "text-forest"
+                      : "text-foreground/80 hover:text-forest"
                   }`}
                 >
                   {link.label}

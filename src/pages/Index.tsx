@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture3 from "@/assets/sculpture-3.jpg";
 import dorure1 from "@/assets/dorure-1.jpg";
-import sculptureGenerale1 from "@/assets/sculpture-generale-1.jpg";
+import sculptureAccueil from "@/assets/sculpture-accueil.jpg";
 import dorureSavoirFaire from "@/assets/dorure-savoirfaire.jpg";
 import restaurationPatrimoineNew from "@/assets/restauration-patrimoine-new.jpeg";
 import modelage2 from "@/assets/modelage-2.jpeg";
@@ -31,7 +31,7 @@ const featuredWorks = [
 
 const expertiseAreas = [
   {
-    image: sculptureGenerale1,
+    image: sculptureAccueil,
     title: "Sculpture",
     description: "Création d'ornements, bas-reliefs et sculptures en ronde-bosse dans la tradition des maîtres anciens, tout en introduisant des techniques plus contemporaines.",
     anchor: "sculpture",
@@ -231,7 +231,7 @@ const Index = () => {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                className="border-forest text-forest hover:bg-forest hover:text-primary-foreground"
               >
                 <Link to="/collections" className="inline-flex items-center gap-2">
                   Découvrir toutes mes œuvres

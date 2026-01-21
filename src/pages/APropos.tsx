@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
-import aProposPortrait from "@/assets/a-propos-portrait.jpg";
+import aPropos2 from "@/assets/a-propos-2.jpg";
 import patrimoine1 from "@/assets/patrimoine-1.jpg";
 
 const APropos = () => {
@@ -36,7 +36,7 @@ const APropos = () => {
             <div className="relative max-w-md mx-auto lg:mx-0">
               <div className="bg-secondary overflow-hidden">
                 <img
-                  src={aProposPortrait}
+                  src={aPropos2}
                   alt="Portrait d'Aurélie Villemur dans un musée de sculptures"
                   className="w-full h-auto object-cover"
                 />
