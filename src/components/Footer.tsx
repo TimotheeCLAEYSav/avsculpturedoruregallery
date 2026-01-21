@@ -38,8 +38,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/oeuvres" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Œuvres
+                <Link to="/collections" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Collections
                 </Link>
               </li>
               <li>
