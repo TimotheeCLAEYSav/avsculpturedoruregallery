@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link, useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import ImageCard from "@/components/ImageCard";
 import Lightbox from "@/components/Lightbox";
@@ -159,11 +159,26 @@ const collectionTitles: Record<string, { title: string; description: string }> =
 
 const CollectionDetail = () => {
   const { collectionId } = useParams<{ collectionId: string }>();
+  const [searchParams] = useSearchParams();
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const collectionInfo = collectionId ? collectionTitles[collectionId] : null;
   const artworks = allArtworks.filter((artwork) => artwork.collection === collectionId);
+
+  // Ouvrir automatiquement une œuvre si le paramètre artwork est présent dans l'URL
+  useEffect(() => {
+    const artworkParam = searchParams.get("artwork");
+    if (artworkParam && artworks.length > 0) {
+      const artwork = artworks.find(
+        (a) => a.title.toLowerCase() === artworkParam.toLowerCase()
+      );
+      if (artwork) {
+        setSelectedArtwork(artwork);
+        setCurrentImageIndex(0);
+      }
+    }
+  }, [searchParams, artworks]);
 
   const openArtwork = (artwork: Artwork) => {
     setSelectedArtwork(artwork);
