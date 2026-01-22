@@ -167,19 +167,20 @@ const CollectionDetail = () => {
   const collectionInfo = collectionId ? collectionTitles[collectionId] : null;
   const artworks = allArtworks.filter((artwork) => artwork.collection === collectionId);
 
-  // Ouvrir automatiquement l'œuvre si paramètre URL artwork=xxx
+  // Ouvrir automatiquement l'œuvre si paramètre URL artwork=xxx (seulement au montage)
   useEffect(() => {
     const artworkParam = searchParams.get("artwork");
-    if (artworkParam) {
-      const artwork = artworks.find(
-        (a) => a.title.toLowerCase() === artworkParam.toLowerCase()
+    if (artworkParam && !selectedArtwork) {
+      const artwork = allArtworks.find(
+        (a) => a.collection === collectionId && a.title.toLowerCase() === artworkParam.toLowerCase()
       );
       if (artwork) {
         setSelectedArtwork(artwork);
         setCurrentImageIndex(0);
       }
     }
-  }, [searchParams, artworks]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [collectionId]);
 
   const openArtwork = (artwork: Artwork) => {
     setSelectedArtwork(artwork);
