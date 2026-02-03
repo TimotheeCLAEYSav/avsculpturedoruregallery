@@ -1,12 +1,10 @@
 name: Deploy to GitHub Pages
 
-# Déclenche le workflow sur chaque push sur main
 on:
   push:
-    branches:
-      - main
+    branches: 
+      - main  # déclenche le workflow sur chaque push sur main
 
-# Permissions nécessaires pour GitHub Pages
 permissions:
   pages: write
   contents: read
@@ -14,32 +12,25 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # Récupère le code
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Configure Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # Installe les dépendances
       - name: Install dependencies
         run: npm install
 
-      # Build le projet
       - name: Build project
         run: npm run build
 
-      # Upload du build pour GitHub Pages
-      - name: Upload artifact for GitHub Pages
+      - name: Upload build to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist  # Assurez-vous que le build sort bien ici
+          path: ./dist
 
-      # Déploye sur GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
