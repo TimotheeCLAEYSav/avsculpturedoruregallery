@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 import sculpture1 from "@/assets/sculpture-1.jpg";
 import flore1 from "@/assets/flore-1.png";
 import contour from "@/assets/contour.jpg";
-import faune from "@/assets/faune.jpg";
+import scarabeeNew1 from "@/assets/scarabee-new-1.jpg";
 
 interface Collection {
   id: string;
@@ -24,7 +24,7 @@ const collections: Collection[] = [
   {
     id: "faune",
     title: "Faune",
-    image: faune,
+    image: scarabeeNew1,
     available: true,
   },
   {
