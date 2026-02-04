@@ -29,6 +29,15 @@ import enigma3 from "@/assets/enigma-3.jpg";
 import hokusai from "@/assets/hokusai.jpg";
 import hokusai1 from "@/assets/hokusai-1.jpg";
 import hokusai2 from "@/assets/hokusai-2.jpg";
+import lotus1 from "@/assets/lotus-1.jpg";
+import lotus2 from "@/assets/lotus-2.jpg";
+import lotus3 from "@/assets/lotus-3.jpg";
+import lotus4 from "@/assets/lotus-4.jpg";
+import lotus5 from "@/assets/lotus-5.jpg";
+import lotus6 from "@/assets/lotus-6.jpg";
+import lotus7 from "@/assets/lotus-7.jpg";
+import lotus8 from "@/assets/lotus-8.jpg";
+import lotus9 from "@/assets/lotus-9.jpg";
 
 interface ArtworkImage {
   src: string;
@@ -88,6 +97,24 @@ const allArtworks: Artwork[] = [
     collection: "femme",
     categoryLabel: "Femme",
     description: "Bas relief inspiré par les créations d'Alphonse Mucha et de voyages. Noyer, dorure à la mixtion avec feuille d'or, cire, patine et insertion d'une boussole.\n\nDimensions (mm): 480 x 670 x 70\n\n2023",
+  },
+  {
+    id: 8,
+    images: [
+      { src: lotus1, alt: "Lotus - vue de face" },
+      { src: lotus2, alt: "Lotus - vue de profil" },
+      { src: lotus3, alt: "Lotus - vue de dos" },
+      { src: lotus4, alt: "Lotus - détail des pieds" },
+      { src: lotus5, alt: "Lotus - autre angle" },
+      { src: lotus6, alt: "Lotus - ambiance" },
+      { src: lotus7, alt: "Lotus - détail visage" },
+      { src: lotus8, alt: "Lotus - vue latérale" },
+      { src: lotus9, alt: "Lotus - détail socle" },
+    ],
+    title: "Lotus",
+    collection: "femme",
+    categoryLabel: "Femme",
+    description: "Ronde bosse sur socle. Luminaire d'inspiration Demetre Chiparus, de style Art Déco en noyer, dorure à la feuille de cuivre, patine.\n\nDimensions (mm): 250 x 160 x 120\n\n2026",
   },
   // Collection Faune
   {
