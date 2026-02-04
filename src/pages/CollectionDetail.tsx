@@ -29,6 +29,15 @@ import enigma3 from "@/assets/enigma-3.jpg";
 import hokusai from "@/assets/hokusai.jpg";
 import hokusai1 from "@/assets/hokusai-1.jpg";
 import hokusai2 from "@/assets/hokusai-2.jpg";
+import lotus1 from "@/assets/lotus-1.jpg";
+import lotus2 from "@/assets/lotus-2.jpg";
+import lotus3 from "@/assets/lotus-3.jpg";
+import lotus4 from "@/assets/lotus-4.jpg";
+import lotus5 from "@/assets/lotus-5.jpg";
+import lotus6 from "@/assets/lotus-6.jpg";
+import lotus7 from "@/assets/lotus-7.jpg";
+import lotus8 from "@/assets/lotus-8.jpg";
+import lotus9 from "@/assets/lotus-9.jpg";
 
 interface ArtworkImage {
   src: string;
