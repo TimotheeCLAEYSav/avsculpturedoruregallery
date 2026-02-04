@@ -20,6 +20,8 @@ import contour from "@/assets/contour.jpg";
 import faune from "@/assets/faune.jpg";
 import faune1 from "@/assets/faune-1.jpg";
 import faune2 from "@/assets/faune-2.jpg";
+import scarabeeNew1 from "@/assets/scarabee-new-1.jpg";
+import scarabeeNew2 from "@/assets/scarabee-new-2.jpg";
 import frida1 from "@/assets/frida-1.jpg";
 import fridaDetail2 from "@/assets/frida-detail-2.jpg";
 import fridaDetail3 from "@/assets/frida-detail-3.jpg";
@@ -124,6 +126,8 @@ const allArtworks: Artwork[] = [
   {
     id: 4,
     images: [
+      { src: scarabeeNew1, alt: "Le scarabée - vue de face fond blanc" },
+      { src: scarabeeNew2, alt: "Le scarabée - vue en situation" },
       { src: faune, alt: "Le scarabée - vue principale" },
       { src: faune1, alt: "Le scarabée - vue détaillée" },
       { src: faune2, alt: "Le scarabée - autre vue" },
