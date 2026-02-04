@@ -98,6 +98,24 @@ const allArtworks: Artwork[] = [
     categoryLabel: "Femme",
     description: "Bas relief inspiré par les créations d'Alphonse Mucha et de voyages. Noyer, dorure à la mixtion avec feuille d'or, cire, patine et insertion d'une boussole.\n\nDimensions (mm): 480 x 670 x 70\n\n2023",
   },
+  {
+    id: 8,
+    images: [
+      { src: lotus1, alt: "Lotus - vue de face" },
+      { src: lotus2, alt: "Lotus - vue de profil" },
+      { src: lotus3, alt: "Lotus - vue de dos" },
+      { src: lotus4, alt: "Lotus - détail des pieds" },
+      { src: lotus5, alt: "Lotus - autre angle" },
+      { src: lotus6, alt: "Lotus - ambiance" },
+      { src: lotus7, alt: "Lotus - détail visage" },
+      { src: lotus8, alt: "Lotus - vue latérale" },
+      { src: lotus9, alt: "Lotus - détail socle" },
+    ],
+    title: "Lotus",
+    collection: "femme",
+    categoryLabel: "Femme",
+    description: "Ronde bosse sur socle. Luminaire d'inspiration Demetre Chiparus, de style Art Déco en noyer, dorure à la feuille de cuivre, patine.\n\nDimensions (mm): 250 x 160 x 120\n\n2026",
+  },
   // Collection Faune
   {
     id: 4,
