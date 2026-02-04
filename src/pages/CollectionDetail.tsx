@@ -29,6 +29,10 @@ import enigma3 from "@/assets/enigma-3.jpg";
 import hokusai from "@/assets/hokusai.jpg";
 import hokusai1 from "@/assets/hokusai-1.jpg";
 import hokusai2 from "@/assets/hokusai-2.jpg";
+import miroir2 from "@/assets/miroir-2.jpg";
+import miroir3 from "@/assets/miroir-3.jpg";
+import miroir4 from "@/assets/miroir-4.jpg";
+import miroir5 from "@/assets/miroir-5.jpg";
 import lotus1 from "@/assets/lotus-1.jpg";
 import lotus2 from "@/assets/lotus-2.jpg";
 import lotus3 from "@/assets/lotus-3.jpg";
@@ -157,6 +161,10 @@ const allArtworks: Artwork[] = [
     id: 6,
     images: [
       { src: contour, alt: "Miroir Louis XVI - vue principale", objectFit: "contain" },
+      { src: miroir2, alt: "Miroir Louis XVI - vue d'ensemble" },
+      { src: miroir3, alt: "Miroir Louis XVI - détail couronne" },
+      { src: miroir4, alt: "Miroir Louis XVI - détail médaillon" },
+      { src: miroir5, alt: "Miroir Louis XVI - détail coin" },
     ],
     title: "Miroir Louis XVI",
     collection: "contour",
