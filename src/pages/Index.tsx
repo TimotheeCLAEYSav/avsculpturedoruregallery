@@ -9,7 +9,7 @@ import sculpture3 from "@/assets/sculpture-3.jpg";
 import dorure1 from "@/assets/dorure-1.jpg";
 import sculptureAccueil from "@/assets/sculpture-accueil.jpg";
 import dorureSavoirFaire from "@/assets/dorure-savoirfaire.jpg";
-import restaurationPatrimoineNew from "@/assets/restauration-patrimoine-new.jpeg";
+import patrimoine6 from "@/assets/patrimoine-6.jpg";
 import modelage2 from "@/assets/modelage-2.jpeg";
 import moulage1 from "@/assets/moulage-1.jpg";
 import patineFinition from "@/assets/patine-finition.png";
@@ -43,7 +43,7 @@ const expertiseAreas = [
     anchor: "dorure",
   },
   {
-    image: restaurationPatrimoineNew,
+    image: patrimoine6,
     title: "Restauration patrimoine",
     description: "Conservation et restauration d'éléments sculptés et dorés pour monuments historiques.",
     anchor: "restauration",

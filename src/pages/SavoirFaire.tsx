@@ -210,7 +210,7 @@ const SavoirFaire = () => {
               Restaurer une œuvre, c'est lui redonner son intégrité tout en respectant son histoire. J'interviens sur des éléments en bois sculpté, doré ou polychrome provenant de monuments historiques, d'objets d'art ou de mobilier ancien. Mon approche allie rigueur technique, respect des matériaux originaux et recherche d'une harmonie visuelle fidèle à l'esprit de l'œuvre.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              J'ai travaillé pour l'entreprise Ateliers Bonhoure notamment sur les travaux de restauration de l'Église Notre Dame du Taur à Toulouse et de l'Église de Camurac ainsi qu'avec Emmanuelle Rossat-Mignod sur la restauration du retable de Labarthe Inard.
+              J'ai travaillé pour l'entreprise Ateliers Bonhoure notamment sur les travaux de restauration de l'Église Notre-Dame-du-Taur à Toulouse.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8 bg-card p-4 border-l-4 border-accent">
               <strong className="text-foreground">Restauration pour particuliers :</strong> Je restaure également des meubles et pièces appartenant à des particuliers, en plus des éléments patrimoniaux. Chaque objet mérite une attention particulière pour retrouver sa splendeur d'origine.
