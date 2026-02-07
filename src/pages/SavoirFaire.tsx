@@ -16,8 +16,6 @@ import patineSavoirfaire from "@/assets/patine-savoirfaire.jpg";
 // Photos patrimoine
 import patrimoine4 from "@/assets/patrimoine-4.jpg";
 import patrimoine6 from "@/assets/patrimoine-6.jpg";
-import patrimoine7 from "@/assets/patrimoine-7.jpg";
-import patrimoine8 from "@/assets/patrimoine-8.jpg";
 
 const savoirFaireItems = [
   {
@@ -84,8 +82,6 @@ const savoirFaireItems = [
 const patrimoineGallery = [
   { src: patrimoine4, alt: "Restauration de fresques murales" },
   { src: patrimoine6, alt: "Détail de sculpture restaurée" },
-  { src: patrimoine7, alt: "Boiseries sculptées en cours de restauration" },
-  { src: patrimoine8, alt: "Intérieur restauré avec boiseries" },
 ];
 
 const SavoirFaire = () => {
@@ -214,7 +210,7 @@ const SavoirFaire = () => {
               Restaurer une œuvre, c'est lui redonner son intégrité tout en respectant son histoire. J'interviens sur des éléments en bois sculpté, doré ou polychrome provenant de monuments historiques, d'objets d'art ou de mobilier ancien. Mon approche allie rigueur technique, respect des matériaux originaux et recherche d'une harmonie visuelle fidèle à l'esprit de l'œuvre.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              J'ai collaboré avec plusieurs artisans d'art notamment sur les travaux de restauration de l'Église Notre Dame du Taur à Toulouse et sur les retables des Églises de Camurac et de Labarthe Inard.
+              J'ai travaillé pour l'entreprise Ateliers Bonhoure notamment sur les travaux de restauration de l'Église Notre Dame du Taur à Toulouse et de l'Église de Camurac ainsi qu'avec Emmanuelle Rossat-Mignod sur la restauration du retable de Labarthe Inard.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8 bg-card p-4 border-l-4 border-accent">
               <strong className="text-foreground">Restauration pour particuliers :</strong> Je restaure également des meubles et pièces appartenant à des particuliers, en plus des éléments patrimoniaux. Chaque objet mérite une attention particulière pour retrouver sa splendeur d'origine.
