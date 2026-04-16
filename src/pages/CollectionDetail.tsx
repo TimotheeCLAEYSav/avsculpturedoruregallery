@@ -44,6 +44,15 @@ import lotus6 from "@/assets/lotus-6.jpg";
 import lotus7 from "@/assets/lotus-7.jpg";
 import lotus8 from "@/assets/lotus-8.jpg";
 import lotus9 from "@/assets/lotus-9.jpg";
+import lotusPoly1 from "@/assets/lotus-poly-1.jpg";
+import lotusPoly2 from "@/assets/lotus-poly-2.jpg";
+import lotusPoly3 from "@/assets/lotus-poly-3.jpg";
+import lotusPoly4 from "@/assets/lotus-poly-4.jpg";
+import lotusPoly5 from "@/assets/lotus-poly-5.jpg";
+import lotusPoly6 from "@/assets/lotus-poly-6.jpg";
+import lotusPoly7 from "@/assets/lotus-poly-7.jpg";
+import lotusPoly8 from "@/assets/lotus-poly-8.jpg";
+import lotusPoly9 from "@/assets/lotus-poly-9.jpg";
 
 interface ArtworkImage {
   src: string;
