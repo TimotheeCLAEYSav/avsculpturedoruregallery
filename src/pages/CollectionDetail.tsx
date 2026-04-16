@@ -44,6 +44,15 @@ import lotus6 from "@/assets/lotus-6.jpg";
 import lotus7 from "@/assets/lotus-7.jpg";
 import lotus8 from "@/assets/lotus-8.jpg";
 import lotus9 from "@/assets/lotus-9.jpg";
+import lotusPoly1 from "@/assets/lotus-poly-1.jpg";
+import lotusPoly2 from "@/assets/lotus-poly-2.jpg";
+import lotusPoly3 from "@/assets/lotus-poly-3.jpg";
+import lotusPoly4 from "@/assets/lotus-poly-4.jpg";
+import lotusPoly5 from "@/assets/lotus-poly-5.jpg";
+import lotusPoly6 from "@/assets/lotus-poly-6.jpg";
+import lotusPoly7 from "@/assets/lotus-poly-7.jpg";
+import lotusPoly8 from "@/assets/lotus-poly-8.jpg";
+import lotusPoly9 from "@/assets/lotus-poly-9.jpg";
 
 interface ArtworkImage {
   src: string;
@@ -121,6 +130,25 @@ const allArtworks: Artwork[] = [
     collection: "femme",
     categoryLabel: "Femme",
     description: "Ronde bosse sur socle. Luminaire d'inspiration Demetre Chiparus, de style Art Déco en noyer, dorure à la feuille de cuivre, patine.\n\nDimensions (mm): 250 x 160 x 120\n\n2026",
+  },
+  // Lotus Polychrome
+  {
+    id: 9,
+    images: [
+      { src: lotusPoly1, alt: "Lotus Polychrome - vue de face" },
+      { src: lotusPoly2, alt: "Lotus Polychrome - vue de profil" },
+      { src: lotusPoly3, alt: "Lotus Polychrome - vue de dos" },
+      { src: lotusPoly4, alt: "Lotus Polychrome - détail des pieds" },
+      { src: lotusPoly5, alt: "Lotus Polychrome - autre angle" },
+      { src: lotusPoly6, alt: "Lotus Polychrome - ambiance" },
+      { src: lotusPoly7, alt: "Lotus Polychrome - détail visage" },
+      { src: lotusPoly8, alt: "Lotus Polychrome - vue latérale" },
+      { src: lotusPoly9, alt: "Lotus Polychrome - détail socle" },
+    ],
+    title: "Lotus (Polychrome)",
+    collection: "femme",
+    categoryLabel: "Femme",
+    description: "Ronde bosse sur socle. Luminaire d'inspiration Demetre Chiparus, de style Art Déco en plâtre, bois d'Ipé noyer, polychromie.\n\nDimensions (mm): 250 x 160 x 120\n\n2026",
   },
   // Collection Faune
   {
