@@ -148,7 +148,7 @@ const allArtworks: Artwork[] = [
     title: "Lotus (Polychrome)",
     collection: "femme",
     categoryLabel: "Femme",
-    description: "Ronde bosse sur socle. Luminaire d'inspiration Demetre Chiparus, de style Art Déco en plâtre, bois d'Ipé noyer, polychromie.\n\nDimensions (mm): 250 x 160 x 120\n\n2026\n\nPièces disponibles\n\nCommandes sur demandes\n\nN'hésitez pas à me contacter pour imaginer votre propre version.",
+    description: "Ronde bosse sur socle. Luminaire d'inspiration Demetre Chiparus, de style Art Déco en plâtre, bois d'Ipé noyer, polychromie.\n\nDimensions (mm): 260 x 160 x 120\n\n2026\n\nPièces disponibles\n\nCommandes sur demandes\n\nN'hésitez pas à me contacter pour imaginer votre propre version.",
   },
   // Collection Faune
   {
