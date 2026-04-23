@@ -197,8 +197,5 @@ const Collections = () => {
     </Layout>
   );
 };
-    </Layout>
-  );
-};
 
 export default Collections;
