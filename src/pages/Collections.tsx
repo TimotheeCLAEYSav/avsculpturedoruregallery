@@ -95,11 +95,17 @@ const Collections = () => {
                         src={collection.image}
                         alt={collection.title}
                         className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
-                          collection.id === "faune" || collection.id === "contour" || collection.id === "abstrait"
+                          collection.id === "faune" || collection.id === "contour"
                             ? "object-contain bg-card" 
                             : "object-cover"
                         }`}
-                        style={collection.id === "femme" ? { objectPosition: 'top' } : undefined}
+                        style={
+                          collection.id === "femme"
+                            ? { objectPosition: 'top' }
+                            : collection.id === "abstrait"
+                            ? { objectPosition: 'center' }
+                            : undefined
+                        }
                       />
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
