@@ -62,6 +62,12 @@ import lumiere1_6 from "@/assets/lumiere1-6.jpg";
 import lumiere1_7 from "@/assets/lumiere1-7.jpg";
 import lumiere1_8 from "@/assets/lumiere1-8.jpg";
 import lumiere1_9 from "@/assets/lumiere1-9.jpg";
+// Images du Miroir Louis Philippe (collection Contour)
+import miroirLp1 from "@/assets/miroir-lp-1.jpg";
+import miroirLp2 from "@/assets/miroir-lp-2.jpg";
+import miroirLp3 from "@/assets/miroir-lp-3.jpg";
+import miroirLp4 from "@/assets/miroir-lp-4.jpg";
+import miroirLp5 from "@/assets/miroir-lp-5.jpg";
 
 interface ArtworkImage {
   src: string;
@@ -211,6 +217,21 @@ const allArtworks: Artwork[] = [
     collection: "contour",
     categoryLabel: "Contour",
     description: "Châssis et éléments sculptés. Tilleul, dorure à la détrempe, peinture.\n\nDimensions (mm): 740 x 390 x 120\n\n2023",
+  },
+  // Miroir de style Louis Philippe — restauration et dorure
+  {
+    id: 11,
+    images: [
+      { src: miroirLp1, alt: "Miroir Louis Philippe - vue de face", objectFit: "contain" },
+      { src: miroirLp2, alt: "Miroir Louis Philippe - vue de profil" },
+      { src: miroirLp3, alt: "Miroir Louis Philippe - détail dorure" },
+      { src: miroirLp4, alt: "Miroir Louis Philippe - détail perles" },
+      { src: miroirLp5, alt: "Miroir Louis Philippe - revers William Morris" },
+    ],
+    title: "Miroir de style Louis Philippe",
+    collection: "contour",
+    categoryLabel: "Contour",
+    description: "Miroir oval contemporain restauré doré à la mixtion et feuille de cuivre. Effet dorure à la détrempe, vernis et fabrication d'un revers sur mesure William Morris.\n\nDimensions (mm): 425 x 305 x 25\n\nPièce disponible à la vente",
   },
   // Collection Abstrait
   {
