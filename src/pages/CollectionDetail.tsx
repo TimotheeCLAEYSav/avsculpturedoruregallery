@@ -231,7 +231,7 @@ const allArtworks: Artwork[] = [
     title: "Miroir de style Louis Philippe",
     collection: "contour",
     categoryLabel: "Contour",
-    description: "Miroir oval contemporain restauré doré à la mixtion et feuille de cuivre. Effet dorure à la détrempe, vernis et fabrication d'un revers sur mesure William Morris.\n\nDimensions (mm): 425 x 305 x 25\n\nPièce disponible à la vente",
+    description: "Miroir ovale contemporain restauré doré à la mixtion et feuille de cuivre. Effet dorure à la détrempe, vernis et fabrication d'un revers sur mesure William Morris.\n\nDimensions (mm): 425 x 305 x 25\n\nPièce disponible à la vente",
   },
   // Collection Abstrait
   {
@@ -384,9 +384,11 @@ const CollectionDetail = () => {
           {artworks.length > 0 ? (
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
               {artworks.map((artwork, index) => {
+                // Pour la collection Contour : taille uniforme (carré) pour homogénéiser les vignettes
+                const isContour = artwork.collection === "contour";
                 const sizes: Array<"small" | "medium" | "large"> = ["medium", "large", "small", "large", "medium"];
-                const size = sizes[index % sizes.length];
-                
+                const size: "small" | "medium" | "large" = isContour ? "small" : sizes[index % sizes.length];
+
                 return (
                   <div
                     key={artwork.id}
