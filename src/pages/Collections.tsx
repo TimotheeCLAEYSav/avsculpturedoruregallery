@@ -6,6 +6,7 @@ import sculpture1 from "@/assets/sculpture-1.jpg";
 import flore1 from "@/assets/flore-1.png";
 import contour from "@/assets/contour.jpg";
 import scarabeeNew1 from "@/assets/scarabee-new-1.jpg";
+import lumiere1 from "@/assets/lumiere1-1.jpg";
 
 interface Collection {
   id: string;
@@ -37,6 +38,12 @@ const collections: Collection[] = [
     id: "contour",
     title: "Contour",
     image: contour,
+    available: true,
+  },
+  {
+    id: "abstrait",
+    title: "Abstrait",
+    image: lumiere1,
     available: true,
   },
 ];
