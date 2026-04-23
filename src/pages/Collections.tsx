@@ -75,11 +75,12 @@ const Collections = () => {
         </div>
       </section>
 
-      {/* Grille des collections */}
+      {/* Grille des collections - 3 en haut */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {collections.map((collection, index) => (
+          {/* Première rangée : 3 collections */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8">
+            {collections.slice(0, 3).map((collection, index) => (
               <div
                 key={collection.id}
                 className="animate-fade-in"
@@ -95,11 +96,68 @@ const Collections = () => {
                         src={collection.image}
                         alt={collection.title}
                         className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
-                          collection.id === "faune" || collection.id === "contour"
+                          collection.id === "faune"
                             ? "object-contain bg-card" 
                             : "object-cover"
                         }`}
                         style={collection.id === "femme" ? { objectPosition: 'top' } : undefined}
+                      />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
+                    </div>
+                    
+                    {/* Contenu */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+                      <h2 className="font-display text-2xl font-semibold text-primary-foreground">
+                        {collection.title}
+                      </h2>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="relative overflow-hidden bg-card border border-border opacity-60">
+                    <div className="aspect-square overflow-hidden">
+                      <img
+                        src={collection.image}
+                        alt={collection.title}
+                        className="w-full h-full object-cover grayscale"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-primary/30" />
+                    </div>
+                    
+                    {/* Contenu */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+                      <h2 className="font-display text-2xl font-semibold text-primary-foreground">
+                        {collection.title}
+                      </h2>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          {/* Deuxième rangée : 2 collections centrées */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {collections.slice(3, 5).map((collection, index) => (
+              <div
+                key={collection.id}
+                className="animate-fade-in"
+                style={{ animationDelay: `${(index + 3) * 0.1}s` }}
+              >
+                {collection.available ? (
+                  <Link
+                    to={`/collections/${collection.id}`}
+                    className="group block relative overflow-hidden bg-card border border-border hover:border-accent transition-all duration-500"
+                  >
+                    <div className="aspect-square overflow-hidden">
+                      <img
+                        src={collection.image}
+                        alt={collection.title}
+                        className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
+                          collection.id === "contour"
+                            ? "object-contain bg-card" 
+                            : "object-cover"
+                        }`}
                       />
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
