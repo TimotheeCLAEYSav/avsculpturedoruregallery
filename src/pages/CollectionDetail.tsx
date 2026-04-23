@@ -53,6 +53,15 @@ import lotusPoly6 from "@/assets/lotus-poly-6.jpg";
 import lotusPoly7 from "@/assets/lotus-poly-7.jpg";
 import lotusPoly8 from "@/assets/lotus-poly-8.jpg";
 import lotusPoly9 from "@/assets/lotus-poly-9.jpg";
+import lumiere1_1 from "@/assets/lumiere1-1.jpg";
+import lumiere1_2 from "@/assets/lumiere1-2.jpg";
+import lumiere1_3 from "@/assets/lumiere1-3.jpg";
+import lumiere1_4 from "@/assets/lumiere1-4.jpg";
+import lumiere1_5 from "@/assets/lumiere1-5.jpg";
+import lumiere1_6 from "@/assets/lumiere1-6.jpg";
+import lumiere1_7 from "@/assets/lumiere1-7.jpg";
+import lumiere1_8 from "@/assets/lumiere1-8.jpg";
+import lumiere1_9 from "@/assets/lumiere1-9.jpg";
 
 interface ArtworkImage {
   src: string;
@@ -203,6 +212,25 @@ const allArtworks: Artwork[] = [
     categoryLabel: "Contour",
     description: "Châssis et éléments sculptés. Tilleul, dorure à la détrempe, peinture.\n\nDimensions (mm): 740 x 390 x 120\n\n2023",
   },
+  // Collection Abstrait
+  {
+    id: 10,
+    images: [
+      { src: lumiere1_1, alt: "Lumière 1# - vue de face" },
+      { src: lumiere1_2, alt: "Lumière 1# - vue arrière" },
+      { src: lumiere1_3, alt: "Lumière 1# - vue de profil en contexte" },
+      { src: lumiere1_4, alt: "Lumière 1# - détail feuille de cuivre" },
+      { src: lumiere1_5, alt: "Lumière 1# - allumée vue de face" },
+      { src: lumiere1_6, alt: "Lumière 1# - allumée détail" },
+      { src: lumiere1_7, alt: "Lumière 1# - en contexte avec bouquet" },
+      { src: lumiere1_8, alt: "Lumière 1# - allumée en ambiance" },
+      { src: lumiere1_9, alt: "Lumière 1# - allumée zoom contexte" },
+    ],
+    title: "Lumière 1#",
+    collection: "abstrait",
+    categoryLabel: "Abstrait",
+    description: "Lampe sur pied sculpté. Abat-jour chiné, tilleul, feuille de cuivre, patine.\n\nDimensions (mm): 270 x 180 (diamètre)\n\nDisponible à la vente\n\nCommandes sur demande",
+  },
 ];
 
 const collectionTitles: Record<string, { title: string; description: string }> = {
@@ -221,6 +249,10 @@ const collectionTitles: Record<string, { title: string; description: string }> =
   contour: {
     title: "Contour",
     description: "Des cadres qui s'attachent à la ligne, au tracé et à la limite de la forme pour sublimer le contenu.",
+  },
+  abstrait: {
+    title: "Abstrait",
+    description: "La collection Abstrait explore la forme libre et la lumière. Sculptures et objets lumineux où la matière, la texture et l'éclat dialoguent dans une recherche plastique sensible.",
   },
 };
 
