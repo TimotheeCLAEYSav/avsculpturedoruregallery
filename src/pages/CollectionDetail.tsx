@@ -69,6 +69,15 @@ import miroirLp3 from "@/assets/miroir-lp-3.jpg";
 import miroirLp4 from "@/assets/miroir-lp-4.jpg";
 import miroirLp5 from "@/assets/miroir-lp-5.jpg";
 import miroirLp6 from "@/assets/miroir-lp-6.jpg";
+// Images Les Ifs (collection Flore)
+import ifs1 from "@/assets/ifs-1.jpg";
+import ifs2 from "@/assets/ifs-2.jpg";
+import ifs3 from "@/assets/ifs-3.jpg";
+import ifs4 from "@/assets/ifs-4.jpg";
+import ifs5 from "@/assets/ifs-5.jpg";
+import ifs6 from "@/assets/ifs-6.jpg";
+import ifs7 from "@/assets/ifs-7.jpg";
+import ifs8 from "@/assets/ifs-8.jpg";
 
 interface ArtworkImage {
   src: string;
@@ -203,6 +212,23 @@ const allArtworks: Artwork[] = [
     collection: "flore",
     categoryLabel: "Flore",
     description: "Dorure à la détrempe avec feuille d'or inspirée d'une estampe d'Hokusai, Hortensia et hirondelle.\n\nDimensions (mm): 360 x 190 x 22\n\n2023",
+  },
+  {
+    id: 12,
+    images: [
+      { src: ifs1, alt: "Les Ifs - duo de lampes allumées" },
+      { src: ifs2, alt: "Les Ifs - duo de lampes éteintes" },
+      { src: ifs3, alt: "Les Ifs - vue allumée de profil" },
+      { src: ifs4, alt: "Les Ifs - vue éteinte de profil" },
+      { src: ifs5, alt: "Les Ifs - vue d'ensemble éteintes" },
+      { src: ifs6, alt: "Les Ifs - vue séparée des deux lampes" },
+      { src: ifs7, alt: "Les Ifs - détail abat-jour et socle" },
+      { src: ifs8, alt: "Les Ifs - détail sculpté du bois" },
+    ],
+    title: "Les Ifs",
+    collection: "flore",
+    categoryLabel: "Flore",
+    description: "Duo de lampes à poser. Abats-jours chinés et réadaptés sur des pieds de lampes sculptés dans du bois exotique de récupération.\n\nDimensions (mm): 270 x 120 x 62 et 320 x 62 x 62\n\nPièces disponibles à la vente",
   },
   // Collection Contour
   {
