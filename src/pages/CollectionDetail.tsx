@@ -78,6 +78,17 @@ import ifs5 from "@/assets/ifs-5.jpg";
 import ifs6 from "@/assets/ifs-6.jpg";
 import ifs7 from "@/assets/ifs-7.jpg";
 import ifs8 from "@/assets/ifs-8.jpg";
+// Images Mosaïque (collection Abstrait)
+import mosaique1 from "@/assets/mosaique-1.jpg";
+import mosaique2 from "@/assets/mosaique-2.jpg";
+import mosaique3 from "@/assets/mosaique-3.jpg";
+import mosaique4 from "@/assets/mosaique-4.jpg";
+import mosaique5 from "@/assets/mosaique-5.jpg";
+import mosaique6 from "@/assets/mosaique-6.jpg";
+import mosaique7 from "@/assets/mosaique-7.jpg";
+import mosaique8 from "@/assets/mosaique-8.jpg";
+import mosaique9 from "@/assets/mosaique-9.jpg";
+import mosaique10 from "@/assets/mosaique-10.jpg";
 
 interface ArtworkImage {
   src: string;
@@ -279,6 +290,25 @@ const allArtworks: Artwork[] = [
     collection: "abstrait",
     categoryLabel: "Abstrait",
     description: "Lampe sur pied sculpté. Abat-jour chiné, tilleul, feuille de cuivre, patine.\n\nDimensions (mm): 270 x 180 (diamètre)\n\nDisponible à la vente\n\nCommandes sur demande",
+  },
+  {
+    id: 11,
+    images: [
+      { src: mosaique1, alt: "Mosaïque - duo de lampes allumées" },
+      { src: mosaique2, alt: "Mosaïque - vue de face éteintes" },
+      { src: mosaique3, alt: "Mosaïque - vue de trois quarts" },
+      { src: mosaique4, alt: "Mosaïque - vue arrière avec signature" },
+      { src: mosaique5, alt: "Mosaïque - vue de dessus des abat-jours" },
+      { src: mosaique6, alt: "Mosaïque - détail du socle sculpté" },
+      { src: mosaique7, alt: "Mosaïque - vue allumée de profil" },
+      { src: mosaique8, alt: "Mosaïque - en contexte avec livres" },
+      { src: mosaique9, alt: "Mosaïque - ambiance allumée" },
+      { src: mosaique10, alt: "Mosaïque - vue d'ensemble éteintes en contexte" },
+    ],
+    title: "Mosaïque",
+    collection: "abstrait",
+    categoryLabel: "Abstrait",
+    description: "Double lampe sur pied sculpté. Abats-jours chiné, bois exotique, patine.\n\nDimensions (mm): 270 x 125 x 120\n\nDisponible à la vente\n\nCommandes sur demande",
   },
 ];
 
