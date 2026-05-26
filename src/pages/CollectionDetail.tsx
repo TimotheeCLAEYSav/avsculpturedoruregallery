@@ -308,7 +308,7 @@ const allArtworks: Artwork[] = [
     title: "Mosaïque",
     collection: "abstrait",
     categoryLabel: "Abstrait",
-    description: "Double lampe sur pied sculpté. Abats-jours chiné, bois exotique, patine.\n\nDimensions (mm): 270 x 125 x 120\n\nDisponible à la vente\n\nCommandes sur demande",
+    description: "Double lampe sur pied sculpté. Abats-jours chinés, bois exotique, patine.\n\nDimensions (mm): 270 x 125 x 120\n\nDisponible à la vente\n\nCommandes sur demande",
   },
 ];
 
