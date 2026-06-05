@@ -31,8 +31,11 @@ const staticEntries: Array<{ path: string; changefreq: string; priority: string 
 ];
 
 // Extract artwork titles via regex (avoids resolving @/assets imports at script time).
+// Scope to the `raw` artwork array so we don't pick up collectionTitles entries.
 const artworksSrc = readFileSync(resolve("src/data/artworks.ts"), "utf8");
-const titleMatches = [...artworksSrc.matchAll(/title:\s*"((?:[^"\\]|\\.)*)"/g)];
+const rawBlockMatch = artworksSrc.match(/const raw[^=]*=\s*\[([\s\S]*?)\n\];/);
+const rawBlock = rawBlockMatch ? rawBlockMatch[1] : "";
+const titleMatches = [...rawBlock.matchAll(/title:\s*"((?:[^"\\]|\\.)*)"/g)];
 const artworkSlugs = Array.from(new Set(titleMatches.map((m) => slugify(m[1]))));
 
 const artworkEntries = artworkSlugs.map((slug) => ({
