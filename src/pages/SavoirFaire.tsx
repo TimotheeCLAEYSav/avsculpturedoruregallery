@@ -108,6 +108,11 @@ const SavoirFaire = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Savoir-faire - Sculpture, dorure et restauration | Aurélie Villemur"
+        description="Sculpture sur bois, dorure à la feuille, modelage, moulage, patine et restauration du patrimoine : découvrez les savoir-faire d'Aurélie Villemur."
+        path="/savoir-faire"
+      />
       {/* Hero */}
       <section className="relative py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
