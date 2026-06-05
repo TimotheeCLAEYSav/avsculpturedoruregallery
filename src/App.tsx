@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import APropos from "./pages/APropos";
 import Collections from "./pages/Collections";
 import CollectionDetail from "./pages/CollectionDetail";
+import ArtworkDetail from "./pages/ArtworkDetail";
 import SavoirFaire from "./pages/SavoirFaire";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
