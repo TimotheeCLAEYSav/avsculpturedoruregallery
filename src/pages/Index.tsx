@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";

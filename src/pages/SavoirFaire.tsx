@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
 import { ArrowRight, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";

@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 
 const Contact = () => {

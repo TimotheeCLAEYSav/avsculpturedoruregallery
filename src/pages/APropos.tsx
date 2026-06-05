@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
 import aPropos2 from "@/assets/a-propos-2.jpg";
 import patrimoine1 from "@/assets/patrimoine-1.jpg";

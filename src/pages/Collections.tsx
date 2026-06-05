@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 
 // Import des images pour les collections
 import sculpture1 from "@/assets/sculpture-1.jpg";
