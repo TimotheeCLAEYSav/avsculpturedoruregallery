@@ -52,6 +52,11 @@ const collections: Collection[] = [
 const Collections = () => {
   return (
     <Layout>
+      <SEO
+        title="Collections - Sculptures et dorures | Aurélie Villemur"
+        description="Découvrez les collections d'œuvres sculptées et dorées d'Aurélie Villemur : Femme, Faune, Flore, Contour et Abstrait."
+        path="/collections"
+      />
       {/* Hero */}
       <section className="relative py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">

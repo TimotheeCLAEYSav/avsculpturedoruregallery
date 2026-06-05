@@ -5,6 +5,11 @@ import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 const Contact = () => {
   return (
     <Layout>
+      <SEO
+        title="Contact - Aurélie Villemur, sculptrice et doreuse | AVsculpturedorure"
+        description="Contactez Aurélie Villemur pour vos projets de sculpture sur bois, dorure ou restauration de patrimoine. Création sur mesure et devis personnalisés."
+        path="/contact"
+      />
       {/* Hero */}
       <section className="relative py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
