@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
 import aPropos2 from "@/assets/a-propos-2.jpg";
 import patrimoine1 from "@/assets/patrimoine-1.jpg";
@@ -6,6 +7,12 @@ import patrimoine1 from "@/assets/patrimoine-1.jpg";
 const APropos = () => {
   return (
     <Layout>
+      <SEO
+        title="À propos - Aurélie Villemur, artisane d'art | AVsculpturedorure"
+        description="Découvrez le parcours et la démarche artistique d'Aurélie Villemur, sculptrice et doreuse sur bois passionnée par les métiers du patrimoine."
+        path="/a-propos"
+        type="profile"
+      />
       {/* Hero À propos */}
       <section className="relative py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">

@@ -21,6 +21,49 @@
     <meta property="og:locale" content="fr_FR" />
 
     <meta name="p:domain_verify" content="3acbb52049206ef76feb6c5b866483b0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Structured data: Person / VisualArtist / LocalBusiness / WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Person", "VisualArtist"],
+          "@id": "https://www.av-sculpturedorure.fr/#person",
+          "name": "Aurélie Villemur",
+          "alternateName": "AVsculpturedorure",
+          "jobTitle": "Sculptrice et Doreuse sur bois",
+          "description": "Artisane d'art spécialisée en sculpture sur bois, dorure à la feuille et restauration du patrimoine.",
+          "url": "https://www.av-sculpturedorure.fr",
+          "image": "https://www.av-sculpturedorure.fr/og-image.jpg",
+          "nationality": "FR",
+          "knowsAbout": ["Sculpture sur bois", "Dorure à la feuille", "Restauration du patrimoine", "Modelage", "Moulage", "Patine"]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.av-sculpturedorure.fr/#business",
+          "name": "AVsculpturedorure - Atelier Aurélie Villemur",
+          "description": "Atelier d'art : sculpture sur bois, dorure et restauration du patrimoine historique.",
+          "url": "https://www.av-sculpturedorure.fr",
+          "image": "https://www.av-sculpturedorure.fr/og-image.jpg",
+          "founder": { "@id": "https://www.av-sculpturedorure.fr/#person" },
+          "address": { "@type": "PostalAddress", "addressCountry": "FR" },
+          "areaServed": "FR"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.av-sculpturedorure.fr/#website",
+          "url": "https://www.av-sculpturedorure.fr",
+          "name": "AVsculpturedorure - Aurélie Villemur",
+          "inLanguage": "fr-FR",
+          "publisher": { "@id": "https://www.av-sculpturedorure.fr/#person" }
+        }
+      ]
+    }
+    </script>
+
     
     <!-- Pinterest Tag -->
     <script>
@@ -44,8 +87,7 @@
     <meta name="twitter:description" content="Sculptrice et doreuse sur bois. Restauration du patrimoine historique." />
     <meta name="twitter:image" content="/og-image.jpg" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.av-sculpturedorure.fr" />
+    <!-- Canonical is set per-route via react-helmet-async (src/components/SEO.tsx) -->
 
     <!-- Google Fonts - Typographies Art Déco -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

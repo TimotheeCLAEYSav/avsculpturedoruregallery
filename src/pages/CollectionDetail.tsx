@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useSearchParams, useNavigate } from "react-router-dom";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import ImageCard from "@/components/ImageCard";
 import Lightbox from "@/components/Lightbox";
 import { ArrowLeft } from "lucide-react";
@@ -402,6 +403,11 @@ const CollectionDetail = () => {
 
   return (
     <Layout>
+      <SEO
+        title={`${collectionInfo.title} - Collection ${collectionInfo.title} | Aurélie Villemur`}
+        description={`Découvrez la collection ${collectionInfo.title} d'Aurélie Villemur : œuvres sculptées et dorées, créations originales et pièces uniques.`}
+        path={`/collections/${collectionId}`}
+      />
       {/* Hero */}
       <section className="relative py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
