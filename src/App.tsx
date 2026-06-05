@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import APropos from "./pages/APropos";
 import Collections from "./pages/Collections";
 import CollectionDetail from "./pages/CollectionDetail";
+import ArtworkDetail from "./pages/ArtworkDetail";
 import SavoirFaire from "./pages/SavoirFaire";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/collections" element={<Collections />} />
           <Route path="/collections/:collectionId" element={<CollectionDetail />} />
+          <Route path="/oeuvres/:slug" element={<ArtworkDetail />} />
           <Route path="/savoir-faire" element={<SavoirFaire />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
