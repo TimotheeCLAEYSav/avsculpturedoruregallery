@@ -10,6 +10,7 @@ import Collections from "./pages/Collections";
 import CollectionDetail from "./pages/CollectionDetail";
 import SavoirFaire from "./pages/SavoirFaire";
 import Contact from "./pages/Contact";
+import ArtworkDetail from "./pages/ArtworkDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/collections" element={<Collections />} />
           <Route path="/collections/:collectionId" element={<CollectionDetail />} />
+          <Route path="/oeuvres/:slug" element={<ArtworkDetail />} />
           <Route path="/savoir-faire" element={<SavoirFaire />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
