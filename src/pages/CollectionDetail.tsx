@@ -149,13 +149,19 @@ const CollectionDetail = () => {
                       objectPosition={artwork.images[0].objectPosition}
                       objectFit={artwork.images[0].objectFit}
                     />
-                    {artwork.images.length > 1 && (
-                      <div className="mt-2 text-center">
+                    <div className="mt-2 flex flex-col items-center gap-1">
+                      {artwork.images.length > 1 && (
                         <span className="text-xs text-muted-foreground italic">
                           {artwork.images.length} vues disponibles
                         </span>
-                      </div>
-                    )}
+                      )}
+                      <Link
+                        to={`/oeuvres/${getArtworkSlug(artwork)}`}
+                        className="text-xs text-accent hover:underline tracking-wider uppercase"
+                      >
+                        Voir la fiche
+                      </Link>
+                    </div>
                   </div>
                 );
               })}
