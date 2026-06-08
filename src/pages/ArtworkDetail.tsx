@@ -86,11 +86,11 @@ const ArtworkDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image principale */}
             <div>
-              <div className="aspect-[4/5] overflow-hidden bg-secondary/30">
+              <div className="bg-secondary/30 flex items-center justify-center p-4 md:p-6">
                 <img
                   src={mainImage.src}
                   alt={mainImage.alt}
-                  className="w-full h-full object-contain"
+                  className="w-full h-auto max-h-[80vh] object-contain"
                   loading="eager"
                 />
               </div>
@@ -181,14 +181,14 @@ const ArtworkDetail = () => {
             <h2 className="font-display text-2xl font-semibold text-foreground mb-6">
               Galerie
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {artwork.images.map((img, idx) => (
-                <div key={idx} className="aspect-square overflow-hidden bg-background">
+                <div key={idx} className="bg-background flex items-center justify-center p-3 min-h-[16rem]">
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-auto max-h-[28rem] object-contain transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               ))}
@@ -211,12 +211,12 @@ const ArtworkDetail = () => {
                   to={`/oeuvres/${getArtworkSlug(rel)}`}
                   className="group block"
                 >
-                  <div className="aspect-[4/5] overflow-hidden bg-secondary/30 mb-3">
+                  <div className="aspect-[4/5] overflow-hidden bg-secondary/30 mb-3 flex items-center justify-center p-2">
                     <img
                       src={rel.images[0].src}
                       alt={rel.images[0].alt}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-accent">
