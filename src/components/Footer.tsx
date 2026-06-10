@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Colonne 1 - Identité */}
           <div className="text-center md:text-left">
             <h3 className="font-display text-xl font-semibold mb-2">
@@ -55,10 +55,32 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Colonne 3 - Réseaux sociaux */}
-          <div className="text-center md:text-right">
+          {/* Colonne 3 - Services */}
+          <div className="text-center">
+            <h4 className="font-display text-lg mb-4 text-accent">Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/sculpture-sur-mesure" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Sculpture sur mesure
+                </Link>
+              </li>
+              <li>
+                <Link to="/dorure-feuille-or" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Dorure à la feuille d'or
+                </Link>
+              </li>
+              <li>
+                <Link to="/restauration-patrimoine" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Restauration du patrimoine
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Colonne 4 - Réseaux sociaux */}
+          <div className="text-center md:text-left">
             <h4 className="font-display text-lg mb-4 text-accent">Suivez-moi</h4>
-            <div className="flex justify-center md:justify-end gap-4">
+            <div className="flex justify-center md:justify-start gap-4">
               <a
                 href="https://www.instagram.com/av_sculpturedorure/"
                 target="_blank"

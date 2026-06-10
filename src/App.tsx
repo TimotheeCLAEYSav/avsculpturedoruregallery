@@ -11,6 +11,9 @@ import CollectionDetail from "./pages/CollectionDetail";
 import SavoirFaire from "./pages/SavoirFaire";
 import Contact from "./pages/Contact";
 import ArtworkDetail from "./pages/ArtworkDetail";
+import DorureFeuilleOr from "./pages/DorureFeuilleOr";
+import RestaurationPatrimoine from "./pages/RestaurationPatrimoine";
+import SculptureSurMesure from "./pages/SculptureSurMesure";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +32,9 @@ const App = () => (
           <Route path="/collections/:collectionId" element={<CollectionDetail />} />
           <Route path="/oeuvres/:slug" element={<ArtworkDetail />} />
           <Route path="/savoir-faire" element={<SavoirFaire />} />
+          <Route path="/dorure-feuille-or" element={<DorureFeuilleOr />} />
+          <Route path="/restauration-patrimoine" element={<RestaurationPatrimoine />} />
+          <Route path="/sculpture-sur-mesure" element={<SculptureSurMesure />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

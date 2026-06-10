@@ -191,6 +191,24 @@ const staticPages = [
     description:
       "Contactez Aurélie Villemur, sculptrice et doreuse sur bois, pour toute demande de création, restauration ou collaboration.",
   },
+  {
+    path: "/sculpture-sur-mesure",
+    title: "Sculpture sur bois sur mesure — Pièces uniques | Aurélie Villemur",
+    description:
+      "Création de sculptures sur bois sur mesure : pièces uniques pour particuliers, décorateurs et lieux d'exception. Du croquis à l'œuvre finie.",
+  },
+  {
+    path: "/dorure-feuille-or",
+    title: "Dorure à la feuille d'or — Atelier d'art | Aurélie Villemur",
+    description:
+      "Dorure à la feuille d'or 22 carats sur bois : sculptures, cadres, mobilier et miroirs. Techniques traditionnelles à la détrempe et à la mixtion.",
+  },
+  {
+    path: "/restauration-patrimoine",
+    title: "Restauration du patrimoine — Sculpture & dorure ancienne | Aurélie Villemur",
+    description:
+      "Restauration de sculptures, cadres et dorures anciennes. Mobilier, art sacré, ornements du XVIIe au XIXe siècle, dans le respect des techniques d'origine.",
+  },
 ];
 
 for (const p of staticPages) writePage(p.path, buildHead(p));
