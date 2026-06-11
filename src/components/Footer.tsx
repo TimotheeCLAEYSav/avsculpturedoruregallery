@@ -98,6 +98,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center text-sm text-primary-foreground/60">
           <p>© {currentYear} AVsculpturedorure - Aurélie Villemur. Tous droits réservés.</p>
+          <p className="mt-1">Site mis à jour en 2026</p>
         </div>
       </div>
     </footer>
