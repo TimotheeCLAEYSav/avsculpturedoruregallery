@@ -81,6 +81,82 @@ const APropos = () => {
         </div>
       </section>
 
+      {/* Formations */}
+      <section className="py-20 bg-background border-t border-border/40">
+        <div className="container mx-auto px-6">
+          <SectionHeading
+            title="Formations"
+            subtitle="Un parcours pluridisciplinaire au service de la création"
+          />
+
+          <div className="max-w-3xl mx-auto">
+            <ol className="relative border-l border-accent/40 pl-8 space-y-10">
+              {/* Formation 1 */}
+              <li className="relative">
+                <span className="absolute -left-[37px] top-2 w-2.5 h-2.5 rotate-45 bg-accent" />
+                <p className="text-accent text-xs tracking-[0.25em] uppercase mb-2">
+                  2024
+                </p>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-1">
+                  Échafaudage et travail en hauteur
+                </h3>
+                <p className="text-muted-foreground italic">
+                  CTFPA, Albi
+                </p>
+              </li>
+
+              {/* Formation 2 */}
+              <li className="relative">
+                <span className="absolute -left-[37px] top-2 w-2.5 h-2.5 rotate-45 bg-accent" />
+                <p className="text-accent text-xs tracking-[0.25em] uppercase mb-2">
+                  2022 — 2024
+                </p>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-1">
+                  Titre à finalité professionnelle de technicien des arts mobiliers sculptés et décoratifs
+                </h3>
+                <p className="text-muted-foreground italic">
+                  École d'Ébénisterie d'Avignon
+                </p>
+              </li>
+
+              {/* Formation 3 */}
+              <li className="relative">
+                <span className="absolute -left-[37px] top-2 w-2.5 h-2.5 rotate-45 bg-accent" />
+                <p className="text-accent text-xs tracking-[0.25em] uppercase mb-2">
+                  2009 — 2014
+                </p>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-1">
+                  Sciences Po
+                </h3>
+                <p className="text-muted-foreground italic">
+                  IEP de Lyon
+                </p>
+              </li>
+
+              {/* Formation 4 */}
+              <li className="relative">
+                <span className="absolute -left-[37px] top-2 w-2.5 h-2.5 rotate-45 bg-accent" />
+                <p className="text-accent text-xs tracking-[0.25em] uppercase mb-2">
+                  Spécialisations
+                </p>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-1">
+                  Master 2 Gestion de Projets et Coopération
+                </h3>
+                <p className="text-muted-foreground italic mb-2">
+                  Bioforce
+                </p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-1">
+                  Diplôme de gestion des conflits sociaux
+                </h3>
+                <p className="text-muted-foreground italic">
+                  École pour le développement — Lima, Pérou
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
       {/* Démarche Artistique */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
