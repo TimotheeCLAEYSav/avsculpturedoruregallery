@@ -265,6 +265,25 @@ export const allArtworks: Artwork[] = [
     year: "2025",
   },
   {
+    id: 14,
+    images: [
+      { src: papillon1, alt: "Papillon de nuit - cadre rond doré" },
+      { src: papillon2, alt: "Papillon de nuit - cadre bois rond" },
+      { src: papillon3, alt: "Papillon de nuit - cadre doré carré" },
+      { src: papillon4, alt: "Papillon de nuit - vue de trois quarts" },
+      { src: papillon5, alt: "Papillon de nuit - détail broderie" },
+    ],
+    title: "Papillon de nuit",
+    collection: "faune",
+    categoryLabel: "Faune",
+    description:
+      "Broderie en volume d'un papillon de nuit intégrée dans des cadres chinés.\n\nDimensions: 120 mm de diamètre\n\nDisponible à la vente\n\nLes commandes personnalisées sont possibles (choix des couleurs, de l'espèce, des dimensions, du type de cadre).",
+    materials: "Fils brodés, cadres chinés",
+    techniques: "Broderie en volume",
+    dimensions: "120 mm de diamètre",
+    availability: "Disponible à la vente — commandes personnalisées possibles",
+  },
+  {
     id: 5,
     images: [{ src: flore1, alt: "La pivoine - sculpture florale" }],
     title: "La Pivoine",
