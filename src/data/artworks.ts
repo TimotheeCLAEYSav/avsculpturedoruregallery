@@ -78,6 +78,11 @@ import mosaique7 from "@/assets/mosaique-7.jpg";
 import mosaique8 from "@/assets/mosaique-8.jpg";
 import mosaique9 from "@/assets/mosaique-9.jpg";
 import mosaique10 from "@/assets/mosaique-10.jpg";
+import papillon1 from "@/assets/papillon-1.jpg";
+import papillon2 from "@/assets/papillon-2.jpg";
+import papillon3 from "@/assets/papillon-3.jpg";
+import papillon4 from "@/assets/papillon-4.jpg";
+import papillon5 from "@/assets/papillon-5.jpg";
 
 export interface ArtworkImage {
   src: string;
