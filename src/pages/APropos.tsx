@@ -115,7 +115,7 @@ const APropos = () => {
                   Titre à finalité professionnelle de technicien des arts mobiliers sculptés et décoratifs
                 </h3>
                 <p className="text-muted-foreground italic">
-                  École d'Ébénisterie d'Avignon
+                  École Supérieure d'Ébénisterie d'Avignon (ESEA)
                 </p>
               </li>
 
