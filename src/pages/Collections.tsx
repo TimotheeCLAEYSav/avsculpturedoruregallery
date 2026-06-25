@@ -58,7 +58,7 @@ const Collections = () => {
         path="/collections"
       />
       {/* Hero */}
-      <section className="relative py-14 bg-primary text-primary-foreground">
+      <section className="relative py-10 md:py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
