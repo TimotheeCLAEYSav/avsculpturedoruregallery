@@ -160,7 +160,7 @@ const Collections = () => {
                         src={collection.image}
                         alt={collection.title}
                         className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
-                          collection.id === "contour"
+                          collection.id === "contour" || collection.id === "abstrait"
                             ? "object-contain mix-blend-multiply"
                             : "object-cover"
                         }`}
