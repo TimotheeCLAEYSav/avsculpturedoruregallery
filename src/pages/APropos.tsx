@@ -40,12 +40,12 @@ const APropos = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Image Portrait */}
-            <div className="relative max-w-md mx-auto lg:mx-0">
-              <div className="bg-secondary overflow-hidden">
+            <div className="relative w-full">
+              <div className="aspect-[4/5] bg-secondary overflow-hidden">
                 <img
                   src={aPropos2}
                   alt="Portrait d'Aurélie Villemur dans un musée de sculptures"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               {/* Cadre décoratif */}
