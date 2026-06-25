@@ -58,7 +58,7 @@ const Collections = () => {
         path="/collections"
       />
       {/* Hero */}
-      <section className="relative py-10 md:py-12 bg-primary text-primary-foreground">
+      <section className="relative py-6 md:py-8 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
@@ -66,10 +66,10 @@ const Collections = () => {
               <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
               <div className="w-12 h-px bg-accent" />
             </div>
-            <p className="text-accent text-sm tracking-[0.25em] uppercase mb-3">
+            <p className="text-accent text-sm tracking-[0.25em] uppercase mb-2">
               Portfolio
             </p>
-            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-4">
+            <h1 className="font-display text-4xl md:text-5xl font-semibold mb-3">
               Collections
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ const Collections = () => {
       </section>
 
       {/* Grille des collections - 3 en haut */}
-      <section className="py-20 bg-background">
+      <section className="py-10 md:py-12 bg-background">
         <div className="container mx-auto px-6">
           {/* Première rangée : 3 collections */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8">
