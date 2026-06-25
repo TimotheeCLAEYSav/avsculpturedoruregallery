@@ -126,45 +126,38 @@ const CollectionDetail = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
           {artworks.length > 0 ? (
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-              {artworks.map((artwork, index) => {
-                // Pour la collection Contour : taille uniforme (carré) pour homogénéiser les vignettes
-                const isContour = artwork.collection === "contour";
-                const sizes: Array<"small" | "medium" | "large"> = ["medium", "large", "small", "large", "medium"];
-                const size: "small" | "medium" | "large" = isContour ? "small" : sizes[index % sizes.length];
-
-                return (
-                  <div
-                    key={artwork.id}
-                    className="break-inside-avoid animate-fade-in"
-                    style={{ animationDelay: `${index * 0.08}s` }}
-                  >
-                    <ImageCard
-                      src={artwork.images[0].src}
-                      alt={artwork.images[0].alt}
-                      title={artwork.title}
-                      category={artwork.categoryLabel}
-                      onClick={() => openArtwork(artwork)}
-                      size={size}
-                      objectPosition={artwork.images[0].objectPosition}
-                      objectFit={artwork.images[0].objectFit}
-                    />
-                    <div className="mt-2 flex flex-col items-center gap-1">
-                      {artwork.images.length > 1 && (
-                        <span className="text-xs text-muted-foreground italic">
-                          {artwork.images.length} vues disponibles
-                        </span>
-                      )}
-                      <Link
-                        to={`/oeuvres/${getArtworkSlug(artwork)}`}
-                        className="text-xs text-accent hover:underline tracking-wider uppercase"
-                      >
-                        Voir la fiche
-                      </Link>
-                    </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {artworks.map((artwork, index) => (
+                <div
+                  key={artwork.id}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${index * 0.08}s` }}
+                >
+                  <ImageCard
+                    src={artwork.images[0].src}
+                    alt={artwork.images[0].alt}
+                    title={artwork.title}
+                    category={artwork.categoryLabel}
+                    onClick={() => openArtwork(artwork)}
+                    size="small"
+                    objectPosition={artwork.images[0].objectPosition}
+                    objectFit="contain"
+                  />
+                  <div className="mt-2 flex flex-col items-center gap-1">
+                    {artwork.images.length > 1 && (
+                      <span className="text-xs text-muted-foreground italic">
+                        {artwork.images.length} vues disponibles
+                      </span>
+                    )}
+                    <Link
+                      to={`/oeuvres/${getArtworkSlug(artwork)}`}
+                      className="text-xs text-accent hover:underline tracking-wider uppercase"
+                    >
+                      Voir la fiche
+                    </Link>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           ) : (
             <div className="text-center py-12">
