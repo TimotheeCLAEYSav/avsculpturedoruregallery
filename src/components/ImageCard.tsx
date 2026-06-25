@@ -27,20 +27,20 @@ const ImageCard = ({ src, alt, title, category, onClick, size = "medium", object
   };
 
   return (
-    <div 
-      className="group relative overflow-hidden cursor-pointer bg-card"
+    <div
+      className="group relative overflow-hidden cursor-pointer bg-secondary/60 p-3 shadow-[0_1px_2px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] transition-shadow duration-500"
       onClick={onClick}
     >
       {/* Cadre doré Art Déco */}
       <div className="absolute inset-0 border border-accent/30 z-10 pointer-events-none group-hover:border-accent transition-colors duration-500" />
       <div className="absolute inset-1 border border-accent/20 z-10 pointer-events-none group-hover:border-accent/60 transition-colors duration-500" />
-      
-      {/* Image avec effet zoom */}
-      <div className={`${aspectClasses[size]} overflow-hidden`}>
+
+      {/* Passe-partout + image */}
+      <div className={`${aspectClasses[size]} overflow-hidden bg-secondary/40 ring-1 ring-accent/20`}>
         <img
           src={src}
           alt={alt}
-          className={`w-full h-full ${fitClasses[objectFit]} ${positionClasses[objectPosition]} transition-all duration-700 ease-out group-hover:scale-110`}
+          className={`w-full h-full ${fitClasses[objectFit]} ${positionClasses[objectPosition]} ${objectFit === "contain" ? "mix-blend-multiply" : ""} transition-all duration-700 ease-out group-hover:scale-105`}
           loading="lazy"
         />
       </div>
