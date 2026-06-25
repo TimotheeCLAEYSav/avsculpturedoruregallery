@@ -7,7 +7,7 @@ import sculpture1 from "@/assets/sculpture-1.jpg";
 import flore1 from "@/assets/flore-1.png";
 import contour from "@/assets/contour.jpg";
 import scarabeeNew1 from "@/assets/scarabee-new-1.jpg";
-import lumiere1 from "@/assets/abstrait-cover.jpg";
+import lumiere1 from "@/assets/mosaique-1.jpg";
 
 interface Collection {
   id: string;
