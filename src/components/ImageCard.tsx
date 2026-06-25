@@ -40,7 +40,7 @@ const ImageCard = ({ src, alt, title, category, onClick, size = "medium", object
         <img
           src={src}
           alt={alt}
-          className={`w-full h-full ${fitClasses[objectFit]} ${positionClasses[objectPosition]} ${objectFit === "contain" ? "mix-blend-multiply" : ""} transition-all duration-700 ease-out group-hover:scale-105`}
+          className={`w-full h-full ${fitClasses[objectFit]} ${positionClasses[objectPosition]} mix-blend-multiply transition-all duration-700 ease-out group-hover:scale-105`}
           loading="lazy"
         />
       </div>
