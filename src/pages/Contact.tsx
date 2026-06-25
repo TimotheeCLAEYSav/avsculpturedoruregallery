@@ -11,7 +11,7 @@ const Contact = () => {
         path="/contact"
       />
       {/* Hero */}
-      <section className="relative py-24 bg-primary text-primary-foreground">
+      <section className="relative py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center gap-4 mb-6">

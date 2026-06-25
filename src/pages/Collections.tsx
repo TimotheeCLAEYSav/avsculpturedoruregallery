@@ -58,7 +58,7 @@ const Collections = () => {
         path="/collections"
       />
       {/* Hero */}
-      <section className="relative py-24 bg-primary text-primary-foreground">
+      <section className="relative py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center gap-4 mb-6">
@@ -95,15 +95,15 @@ const Collections = () => {
                 {collection.available ? (
                   <Link
                     to={`/collections/${collection.id}`}
-                    className="group block relative overflow-hidden bg-card border border-border hover:border-accent transition-all duration-500"
+                    className="group block relative overflow-hidden bg-secondary/60 p-3 border border-accent/30 hover:border-accent shadow-sm hover:shadow-md transition-all duration-500"
                   >
-                    <div className="aspect-square overflow-hidden">
+                    <div className="relative aspect-square overflow-hidden bg-secondary/40 ring-1 ring-accent/20">
                       <img
                         src={collection.image}
                         alt={collection.title}
                         className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
                           collection.id === "faune"
-                            ? "object-contain bg-card" 
+                            ? "object-contain mix-blend-multiply"
                             : "object-cover"
                         }`}
                         style={collection.id === "femme" ? { objectPosition: 'top' } : undefined}
@@ -153,15 +153,15 @@ const Collections = () => {
                 {collection.available ? (
                   <Link
                     to={`/collections/${collection.id}`}
-                    className="group block relative overflow-hidden bg-card border border-border hover:border-accent transition-all duration-500"
+                    className="group block relative overflow-hidden bg-secondary/60 p-3 border border-accent/30 hover:border-accent shadow-sm hover:shadow-md transition-all duration-500"
                   >
-                    <div className="aspect-square overflow-hidden">
+                    <div className="relative aspect-square overflow-hidden bg-secondary/40 ring-1 ring-accent/20">
                       <img
                         src={collection.image}
                         alt={collection.title}
                         className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
                           collection.id === "contour"
-                            ? "object-contain bg-card" 
+                            ? "object-contain mix-blend-multiply"
                             : "object-cover"
                         }`}
                       />
