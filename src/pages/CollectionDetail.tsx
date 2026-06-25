@@ -89,18 +89,18 @@ const CollectionDetail = () => {
         path={`/collections/${collectionId}`}
       />
       {/* Hero */}
-      <section className="relative py-20 bg-primary text-primary-foreground">
+      <section className="relative py-14 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="flex items-center justify-center gap-4 mb-4">
               <div className="w-12 h-px bg-accent" />
               <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
               <div className="w-12 h-px bg-accent" />
             </div>
-            <p className="text-accent text-sm tracking-[0.25em] uppercase mb-4">
+            <p className="text-accent text-sm tracking-[0.25em] uppercase mb-3">
               Collection
             </p>
-            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-4">
               {collectionInfo.title}
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
