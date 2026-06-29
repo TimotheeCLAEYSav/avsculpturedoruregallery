@@ -83,6 +83,11 @@ import papillon2 from "@/assets/papillon-2.jpg";
 import papillon3 from "@/assets/papillon-3.jpg";
 import papillon4 from "@/assets/papillon-4.jpg";
 import papillon5 from "@/assets/papillon-5.jpg";
+import refletPivoine1 from "@/assets/reflet-pivoine-1.jpg";
+import refletPivoine2 from "@/assets/reflet-pivoine-2.jpg";
+import refletPivoine3 from "@/assets/reflet-pivoine-3.jpg";
+import refletPivoine4 from "@/assets/reflet-pivoine-4.jpg";
+import refletPivoine5 from "@/assets/reflet-pivoine-5.jpg";
 
 export interface ArtworkImage {
   src: string;
