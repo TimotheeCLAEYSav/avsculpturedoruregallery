@@ -341,6 +341,24 @@ export const allArtworks: Artwork[] = [
     availability: "Pièces disponibles à la vente",
   },
   {
+    id: 15,
+    images: [
+      { src: refletPivoine1, alt: "Le reflet de la pivoine - vue de face" },
+      { src: refletPivoine2, alt: "Le reflet de la pivoine - vue de profil" },
+      { src: refletPivoine3, alt: "Le reflet de la pivoine - vue en main" },
+      { src: refletPivoine4, alt: "Le reflet de la pivoine - en situation murale" },
+      { src: refletPivoine5, alt: "Le reflet de la pivoine - avec broderie papillon" },
+    ],
+    title: "Le reflet de la pivoine",
+    collection: "flore",
+    categoryLabel: "Flore",
+    description:
+      "Miroir sculpté dans du bois de chêne, teinté et ciré.\n\nDimensions (mm): 130 de diamètre\n\n2026",
+    materials: "Chêne, teinte, cire",
+    techniques: "Sculpture, teinte, cirage",
+    dimensions: "130 mm de diamètre",
+    year: "2026",
+  {
     id: 6,
     images: [
       { src: contour, alt: "Miroir Louis XVI - vue principale", objectFit: "contain" },
