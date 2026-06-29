@@ -358,6 +358,7 @@ export const allArtworks: Artwork[] = [
     techniques: "Sculpture, teinte, cirage",
     dimensions: "130 mm de diamètre",
     year: "2026",
+  },
   {
     id: 6,
     images: [
