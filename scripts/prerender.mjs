@@ -236,7 +236,7 @@ for (const a of artworks) {
       jobTitle: "Sculptrice et doreuse sur bois",
       url: BASE_URL,
     },
-    url: `${BASE_URL}${path}`,
+    url: `${BASE_URL}${path}/`,
     ...(imageUrl ? { image: `${BASE_URL}${imageUrl}` } : {}),
     ...(a.year ? { dateCreated: a.year } : {}),
   };
