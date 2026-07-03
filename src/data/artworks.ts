@@ -150,8 +150,8 @@ export const allArtworks: Artwork[] = [
   {
     id: 1,
     images: [
-      { src: sculpture1, alt: "Enigma - vue principale", objectPosition: "top" },
-      { src: sculpture2, alt: "Enigma - vue détaillée" },
+      { src: sculpture2, alt: "Enigma – sculpture Art Déco en noyer, dorure et faux marbre par Aurélie Villemur" },
+      { src: sculpture1, alt: "Enigma - vue d'ensemble sur socle", objectPosition: "top" },
       { src: enigma1, alt: "Enigma - détail visage" },
       { src: enigma2, alt: "Enigma - détail base" },
       { src: enigma3, alt: "Enigma - vue de dos" },
