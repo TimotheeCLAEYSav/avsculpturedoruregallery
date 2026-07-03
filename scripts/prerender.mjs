@@ -118,7 +118,11 @@ const esc = (s) =>
     .replace(/"/g, "&quot;");
 
 function buildHead({ title, description, path, image, type = "website", jsonLd }) {
-  const url = `${BASE_URL}${path}`;
+  // GitHub Pages serves prerendered routes as /path/index.html and 301-redirects
+  // /path → /path/. Canonical & og:url MUST include the trailing slash so
+  // Googlebot doesn't see a redirect on every fetch (Search Console "Redirect error").
+  const canonicalPath = path === "/" ? "/" : path.endsWith("/") ? path : `${path}/`;
+  const url = `${BASE_URL}${canonicalPath}`;
   const img = image
     ? image.startsWith("http")
       ? image
