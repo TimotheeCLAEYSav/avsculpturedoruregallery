@@ -13,7 +13,10 @@ const SITE_URL = "https://www.av-sculpturedorure.fr";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 const SEO = ({ title, description, path, image, type = "website", jsonLd }: SEOProps) => {
-  const url = `${SITE_URL}${path}`;
+  // Trailing slash: GitHub Pages serves prerendered routes at /path/ and
+  // 301-redirects /path → /path/. Keep canonical & og:url on the final URL.
+  const canonicalPath = path === "/" ? "/" : path.endsWith("/") ? path : `${path}/`;
+  const url = `${SITE_URL}${canonicalPath}`;
   const img = image || DEFAULT_IMAGE;
   const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
