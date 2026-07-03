@@ -47,7 +47,7 @@ const ArtworkDetail = () => {
       jobTitle: "Sculptrice et doreuse sur bois",
       url: SITE_URL,
     },
-    url: `${SITE_URL}${path}`,
+    url: `${SITE_URL}${path}/`,
     ...(artwork.year ? { dateCreated: artwork.year } : {}),
   };
 
