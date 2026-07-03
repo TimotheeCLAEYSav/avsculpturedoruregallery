@@ -73,8 +73,10 @@ const entries = [...staticEntries, ...collectionEntries, ...artworkEntries];
 
 const urlNodes = entries
   .map(
-    (e) =>
-      `  <url>\n    <loc>${BASE_URL}${e.path}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${e.changefreq}</changefreq>\n    <priority>${e.priority}</priority>\n  </url>`,
+    (e) => {
+      const locPath = e.path === "/" ? "/" : `${e.path}/`;
+      return `  <url>\n    <loc>${BASE_URL}${locPath}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${e.changefreq}</changefreq>\n    <priority>${e.priority}</priority>\n  </url>`;
+    },
   )
   .join("\n");
 
