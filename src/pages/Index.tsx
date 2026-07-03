@@ -199,7 +199,7 @@ const Index = () => {
               <div className="aspect-[3/4] overflow-hidden bg-card">
                 <img
                   src={sculpture1}
-                  alt="Enigma - Chef d'œuvre d'Aurélie Villemur"
+                  alt="Enigma – sculpture Art Déco en noyer, dorure et faux marbre par Aurélie Villemur"
                   className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
