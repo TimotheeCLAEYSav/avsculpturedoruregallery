@@ -44,7 +44,7 @@ const SEO = ({ title, description, path, image, type = "website", jsonLd }: SEOP
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={img} />
-      <meta name="twitter:image:alt" content="Enigma – sculpture Art Déco en noyer, dorure et faux marbre par Aurélie Villemur" /></meta>
+      <meta name="twitter:image:alt" content="Enigma – sculpture Art Déco en noyer, dorure et faux marbre par Aurélie Villemur" />
 
       {schemas.map((schema, i) => (
         <script key={i} type="application/ld+json">
