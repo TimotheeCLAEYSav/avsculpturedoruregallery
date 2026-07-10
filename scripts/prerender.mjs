@@ -25,7 +25,7 @@ const root = resolve(__dirname, "..");
 const dist = resolve(root, "dist");
 
 const BASE_URL = "https://www.av-sculpturedorure.fr";
-const SITE_NAME = "AVsculpturedorure";
+const SITE_NAME = "AV Sculpture & Dorure";
 
 if (!existsSync(dist)) {
   console.error("[prerender] dist/ not found — run `vite build` first.");
@@ -173,7 +173,7 @@ function writePage(path, headExtra) {
 const staticPages = [
   {
     path: "/a-propos",
-    title: "À propos — Aurélie Villemur | AVsculpturedorure",
+    title: "À propos — Aurélie Villemur | AV Sculpture & Dorure",
     description:
       "Découvrez le parcours et la démarche d'Aurélie Villemur, sculptrice et doreuse sur bois : artisanat d'art, restauration du patrimoine et création contemporaine.",
   },
@@ -191,7 +191,7 @@ const staticPages = [
   },
   {
     path: "/contact",
-    title: "Contact — Aurélie Villemur | AVsculpturedorure",
+    title: "Contact — Aurélie Villemur | AV Sculpture & Dorure",
     description:
       "Contactez Aurélie Villemur, sculptrice et doreuse sur bois, pour toute demande de création, restauration ou collaboration.",
   },
