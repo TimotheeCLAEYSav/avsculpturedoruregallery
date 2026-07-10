@@ -24,7 +24,7 @@ const Navbar = () => {
               Aurélie Villemur
             </span>
             <span className="text-xs md:text-sm text-forest font-medium tracking-[0.2em] uppercase">
-              AVsculpturedorure
+              AV Sculpture &amp; Dorure
             </span>
           </Link>
 

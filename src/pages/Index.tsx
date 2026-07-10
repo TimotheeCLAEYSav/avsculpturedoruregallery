@@ -73,7 +73,7 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="AVsculpturedorure - Aurélie Villemur | Sculptrice et Doreuse sur bois"
+        title="AV Sculpture & Dorure - Aurélie Villemur | Sculptrice et Doreuse sur bois"
         description="Aurélie Villemur, artisane d'art : sculpture sur bois, dorure à la feuille et restauration du patrimoine. Créations sur mesure et savoir-faire d'exception."
         path="/"
       />

@@ -8,7 +8,7 @@ const APropos = () => {
   return (
     <Layout>
       <SEO
-        title="À propos - Aurélie Villemur, artisane d'art | AVsculpturedorure"
+        title="À propos - Aurélie Villemur, artisane d'art | AV Sculpture & Dorure"
         description="Découvrez le parcours et la démarche artistique d'Aurélie Villemur, sculptrice et doreuse sur bois passionnée par les métiers du patrimoine."
         path="/a-propos"
         type="profile"

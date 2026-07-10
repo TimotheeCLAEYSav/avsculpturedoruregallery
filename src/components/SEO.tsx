@@ -38,7 +38,7 @@ const SEO = ({ title, description, path, image, type = "website", jsonLd }: SEOP
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="Enigma – sculpture Art Déco en noyer, dorure et faux marbre par Aurélie Villemur" />
       <meta property="og:locale" content="fr_FR" />
-      <meta property="og:site_name" content="AVsculpturedorure" />
+      <meta property="og:site_name" content="AV Sculpture & Dorure" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />

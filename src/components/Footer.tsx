@@ -14,7 +14,7 @@ const Footer = () => {
               Aurélie Villemur
             </h3>
             <p className="text-accent text-sm tracking-[0.15em] uppercase mb-4">
-              AVsculpturedorure
+              AV Sculpture &amp; Dorure
             </p>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Artisane d'art
@@ -97,7 +97,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-sm text-primary-foreground/60">
-          <p>© {currentYear} AVsculpturedorure - Aurélie Villemur. Tous droits réservés.</p>
+          <p>© {currentYear} AV Sculpture &amp; Dorure - Aurélie Villemur. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

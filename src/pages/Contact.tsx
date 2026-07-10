@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Layout>
       <SEO
-        title="Contact - Aurélie Villemur, sculptrice et doreuse | AVsculpturedorure"
+        title="Contact - Aurélie Villemur, sculptrice et doreuse | AV Sculpture & Dorure"
         description="Contactez Aurélie Villemur pour vos projets de sculpture sur bois, dorure ou restauration de patrimoine. Création sur mesure et devis personnalisés."
         path="/contact"
       />
