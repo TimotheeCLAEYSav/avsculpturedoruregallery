@@ -106,6 +106,9 @@ import moineau3 from "@/assets/moineau-3.jpg";
 import norwich1 from "@/assets/norwich-1.jpg";
 import norwich2 from "@/assets/norwich-2.jpg";
 import norwich3 from "@/assets/norwich-3.jpg";
+import acanthe1 from "@/assets/acanthe-1.jpg";
+import acanthe2 from "@/assets/acanthe-2.jpg";
+import acanthe3 from "@/assets/acanthe-3.jpg";
 
 export interface ArtworkImage {
   src: string;
@@ -477,6 +480,23 @@ export const allArtworks: Artwork[] = [
     materials: "Bois, feuille d'or 23 carats",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate",
     dimensions: "190 x 20 mm",
+    year: "2026",
+   },
+  {
+    id: 22,
+    images: [
+      { src: acanthe1, alt: "Acanthe - médaillon doré à la feuille d'or, feuilles d'acanthe peintes à l'huile" },
+      { src: acanthe2, alt: "Acanthe - vue de trois quarts" },
+      { src: acanthe3, alt: "Acanthe - en situation murale" },
+    ],
+    title: "Acanthe",
+    collection: "flore",
+    categoryLabel: "Flore",
+    description:
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nDimensions (mm): 120 x 20\n\n2026",
+    materials: "Bois, feuille d'or 23 carats, peinture à l'huile",
+    techniques: "Dorure à la détrempe, réparure, brunissage à l'agate, rehauts à l'huile",
+    dimensions: "120 x 20 mm",
     year: "2026",
   },
   {
