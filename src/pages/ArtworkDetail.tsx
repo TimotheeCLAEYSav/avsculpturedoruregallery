@@ -86,11 +86,11 @@ const ArtworkDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image principale */}
             <div>
-              <div className="bg-secondary/30 flex items-center justify-center p-4 md:p-6">
+              <div className="bg-secondary/60 flex items-center justify-center p-4 md:p-6">
                 <img
                   src={mainImage.src}
                   alt={mainImage.alt}
-                  className="w-full h-auto max-h-[80vh] object-contain"
+                  className="w-full h-auto max-h-[80vh] object-contain mix-blend-multiply"
                   loading="eager"
                 />
               </div>
