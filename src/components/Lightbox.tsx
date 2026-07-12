@@ -55,7 +55,7 @@ const Lightbox = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/95 animate-fade-in">
+    <div className="fixed inset-0 z-50 bg-primary/95 animate-fade-in">
       {/* Bouton fermer */}
       <button
         onClick={onClose}
@@ -68,12 +68,12 @@ const Lightbox = ({
       {/* Contenu principal */}
       <div className="h-full flex flex-col md:flex-row">
         {/* Zone image */}
-        <div className="flex-1 relative flex items-center justify-center p-4 md:p-12">
+        <div className="flex-1 relative flex items-center justify-center p-4 md:p-12 bg-secondary/60">
           {/* Image principale */}
           <img
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
-            className="max-h-[70vh] md:max-h-[85vh] max-w-full object-contain animate-scale-in"
+            className="max-h-[70vh] md:max-h-[85vh] max-w-full object-contain mix-blend-multiply animate-scale-in"
             key={currentIndex}
           />
 
