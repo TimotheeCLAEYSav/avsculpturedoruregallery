@@ -86,11 +86,11 @@ const ArtworkDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image principale */}
             <div>
-              <div className="bg-secondary/30 flex items-center justify-center p-4 md:p-6">
+              <div className="bg-secondary/60 flex items-center justify-center p-4 md:p-6">
                 <img
                   src={mainImage.src}
                   alt={mainImage.alt}
-                  className="w-full h-auto max-h-[80vh] object-contain"
+                  className="w-full h-auto max-h-[80vh] object-contain mix-blend-multiply"
                   loading="eager"
                 />
               </div>
@@ -183,12 +183,12 @@ const ArtworkDetail = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {artwork.images.map((img, idx) => (
-                <div key={idx} className="bg-background flex items-center justify-center p-3 min-h-[16rem]">
+                <div key={idx} className="bg-secondary/60 flex items-center justify-center p-3 min-h-[16rem]">
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className="w-full h-auto max-h-[28rem] object-contain transition-transform duration-500 hover:scale-105"
+                    className="w-full h-auto max-h-[28rem] object-contain mix-blend-multiply transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               ))}
