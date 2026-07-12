@@ -100,6 +100,9 @@ import flamant3 from "@/assets/flamant-3.jpg";
 import papillonPivoine1 from "@/assets/papillon-pivoine-1.jpg";
 import papillonPivoine2 from "@/assets/papillon-pivoine-2.jpg";
 import papillonPivoine3 from "@/assets/papillon-pivoine-3.jpg";
+import moineau1 from "@/assets/moineau-1.jpg";
+import moineau2 from "@/assets/moineau-2.jpg";
+import moineau3 from "@/assets/moineau-3.jpg";
 
 export interface ArtworkImage {
   src: string;
