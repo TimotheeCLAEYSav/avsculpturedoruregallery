@@ -183,12 +183,12 @@ const ArtworkDetail = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {artwork.images.map((img, idx) => (
-                <div key={idx} className="bg-background flex items-center justify-center p-3 min-h-[16rem]">
+                <div key={idx} className="bg-secondary/60 flex items-center justify-center p-3 min-h-[16rem]">
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className="w-full h-auto max-h-[28rem] object-contain transition-transform duration-500 hover:scale-105"
+                    className="w-full h-auto max-h-[28rem] object-contain mix-blend-multiply transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               ))}
