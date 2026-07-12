@@ -100,6 +100,9 @@ import flamant3 from "@/assets/flamant-3.jpg";
 import papillonPivoine1 from "@/assets/papillon-pivoine-1.jpg";
 import papillonPivoine2 from "@/assets/papillon-pivoine-2.jpg";
 import papillonPivoine3 from "@/assets/papillon-pivoine-3.jpg";
+import moineau1 from "@/assets/moineau-1.jpg";
+import moineau2 from "@/assets/moineau-2.jpg";
+import moineau3 from "@/assets/moineau-3.jpg";
 
 export interface ArtworkImage {
   src: string;
@@ -365,6 +368,23 @@ export const allArtworks: Artwork[] = [
       "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nDimensions (mm): 120 x 20\n\n2026",
     materials: "Bois, feuille d'or 23 carats, peinture à l'huile",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate, rehauts à l'huile",
+    dimensions: "120 x 20 mm",
+    year: "2026",
+  },
+  {
+    id: 20,
+    images: [
+      { src: moineau1, alt: "Le moineau - médaillon doré à la feuille d'or" },
+      { src: moineau2, alt: "Le moineau - vue de trois quarts" },
+      { src: moineau3, alt: "Le moineau - en situation murale" },
+    ],
+    title: "Le moineau",
+    collection: "faune",
+    categoryLabel: "Faune",
+    description:
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs.\n\nDimensions (mm): 120 x 20\n\n2026",
+    materials: "Bois, feuille d'or 23 carats",
+    techniques: "Dorure à la détrempe, réparure, brunissage à l'agate",
     dimensions: "120 x 20 mm",
     year: "2026",
   },
