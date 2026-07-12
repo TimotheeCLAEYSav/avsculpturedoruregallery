@@ -103,6 +103,9 @@ import papillonPivoine3 from "@/assets/papillon-pivoine-3.jpg";
 import moineau1 from "@/assets/moineau-1.jpg";
 import moineau2 from "@/assets/moineau-2.jpg";
 import moineau3 from "@/assets/moineau-3.jpg";
+import norwich1 from "@/assets/norwich-1.jpg";
+import norwich2 from "@/assets/norwich-2.jpg";
+import norwich3 from "@/assets/norwich-3.jpg";
 
 export interface ArtworkImage {
   src: string;
@@ -457,6 +460,23 @@ export const allArtworks: Artwork[] = [
     materials: "Chêne, teinte, cire",
     techniques: "Sculpture, teinte, cirage",
     dimensions: "130 mm de diamètre",
+    year: "2026",
+  },
+  {
+    id: 21,
+    images: [
+      { src: norwich1, alt: "Norwich - médaillon doré à la feuille d'or, motifs floraux gravés" },
+      { src: norwich2, alt: "Norwich - vue de trois quarts" },
+      { src: norwich3, alt: "Norwich - en situation murale" },
+    ],
+    title: "Norwich",
+    collection: "flore",
+    categoryLabel: "Flore",
+    description:
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs.\n\nDimensions (mm): 190 x 20\n\n2026",
+    materials: "Bois, feuille d'or 23 carats",
+    techniques: "Dorure à la détrempe, réparure, brunissage à l'agate",
+    dimensions: "190 x 20 mm",
     year: "2026",
   },
   {
