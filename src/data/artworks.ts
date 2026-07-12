@@ -91,6 +91,9 @@ import refletPivoine5 from "@/assets/reflet-pivoine-5.jpg";
 import leopard1 from "@/assets/leopard-1.jpg";
 import leopard2 from "@/assets/leopard-2.jpg";
 import leopard3 from "@/assets/leopard-3.jpg";
+import paradis1 from "@/assets/paradis-1.jpg";
+import paradis2 from "@/assets/paradis-2.jpg";
+import paradis3 from "@/assets/paradis-3.jpg";
 
 export interface ArtworkImage {
   src: string;
@@ -299,6 +302,23 @@ export const allArtworks: Artwork[] = [
       { src: leopard3, alt: "Le Léopard - en situation murale" },
     ],
     title: "Le Léopard",
+    collection: "faune",
+    categoryLabel: "Faune",
+    description:
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs.\n\nDimensions (mm): 190 x 20\n\n2026",
+    materials: "Bois, feuille d'or 23 carats",
+    techniques: "Dorure à la détrempe, réparure, brunissage à l'agate",
+    dimensions: "190 x 20 mm",
+    year: "2026",
+  },
+  {
+    id: 17,
+    images: [
+      { src: paradis1, alt: "L'Oiseau du Paradis - médaillon doré à la feuille d'or" },
+      { src: paradis2, alt: "L'Oiseau du Paradis - vue de trois quarts" },
+      { src: paradis3, alt: "L'Oiseau du Paradis - en situation murale" },
+    ],
+    title: "L'Oiseau du Paradis",
     collection: "faune",
     categoryLabel: "Faune",
     description:
