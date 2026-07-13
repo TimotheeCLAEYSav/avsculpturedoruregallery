@@ -199,7 +199,7 @@ const ArtworkDetail = () => {
 
       {/* Œuvres liées */}
       {related.length > 0 && (
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-secondary/30">
           <div className="container mx-auto px-6">
             <h2 className="font-display text-2xl font-semibold text-foreground mb-8">
               Œuvres de la même collection
@@ -211,12 +211,12 @@ const ArtworkDetail = () => {
                   to={`/oeuvres/${getArtworkSlug(rel)}`}
                   className="group block"
                 >
-                  <div className="aspect-[4/5] overflow-hidden bg-secondary/30 mb-3 flex items-center justify-center p-2">
+                  <div className="aspect-[4/5] overflow-hidden bg-secondary/60 mb-3 flex items-center justify-center p-2">
                     <img
                       src={rel.images[0].src}
                       alt={rel.images[0].alt}
                       loading="lazy"
-                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-accent">
