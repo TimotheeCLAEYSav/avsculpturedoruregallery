@@ -314,7 +314,7 @@ export const allArtworks: Artwork[] = [
     images: [
       { src: leopard1, alt: "Le Léopard - médaillon doré à la feuille d'or" },
       { src: leopard2, alt: "Le Léopard - vue de trois quarts" },
-      { src: leopard3Asset.url, alt: "Le Léopard - en situation murale" },
+      { src: leopard3, alt: "Le Léopard - en situation murale" },
     ],
     title: "Le Léopard",
     collection: "faune",
