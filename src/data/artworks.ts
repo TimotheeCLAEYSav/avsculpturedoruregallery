@@ -90,7 +90,7 @@ import refletPivoine4 from "@/assets/reflet-pivoine-4.jpg";
 import refletPivoine5 from "@/assets/reflet-pivoine-5.jpg";
 import leopard1 from "@/assets/leopard-1.jpg";
 import leopard2 from "@/assets/leopard-2.jpg";
-import leopard3 from "@/assets/leopard-3.jpg";
+import leopard3Asset from "@/assets/leopard-3.jpg.asset.json";
 import paradis1 from "@/assets/paradis-1.jpg";
 import paradis2 from "@/assets/paradis-2.jpg";
 import paradis3 from "@/assets/paradis-3.jpg";
