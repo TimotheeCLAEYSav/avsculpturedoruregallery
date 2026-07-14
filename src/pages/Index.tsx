@@ -34,7 +34,7 @@ const expertiseAreas = [
   {
     image: sculptureAccueil,
     title: "Sculpture",
-    description: "Création d'ornements, bas-reliefs et sculptures en ronde-bosse dans la tradition des maîtres anciens, tout en introduisant des techniques plus contemporaines.",
+    description: "Création de sculptures sur bois, bas-reliefs et ornements dorés à la feuille d'or. Des œuvres contemporaines inspirées des arts décoratifs et des cabinets de curiosités, entièrement réalisées à la main en France.",
     anchor: "sculpture",
   },
   {
@@ -74,7 +74,7 @@ const Index = () => {
     <Layout>
       <SEO
         title="AV Sculpture & Dorure | Aurélie Villemur – Sculpture sur bois, Dorure à la feuille & Restauration patrimoniale"
-        description="Aurélie Villemur, artisane d'art : sculpture sur bois, dorure à la feuille et restauration du patrimoine. Créations sur mesure et savoir-faire d'exception."
+        description="Création de sculptures sur bois, bas-reliefs et ornements dorés à la feuille d'or. Œuvres contemporaines inspirées des arts décoratifs et des cabinets de curiosités, entièrement réalisées à la main en France."
         path="/"
       />
       {/* Hero Section avec image Enigma en fond */}
