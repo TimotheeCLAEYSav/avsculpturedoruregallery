@@ -34,7 +34,7 @@ const expertiseAreas = [
   {
     image: sculptureAccueil,
     title: "Sculpture",
-    description: "Création d'ornements, bas-reliefs et sculptures en ronde-bosse dans la tradition des maîtres anciens, tout en introduisant des techniques plus contemporaines.",
+    description: "Création de sculptures sur bois, bas-reliefs et ornements dorés à la feuille d'or. Des œuvres contemporaines inspirées des arts décoratifs et des cabinets de curiosités, entièrement réalisées à la main en France.",
     anchor: "sculpture",
   },
   {
