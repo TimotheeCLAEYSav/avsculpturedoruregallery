@@ -1,0 +1,11 @@
+{
+  "name": "AV Sculpture & Dorure",
+  "short_name": "AV Sculpture",
+  "icons": [
+    { "src": "/favicon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ],
+  "theme_color": "#6c704f",
+  "background_color": "#6c704f",
+  "display": "standalone"
+}
