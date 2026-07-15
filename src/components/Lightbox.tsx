@@ -109,7 +109,7 @@ const Lightbox = ({
         </div>
 
         {/* Panneau d'informations */}
-        <div className="md:w-80 lg:w-96 bg-black/50 p-6 md:p-8 flex flex-col">
+        <div className="md:w-80 lg:w-96 bg-black/50 p-6 md:p-8 pb-24 md:pb-8 flex flex-col md:overflow-y-auto">
           {category && (
             <span className="text-accent text-xs tracking-[0.25em] uppercase mb-2">
               {category}
