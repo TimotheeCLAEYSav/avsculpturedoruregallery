@@ -193,22 +193,23 @@ const Index = () => {
       </section>
 
       {/* Section Chef-d'œuvre - Enigma */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-fluid bg-secondary/30">
+        <div className="container mx-auto px-fluid">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Image principale - lien vers l'œuvre */}
             <Link to="/oeuvres/enigma" className="relative group block">
               <div className="aspect-[3/4] overflow-hidden bg-card">
                 <img
                   src={sculpture1}
                   alt="Enigma – sculpture Art Déco en noyer, dorure et faux marbre par Aurélie Villemur"
+                  loading="lazy"
                   className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
               {/* Badge chef-d'œuvre */}
-              <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-4 py-2 flex items-center gap-2">
+              <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 sm:px-4 py-2 flex items-center gap-2">
                 <Star size={16} fill="currentColor" />
-                <span className="text-xs font-medium tracking-wider uppercase">Chef-d'œuvre</span>
+                <span className="text-fluid-eyebrow font-medium tracking-wider uppercase">Chef-d'œuvre</span>
               </div>
               {/* Cadre décoratif */}
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-accent -z-10" />
@@ -218,20 +219,20 @@ const Index = () => {
             <div className="lg:pl-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-px bg-accent" />
-                <h2 className="font-display text-3xl font-semibold text-amber-800">
+                <h2 className="font-display text-fluid-h2 font-semibold text-amber-800">
                   Œuvre phare
                 </h2>
               </div>
 
-              <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
+              <h3 className="font-display text-fluid-h3 font-semibold text-foreground mb-4">
                 Enigma
               </h3>
 
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground text-fluid-body mb-6">
                 Cette sculpture incarne l'essence de mon travail : un profil féminin mystérieux, sublimé par la délicatesse de la feuille d'or. Inspirée par l'élégance géométrique de l'Art Déco, Enigma représente la fusion parfaite entre tradition et modernité.
               </p>
 
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className="text-muted-foreground text-fluid-body mb-8">
                 Chaque détail a été sculpté avec précision, puis rehaussé de dorure à la feuille pour capturer la lumière et créer ce jeu subtil d'ombres et d'éclats qui donne vie à l'œuvre. Un faux marbre a été créé pour rappeler le globe chiné dans une brocante à Athènes et qui accueille une lampe.
               </p>
 
@@ -252,8 +253,8 @@ const Index = () => {
       </section>
 
       {/* Section Citation / Philosophie */}
-      <section className="py-24 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6">
+      <section className="py-fluid bg-primary text-primary-foreground">
+        <div className="container mx-auto px-fluid">
           <div className="max-w-3xl mx-auto text-center">
             {/* Ornement */}
             <div className="flex items-center justify-center gap-4 mb-8">
@@ -262,17 +263,17 @@ const Index = () => {
               <div className="w-16 h-px bg-accent" />
             </div>
 
-            <blockquote className="font-display text-2xl md:text-3xl italic leading-relaxed mb-8">
+            <blockquote className="font-display text-fluid-quote italic mb-8">
               "La lumière de l'or pour sublimer le bois et révéler ses détails."
             </blockquote>
 
-            <p className="text-accent tracking-[0.2em] uppercase text-sm">
+            <p className="text-accent tracking-[0.2em] uppercase text-fluid-eyebrow">
               — Aurélie Villemur
             </p>
-            <p className="text-accent/80 tracking-[0.15em] uppercase text-xs mt-1">
+            <p className="text-accent/80 tracking-[0.15em] uppercase text-fluid-eyebrow mt-1">
               Artisane d'Art
             </p>
-            <p className="text-accent/80 tracking-[0.15em] uppercase text-xs">
+            <p className="text-accent/80 tracking-[0.15em] uppercase text-fluid-eyebrow">
               Sculptrice, Ébéniste et Doreuse sur bois
             </p>
           </div>
@@ -280,8 +281,8 @@ const Index = () => {
       </section>
 
       {/* Section CTA - Contact */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-fluid bg-background">
+        <div className="container mx-auto px-fluid">
           <div className="max-w-2xl mx-auto text-center">
             <SectionHeading
               title="Un projet en tête ?"
