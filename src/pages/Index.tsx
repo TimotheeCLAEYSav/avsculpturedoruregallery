@@ -79,18 +79,19 @@ const Index = () => {
       />
       {/* Hero Section avec image Enigma en fond */}
       <section 
-        className="relative min-h-[80vh] flex items-center justify-center"
+        className="relative flex items-center justify-center py-fluid"
         style={{
           backgroundImage: `url(${sculpture1})`,
           backgroundSize: 'cover',
           backgroundPosition: 'top',
+          minHeight: 'clamp(32rem, 70vh, 48rem)',
         }}
       >
         {/* Overlay léger */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/60" />
         
         {/* Contenu */}
-        <div className="relative z-10 container mx-auto px-6 text-center">
+        <div className="relative z-10 container mx-auto px-fluid text-center">
           {/* Ornement supérieur */}
           <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in">
             <div className="w-16 md:w-24 h-px bg-accent" />
@@ -100,7 +101,7 @@ const Index = () => {
 
           {/* Sous-titre */}
           <p 
-            className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4 animate-fade-in"
+            className="text-accent text-fluid-eyebrow tracking-[0.25em] uppercase mb-4 animate-fade-in"
             style={{ animationDelay: '0.1s' }}
           >
             Artisane d'Art, Sculptrice & Doreuse sur bois
@@ -108,7 +109,7 @@ const Index = () => {
 
           {/* Titre principal */}
           <h1 
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground mb-6 animate-fade-in"
+            className="font-display text-fluid-h1 font-semibold text-primary-foreground mb-6 animate-fade-in"
             style={{ animationDelay: '0.2s' }}
           >
             Aurélie Villemur
@@ -116,7 +117,7 @@ const Index = () => {
 
           {/* Description */}
           <p 
-            className="text-primary-foreground/90 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
+            className="text-primary-foreground/90 text-fluid-lead max-w-2xl mx-auto mb-10 animate-fade-in"
             style={{ animationDelay: '0.3s' }}
           >
             Atelier de création d'ouvrages sculptés, dorés et de restauration patrimoniale
