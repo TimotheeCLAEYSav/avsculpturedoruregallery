@@ -55,20 +55,20 @@ const Lightbox = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-primary/95 animate-fade-in">
+    <div className="fixed inset-0 z-50 bg-primary/95 animate-fade-in overflow-y-auto overscroll-contain">
       {/* Bouton fermer */}
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 z-50 w-12 h-12 flex items-center justify-center text-white/70 hover:text-white transition-colors"
+        className="fixed top-6 right-6 z-[60] w-12 h-12 flex items-center justify-center text-white/70 hover:text-white transition-colors bg-primary/60 rounded-full backdrop-blur-sm"
         aria-label="Fermer"
       >
         <X size={28} />
       </button>
 
       {/* Contenu principal */}
-      <div className="h-full flex flex-col md:flex-row">
+      <div className="min-h-full flex flex-col md:flex-row md:h-screen">
         {/* Zone image */}
-        <div className="flex-1 relative flex items-center justify-center p-4 md:p-12 bg-secondary/60">
+        <div className="relative flex items-center justify-center p-4 md:p-12 bg-secondary/60 md:flex-1 md:min-h-0">
           {/* Image principale */}
           <img
             src={images[currentIndex].src}
@@ -109,7 +109,7 @@ const Lightbox = ({
         </div>
 
         {/* Panneau d'informations */}
-        <div className="md:w-80 lg:w-96 bg-black/50 p-6 md:p-8 flex flex-col">
+        <div className="md:w-80 lg:w-96 bg-black/50 p-6 md:p-8 pb-24 md:pb-8 flex flex-col md:overflow-y-auto">
           {category && (
             <span className="text-accent text-xs tracking-[0.25em] uppercase mb-2">
               {category}
