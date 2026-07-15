@@ -68,7 +68,7 @@ const Lightbox = ({
       {/* Contenu principal */}
       <div className="min-h-full flex flex-col md:flex-row md:h-screen">
         {/* Zone image */}
-        <div className="flex-1 relative flex items-center justify-center p-4 md:p-12 bg-secondary/60">
+        <div className="relative flex items-center justify-center p-4 md:p-12 bg-secondary/60 md:flex-1 md:min-h-0">
           {/* Image principale */}
           <img
             src={images[currentIndex].src}
