@@ -20,11 +20,11 @@ const SectionHeading = ({
           <div className="w-12 h-px bg-accent" />
         </div>
       )}
-      <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-3">
+      <h2 className="font-display text-fluid-h2 font-semibold text-foreground mb-3">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-fluid-lead max-w-2xl mx-auto">
           {subtitle}
         </p>
       )}
