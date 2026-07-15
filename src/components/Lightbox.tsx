@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 interface LightboxImage {
   src: string;
   alt: string;
+  objectPosition?: string;
 }
 
 interface LightboxProps {
