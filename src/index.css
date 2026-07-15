@@ -181,6 +181,45 @@
 }
 
 @layer utilities {
+  /* Typographie fluide - reste harmonieuse à tous les zooms/tailles d'écran */
+  .text-fluid-h1 {
+    font-size: clamp(2.25rem, 1.4rem + 3.6vw, 4.5rem);
+    line-height: 1.1;
+  }
+  .text-fluid-h2 {
+    font-size: clamp(1.75rem, 1.15rem + 2.4vw, 2.75rem);
+    line-height: 1.2;
+  }
+  .text-fluid-h3 {
+    font-size: clamp(1.35rem, 1rem + 1.4vw, 1.875rem);
+    line-height: 1.25;
+  }
+  .text-fluid-lead {
+    font-size: clamp(1rem, 0.85rem + 0.7vw, 1.25rem);
+    line-height: 1.6;
+  }
+  .text-fluid-body {
+    font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.075rem);
+    line-height: 1.65;
+  }
+  .text-fluid-eyebrow {
+    font-size: clamp(0.75rem, 0.68rem + 0.3vw, 0.95rem);
+  }
+  .text-fluid-quote {
+    font-size: clamp(1.35rem, 1rem + 1.6vw, 2rem);
+    line-height: 1.4;
+  }
+
+  /* Padding vertical fluide pour les sections */
+  .py-fluid {
+    padding-top: clamp(3rem, 2rem + 4vw, 6rem);
+    padding-bottom: clamp(3rem, 2rem + 4vw, 6rem);
+  }
+  .px-fluid {
+    padding-left: clamp(1rem, 0.5rem + 2vw, 2.5rem);
+    padding-right: clamp(1rem, 0.5rem + 2vw, 2.5rem);
+  }
+
   /* Animation fade-in subtile */
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;

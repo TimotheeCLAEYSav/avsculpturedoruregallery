@@ -23,12 +23,15 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   return (
     <section 
-      className="relative min-h-[80vh] flex items-center justify-center"
-      style={backgroundImage ? {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      } : undefined}
+      className="relative flex items-center justify-center py-fluid"
+      style={{
+        ...(backgroundImage ? {
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        } : {}),
+        minHeight: 'clamp(28rem, 65vh, 44rem)',
+      }}
     >
       {/* Overlay / Fond */}
       {overlay && (
@@ -36,7 +39,7 @@ const HeroSection = ({
       )}
       
       {/* Contenu */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-fluid text-center">
         {/* Ornement supérieur */}
         <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in">
           <div className="w-16 md:w-24 h-px bg-accent" />
@@ -46,7 +49,7 @@ const HeroSection = ({
 
         {/* Sous-titre */}
         <p 
-          className="text-accent text-sm md:text-base tracking-[0.25em] uppercase mb-4 animate-fade-in"
+          className="text-accent text-fluid-eyebrow tracking-[0.25em] uppercase mb-4 animate-fade-in"
           style={{ animationDelay: '0.1s' }}
         >
           {subtitle}
@@ -54,7 +57,7 @@ const HeroSection = ({
 
         {/* Titre principal */}
         <h1 
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground mb-6 animate-fade-in"
+          className="font-display text-fluid-h1 font-semibold text-primary-foreground mb-6 animate-fade-in"
           style={{ animationDelay: '0.2s' }}
         >
           {title}
@@ -63,7 +66,7 @@ const HeroSection = ({
         {/* Description */}
         {description && (
           <p 
-            className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
+            className="text-primary-foreground/80 text-fluid-lead max-w-2xl mx-auto mb-10 animate-fade-in"
             style={{ animationDelay: '0.3s' }}
           >
             {description}
