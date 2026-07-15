@@ -153,14 +153,14 @@ const Index = () => {
       </section>
 
       {/* Section Expertise avec photos */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-fluid bg-background">
+        <div className="container mx-auto px-fluid">
           <SectionHeading
             title="Un savoir-faire d'exception"
             subtitle="Six domaines d'expertise au service de la beauté et du patrimoine"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {expertiseAreas.map((area, index) => (
               <Link
                 key={area.title}
@@ -172,16 +172,17 @@ const Index = () => {
                   <img
                     src={area.image}
                     alt={area.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     style={area.title === "Restauration patrimoine" ? { objectPosition: 'center 30%' } : undefined}
                   />
                 </div>
                 {/* Overlay avec texte */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-transparent flex flex-col justify-end p-6">
-                  <h3 className="font-display text-2xl font-semibold text-primary-foreground mb-2">
+                  <h3 className="font-display text-fluid-h3 font-semibold text-primary-foreground mb-2">
                     {area.title}
                   </h3>
-                  <p className="text-primary-foreground/80 text-base leading-relaxed">
+                  <p className="text-primary-foreground/80 text-fluid-body">
                     {area.description}
                   </p>
                 </div>
