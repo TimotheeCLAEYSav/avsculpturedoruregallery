@@ -138,7 +138,7 @@ const Lightbox = ({
                   <button
                     key={idx}
                     onClick={() => onIndexChange(idx)}
-                    className={`w-16 h-16 overflow-hidden border-2 transition-all ${
+                    className={`w-16 h-16 overflow-hidden border-2 transition-all bg-secondary/40 flex items-center justify-center ${
                       idx === currentIndex
                         ? "border-accent"
                         : "border-white/20 hover:border-white/50"
@@ -147,7 +147,7 @@ const Lightbox = ({
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain mix-blend-multiply"
                     />
                   </button>
                 ))}
