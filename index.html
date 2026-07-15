@@ -41,6 +41,15 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "ImageObject",
+          "@id": "https://www.av-sculpturedorure.fr/#primaryimage",
+          "url": "https://www.av-sculpturedorure.fr/og-image.jpg",
+          "contentUrl": "https://www.av-sculpturedorure.fr/og-image.jpg",
+          "width": 1200,
+          "height": 630,
+          "caption": "Enigma – sculpture Art Déco en noyer, dorure à la feuille et faux marbre par Aurélie Villemur"
+        },
+        {
           "@type": ["Person", "VisualArtist"],
           "@id": "https://www.av-sculpturedorure.fr/#person",
           "name": "Aurélie Villemur",
@@ -48,7 +57,7 @@
           "jobTitle": "Sculptrice et Doreuse sur bois",
           "description": "Artisane d'art spécialisée en sculpture sur bois, dorure à la feuille et restauration du patrimoine.",
           "url": "https://www.av-sculpturedorure.fr",
-          "image": "https://www.av-sculpturedorure.fr/og-image.jpg",
+          "image": { "@id": "https://www.av-sculpturedorure.fr/#primaryimage" },
           "nationality": "FR",
           "knowsAbout": ["Sculpture sur bois", "Dorure à la feuille", "Restauration du patrimoine", "Modelage", "Moulage", "Patine"]
         },
@@ -58,7 +67,8 @@
           "name": "AV Sculpture & Dorure - Atelier Aurélie Villemur",
           "description": "Atelier d'art : sculpture sur bois, dorure et restauration du patrimoine historique.",
           "url": "https://www.av-sculpturedorure.fr",
-          "image": "https://www.av-sculpturedorure.fr/og-image.jpg",
+          "image": { "@id": "https://www.av-sculpturedorure.fr/#primaryimage" },
+          "logo": { "@id": "https://www.av-sculpturedorure.fr/#primaryimage" },
           "founder": { "@id": "https://www.av-sculpturedorure.fr/#person" },
           "address": { "@type": "PostalAddress", "addressCountry": "FR" },
           "areaServed": "FR"
@@ -69,7 +79,26 @@
           "url": "https://www.av-sculpturedorure.fr",
           "name": "AV Sculpture & Dorure - Aurélie Villemur",
           "inLanguage": "fr-FR",
+          "image": { "@id": "https://www.av-sculpturedorure.fr/#primaryimage" },
           "publisher": { "@id": "https://www.av-sculpturedorure.fr/#person" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.av-sculpturedorure.fr/#webpage",
+          "url": "https://www.av-sculpturedorure.fr/",
+          "name": "AV Sculpture & Dorure | Aurélie Villemur",
+          "isPartOf": { "@id": "https://www.av-sculpturedorure.fr/#website" },
+          "primaryImageOfPage": { "@id": "https://www.av-sculpturedorure.fr/#primaryimage" },
+          "image": { "@id": "https://www.av-sculpturedorure.fr/#primaryimage" }
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://www.av-sculpturedorure.fr/#enigma",
+          "name": "Enigma",
+          "creator": { "@id": "https://www.av-sculpturedorure.fr/#person" },
+          "artMedium": ["Bois de noyer", "Feuille d'or", "Faux marbre"],
+          "artform": "Sculpture",
+          "image": { "@id": "https://www.av-sculpturedorure.fr/#primaryimage" }
         }
       ]
     }
