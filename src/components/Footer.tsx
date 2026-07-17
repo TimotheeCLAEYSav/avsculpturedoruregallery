@@ -48,11 +48,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/stages" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Stages
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
                   Contact
                 </Link>

@@ -9,7 +9,7 @@ import APropos from "./pages/APropos";
 import Collections from "./pages/Collections";
 import CollectionDetail from "./pages/CollectionDetail";
 import SavoirFaire from "./pages/SavoirFaire";
-import Stages from "./pages/Stages";
+
 import Contact from "./pages/Contact";
 import ArtworkDetail from "./pages/ArtworkDetail";
 import NotFound from "./pages/NotFound";
@@ -30,7 +30,6 @@ const App = () => (
           <Route path="/collections/:collectionId" element={<CollectionDetail />} />
           <Route path="/oeuvres/:slug" element={<ArtworkDetail />} />
           <Route path="/savoir-faire" element={<SavoirFaire />} />
-          <Route path="/stages" element={<Stages />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
