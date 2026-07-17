@@ -190,6 +190,12 @@ const staticPages = [
       "Sculpture sur bois, dorure à la feuille, restauration du patrimoine. Techniques traditionnelles et savoir-faire d'excellence au service de la création.",
   },
   {
+    path: "/stages",
+    title: "Stages d'initiation à la sculpture sur bois | Aurélie Villemur",
+    description:
+      "Stages d'initiation à la sculpture sur bois pour débutants, animés par Aurélie Villemur dans son atelier d'art à Toulouse. Découverte des outils, des essences et des gestes traditionnels.",
+  },
+  {
     path: "/contact",
     title: "Contact — Aurélie Villemur | AV Sculpture & Dorure",
     description:
