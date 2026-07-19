@@ -7,9 +7,10 @@ interface ImageCardProps {
   size?: "small" | "medium" | "large";
   objectPosition?: "center" | "top";
   objectFit?: "cover" | "contain";
+  status?: "available" | "sold";
 }
 
-const ImageCard = ({ src, alt, title, category, onClick, size = "medium", objectPosition = "center", objectFit = "cover" }: ImageCardProps) => {
+const ImageCard = ({ src, alt, title, category, onClick, size = "medium", objectPosition = "center", objectFit = "cover", status }: ImageCardProps) => {
   const aspectClasses = {
     small: "aspect-square",
     medium: "aspect-[4/5]",
