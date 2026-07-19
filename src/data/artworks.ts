@@ -254,6 +254,7 @@ export const allArtworks: Artwork[] = [
     techniques: "Ronde bosse, dorure à la feuille, patine",
     dimensions: "250 x 160 x 120 mm",
     year: "2026",
+    status: "sold",
   },
   {
     id: 9,
