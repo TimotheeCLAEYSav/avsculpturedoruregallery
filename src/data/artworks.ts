@@ -404,6 +404,26 @@ export const allArtworks: Artwork[] = [
     year: "2026",
   },
   {
+    id: 23,
+    images: [
+      { src: ecureuil1, alt: "L'Écureuil - sculpture en noyer massif, vue de trois quarts" },
+      { src: ecureuil2, alt: "L'Écureuil - vue arrière, détail du dos ciselé" },
+      { src: ecureuil3, alt: "L'Écureuil - vue de profil, queue en volute" },
+      { src: ecureuil4, alt: "L'Écureuil - autre vue de trois quarts, socle sculpté" },
+      { src: ecureuil5, alt: "L'Écureuil - sculpture en noyer en situation extérieure" },
+    ],
+    title: "L'Écureuil",
+    collection: "faune",
+    categoryLabel: "Faune",
+    description:
+      "Ronde-bosse sur socle. Sculpture réalisée en bois de noyer massif, patinée. L'œuvre est assemblée sur un piédestal sculpté, mettant en valeur les lignes du bois et l'équilibre de la composition.\n\nDimensions (mm): 225 x 160 x 125\n\n2026",
+    materials: "Noyer massif, patine",
+    techniques: "Ronde-bosse, sculpture sur bois, patine",
+    dimensions: "225 x 160 x 125 mm",
+    year: "2026",
+    status: "sold",
+  },
+  {
     id: 5,
     images: [{ src: flore1, alt: "La pivoine - sculpture florale" }],
     title: "La Pivoine",
