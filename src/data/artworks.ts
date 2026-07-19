@@ -109,6 +109,11 @@ import norwich3 from "@/assets/norwich-3.jpg";
 import acanthe1 from "@/assets/acanthe-1.jpg";
 import acanthe2 from "@/assets/acanthe-2.jpg";
 import acanthe3 from "@/assets/acanthe-3.jpg";
+import ecureuil1 from "@/assets/ecureuil-1.jpg";
+import ecureuil2 from "@/assets/ecureuil-2.jpg";
+import ecureuil3 from "@/assets/ecureuil-3.jpg";
+import ecureuil4 from "@/assets/ecureuil-4.jpg";
+import ecureuil5 from "@/assets/ecureuil-5.jpg";
 
 export interface ArtworkImage {
   src: string;
@@ -116,6 +121,8 @@ export interface ArtworkImage {
   objectPosition?: "center" | "top";
   objectFit?: "cover" | "contain";
 }
+
+export type ArtworkStatus = "available" | "sold";
 
 export interface Artwork {
   id: number;
@@ -129,6 +136,7 @@ export interface Artwork {
   techniques?: string;
   availability?: string;
   year?: string;
+  status?: ArtworkStatus;
 }
 
 /** Generate a URL-safe slug from a title (accents removed). */
@@ -246,6 +254,7 @@ export const allArtworks: Artwork[] = [
     techniques: "Ronde bosse, dorure à la feuille, patine",
     dimensions: "250 x 160 x 120 mm",
     year: "2026",
+    status: "sold",
   },
   {
     id: 9,
@@ -393,6 +402,26 @@ export const allArtworks: Artwork[] = [
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate",
     dimensions: "120 x 20 mm",
     year: "2026",
+  },
+  {
+    id: 23,
+    images: [
+      { src: ecureuil1, alt: "L'Écureuil - sculpture en noyer massif, vue de trois quarts" },
+      { src: ecureuil2, alt: "L'Écureuil - vue arrière, détail du dos ciselé" },
+      { src: ecureuil3, alt: "L'Écureuil - vue de profil, queue en volute" },
+      { src: ecureuil4, alt: "L'Écureuil - autre vue de trois quarts, socle sculpté" },
+      { src: ecureuil5, alt: "L'Écureuil - sculpture en noyer en situation extérieure" },
+    ],
+    title: "L'Écureuil",
+    collection: "faune",
+    categoryLabel: "Faune",
+    description:
+      "Ronde-bosse sur socle. Sculpture réalisée en bois de noyer massif, patinée. L'œuvre est assemblée sur un piédestal sculpté, mettant en valeur les lignes du bois et l'équilibre de la composition.\n\nDimensions (mm): 225 x 160 x 125\n\n2026",
+    materials: "Noyer massif, patine",
+    techniques: "Ronde-bosse, sculpture sur bois, patine",
+    dimensions: "225 x 160 x 125 mm",
+    year: "2026",
+    status: "sold",
   },
   {
     id: 5,
