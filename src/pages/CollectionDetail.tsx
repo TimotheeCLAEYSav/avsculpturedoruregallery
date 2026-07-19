@@ -142,6 +142,7 @@ const CollectionDetail = () => {
                     size="small"
                     objectPosition={artwork.images[0].objectPosition}
                     objectFit="contain"
+                    status={artwork.status}
                   />
                   <div className="mt-2 flex flex-col items-center gap-1">
                     {artwork.images.length > 1 && (
