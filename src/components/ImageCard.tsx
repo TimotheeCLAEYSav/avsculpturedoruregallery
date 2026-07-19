@@ -36,6 +36,17 @@ const ImageCard = ({ src, alt, title, category, onClick, size = "medium", object
       <div className="absolute inset-0 border border-accent/30 z-10 pointer-events-none group-hover:border-accent transition-colors duration-500" />
       <div className="absolute inset-1 border border-accent/20 z-10 pointer-events-none group-hover:border-accent/60 transition-colors duration-500" />
 
+      {/* Badge "Vendu" */}
+      {status === "sold" && (
+        <div className="absolute top-4 right-4 z-20 pointer-events-none">
+          <span className="inline-flex items-center gap-2 bg-primary/90 text-primary-foreground px-3 py-1 text-[0.65rem] tracking-[0.25em] uppercase font-medium border border-accent/60 backdrop-blur-sm shadow-sm">
+            <span className="w-1 h-1 rotate-45 bg-accent" />
+            Vendu
+          </span>
+        </div>
+      )}
+
+
       {/* Passe-partout + image */}
       <div className={`${aspectClasses[size]} overflow-hidden bg-secondary/40 ring-1 ring-accent/20`}>
         <img
