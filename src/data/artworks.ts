@@ -109,6 +109,11 @@ import norwich3 from "@/assets/norwich-3.jpg";
 import acanthe1 from "@/assets/acanthe-1.jpg";
 import acanthe2 from "@/assets/acanthe-2.jpg";
 import acanthe3 from "@/assets/acanthe-3.jpg";
+import ecureuil1 from "@/assets/ecureuil-1.jpg";
+import ecureuil2 from "@/assets/ecureuil-2.jpg";
+import ecureuil3 from "@/assets/ecureuil-3.jpg";
+import ecureuil4 from "@/assets/ecureuil-4.jpg";
+import ecureuil5 from "@/assets/ecureuil-5.jpg";
 
 export interface ArtworkImage {
   src: string;
@@ -116,6 +121,8 @@ export interface ArtworkImage {
   objectPosition?: "center" | "top";
   objectFit?: "cover" | "contain";
 }
+
+export type ArtworkStatus = "available" | "sold";
 
 export interface Artwork {
   id: number;
@@ -129,6 +136,7 @@ export interface Artwork {
   techniques?: string;
   availability?: string;
   year?: string;
+  status?: ArtworkStatus;
 }
 
 /** Generate a URL-safe slug from a title (accents removed). */
