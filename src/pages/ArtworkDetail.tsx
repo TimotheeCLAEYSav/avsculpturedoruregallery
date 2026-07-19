@@ -86,7 +86,15 @@ const ArtworkDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image principale */}
             <div>
-              <div className="bg-secondary/60 flex items-center justify-center p-4 md:p-6">
+              <div className="relative bg-secondary/60 flex items-center justify-center p-4 md:p-6">
+                {artwork.status === "sold" && (
+                  <div className="absolute top-4 right-4 z-10 pointer-events-none">
+                    <span className="inline-flex items-center gap-2 bg-primary/90 text-primary-foreground px-3 py-1 text-[0.65rem] tracking-[0.25em] uppercase font-medium border border-accent/60 backdrop-blur-sm shadow-sm">
+                      <span className="w-1 h-1 rotate-45 bg-accent" />
+                      Vendu
+                    </span>
+                  </div>
+                )}
                 <img
                   src={mainImage.src}
                   alt={mainImage.alt}
@@ -104,6 +112,15 @@ const ArtworkDetail = () => {
               <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-6">
                 {artwork.title}
               </h1>
+
+              {artwork.status === "sold" && (
+                <div className="mb-6">
+                  <span className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-1.5 text-xs tracking-[0.25em] uppercase font-medium border border-accent/60">
+                    <span className="w-1.5 h-1.5 rotate-45 bg-accent" />
+                    Vendu
+                  </span>
+                </div>
+              )}
 
               {artwork.description && (
                 <p className="text-muted-foreground leading-relaxed whitespace-pre-line mb-8">
