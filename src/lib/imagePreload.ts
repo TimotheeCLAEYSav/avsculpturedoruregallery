@@ -17,8 +17,7 @@ export function preloadImage(src: string, priority: "high" | "low" = "low"): Pro
     const img = new Image();
     // fetchpriority est ignoré silencieusement par les navigateurs qui ne le
     // supportent pas — sûr à définir.
-    // @ts-expect-error - fetchPriority est récent
-    img.fetchPriority = priority;
+    (img as HTMLImageElement & { fetchPriority?: string }).fetchPriority = priority;
     img.decoding = "async";
     img.onload = () => {
       preloaded.add(src);
