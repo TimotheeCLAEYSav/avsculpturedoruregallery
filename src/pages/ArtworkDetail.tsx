@@ -1,9 +1,12 @@
+import { useEffect } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
+import { preloadImages } from "@/lib/imagePreload";
 import {
+  allArtworks,
   getArtworkBySlug,
   getArtworkSlug,
   getRelatedArtworks,
@@ -24,6 +27,20 @@ const ArtworkDetail = () => {
   const related = getRelatedArtworks(artwork);
   const path = `/oeuvres/${getArtworkSlug(artwork)}`;
   const mainImage = artwork.images[0];
+
+  // Précharge toutes les vues de l'œuvre + œuvres voisines/liées pour que la
+  // navigation entre œuvres soit instantanée.
+  useEffect(() => {
+    if (!artwork) return;
+    preloadImages(artwork.images.map((i) => i.src), "high");
+    const siblings = allArtworks.filter((a) => a.collection === artwork.collection);
+    const idx = siblings.findIndex((a) => a.id === artwork.id);
+    const neighbours = [siblings[idx - 1], siblings[idx + 1]].filter(Boolean);
+    const relatedSrcs = related.map((r) => r.images[0]?.src);
+    const neighbourSrcs = neighbours.flatMap((n) => n.images.map((i) => i.src));
+    preloadImages([...relatedSrcs, ...neighbourSrcs], "low");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [artwork?.id]);
 
   const seoTitle = `${artwork.title} — ${collection?.title ?? "Collection"} | Aurélie Villemur`;
   const seoDesc =

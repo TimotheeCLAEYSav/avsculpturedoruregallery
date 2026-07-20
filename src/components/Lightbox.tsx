@@ -54,6 +54,12 @@ const Lightbox = ({
     };
   }, [handleKeyDown, isOpen]);
 
+  // Précharge toutes les vues dès l'ouverture, pour que les flèches soient instantanées.
+  useEffect(() => {
+    if (!isOpen) return;
+    preloadImages(images.map((i) => i.src), "high");
+  }, [isOpen, images]);
+
   if (!isOpen) return null;
 
   return (
@@ -75,6 +81,8 @@ const Lightbox = ({
           <img
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
+            decoding="async"
+            {...({ fetchpriority: "high" } as Record<string, string>)}
             className="max-h-[70vh] md:max-h-[85vh] max-w-full object-contain mix-blend-multiply animate-scale-in"
             key={currentIndex}
           />
