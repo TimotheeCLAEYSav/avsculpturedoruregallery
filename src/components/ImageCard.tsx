@@ -1,16 +1,21 @@
+import { useEffect, useRef, useState } from "react";
+import { isPreloaded } from "@/lib/imagePreload";
+
 interface ImageCardProps {
   src: string;
   alt: string;
   title?: string;
   category?: string;
   onClick?: () => void;
+  onMouseEnter?: () => void;
   size?: "small" | "medium" | "large";
   objectPosition?: "center" | "top";
   objectFit?: "cover" | "contain";
   status?: "available" | "sold";
+  priority?: "high" | "auto";
 }
 
-const ImageCard = ({ src, alt, title, category, onClick, size = "medium", objectPosition = "center", objectFit = "cover", status }: ImageCardProps) => {
+const ImageCard = ({ src, alt, title, category, onClick, onMouseEnter, size = "medium", objectPosition = "center", objectFit = "cover", status, priority = "auto" }: ImageCardProps) => {
   const aspectClasses = {
     small: "aspect-square",
     medium: "aspect-[4/5]",
