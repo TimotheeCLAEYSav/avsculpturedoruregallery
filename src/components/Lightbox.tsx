@@ -1,5 +1,6 @@
 import { useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { preloadImages } from "@/lib/imagePreload";
 
 interface LightboxImage {
   src: string;
@@ -53,6 +54,12 @@ const Lightbox = ({
     };
   }, [handleKeyDown, isOpen]);
 
+  // Précharge toutes les vues dès l'ouverture, pour que les flèches soient instantanées.
+  useEffect(() => {
+    if (!isOpen) return;
+    preloadImages(images.map((i) => i.src), "high");
+  }, [isOpen, images]);
+
   if (!isOpen) return null;
 
   return (
@@ -74,6 +81,8 @@ const Lightbox = ({
           <img
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
+            decoding="async"
+            {...({ fetchpriority: "high" } as Record<string, string>)}
             className="max-h-[70vh] md:max-h-[85vh] max-w-full object-contain mix-blend-multiply animate-scale-in"
             key={currentIndex}
           />
@@ -147,6 +156,8 @@ const Lightbox = ({
                     <img
                       src={image.src}
                       alt={image.alt}
+                      decoding="async"
+                      loading="lazy"
                       className="w-full h-full object-contain mix-blend-multiply"
                     />
                   </button>

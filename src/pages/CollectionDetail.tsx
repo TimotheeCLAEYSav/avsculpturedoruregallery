@@ -6,6 +6,7 @@ import ImageCard from "@/components/ImageCard";
 import Lightbox from "@/components/Lightbox";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { preloadImages } from "@/lib/imagePreload";
 
 
 import {
@@ -25,6 +26,17 @@ const CollectionDetail = () => {
 
   const collectionInfo = collectionId ? collectionTitles[collectionId] : null;
   const artworks = allArtworks.filter((artwork) => artwork.collection === collectionId);
+
+  // Dès l'ouverture d'une collection, on précharge TOUTES les images de la
+  // collection (toutes les vues de chaque œuvre) pour une navigation fluide.
+  useEffect(() => {
+    const srcs: string[] = [];
+    artworks.forEach((a) => a.images.forEach((img) => srcs.push(img.src)));
+    // Les premières vignettes sont marquées prioritaires côté <img>, on
+    // précharge le reste en arrière-plan.
+    preloadImages(srcs, "low");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [collectionId]);
 
   // Ouvrir automatiquement l'œuvre si paramètre URL artwork=xxx (seulement au montage)
   useEffect(() => {
@@ -139,10 +151,12 @@ const CollectionDetail = () => {
                     title={artwork.title}
                     category={artwork.categoryLabel}
                     onClick={() => openArtwork(artwork)}
+                    onMouseEnter={() => preloadImages(artwork.images.map((i) => i.src), "high")}
                     size="small"
                     objectPosition={artwork.images[0].objectPosition}
                     objectFit="contain"
                     status={artwork.status}
+                    priority={index < 3 ? "high" : "auto"}
                   />
                   <div className="mt-2 flex flex-col items-center gap-1">
                     {artwork.images.length > 1 && (
