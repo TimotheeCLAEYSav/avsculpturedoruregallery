@@ -117,6 +117,8 @@ const ArtworkDetail = () => {
                   alt={mainImage.alt}
                   className="w-full h-auto max-h-[80vh] object-contain mix-blend-multiply"
                   loading="eager"
+                  decoding="async"
+                  {...({ fetchpriority: "high" } as Record<string, string>)}
                 />
               </div>
             </div>

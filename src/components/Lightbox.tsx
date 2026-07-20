@@ -156,6 +156,8 @@ const Lightbox = ({
                     <img
                       src={image.src}
                       alt={image.alt}
+                      decoding="async"
+                      loading="lazy"
                       className="w-full h-full object-contain mix-blend-multiply"
                     />
                   </button>
