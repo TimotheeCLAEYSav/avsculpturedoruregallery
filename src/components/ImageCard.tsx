@@ -32,10 +32,20 @@ const ImageCard = ({ src, alt, title, category, onClick, onMouseEnter, size = "m
     contain: "object-contain",
   };
 
+  const imgRef = useRef<HTMLImageElement | null>(null);
+  const [loaded, setLoaded] = useState(() => isPreloaded(src));
+
+  useEffect(() => {
+    setLoaded(isPreloaded(src));
+    const el = imgRef.current;
+    if (el && el.complete && el.naturalWidth > 0) setLoaded(true);
+  }, [src]);
+
   return (
     <div
       className="group relative overflow-hidden cursor-pointer bg-secondary/60 p-3 shadow-[0_1px_2px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] transition-shadow duration-500"
       onClick={onClick}
+      onMouseEnter={onMouseEnter}
     >
       {/* Cadre doré Art Déco */}
       <div className="absolute inset-0 border border-accent/30 z-10 pointer-events-none group-hover:border-accent transition-colors duration-500" />
@@ -52,13 +62,17 @@ const ImageCard = ({ src, alt, title, category, onClick, onMouseEnter, size = "m
       )}
 
 
-      {/* Passe-partout + image */}
+      {/* Passe-partout + image — aspect-ratio réservé pour éviter tout CLS */}
       <div className={`${aspectClasses[size]} overflow-hidden bg-secondary/40 ring-1 ring-accent/20`}>
         <img
+          ref={imgRef}
           src={src}
           alt={alt}
-          className={`w-full h-full ${fitClasses[objectFit]} ${positionClasses[objectPosition]} mix-blend-multiply transition-all duration-700 ease-out group-hover:scale-105`}
-          loading="lazy"
+          decoding="async"
+          loading={priority === "high" ? "eager" : "lazy"}
+          {...({ fetchpriority: priority === "high" ? "high" : "auto" } as Record<string, string>)}
+          onLoad={() => setLoaded(true)}
+          className={`w-full h-full ${fitClasses[objectFit]} ${positionClasses[objectPosition]} mix-blend-multiply transition-all duration-700 ease-out group-hover:scale-105 ${loaded ? "opacity-100" : "opacity-0"}`}
         />
       </div>
 
