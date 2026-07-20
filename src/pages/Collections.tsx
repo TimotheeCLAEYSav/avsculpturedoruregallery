@@ -53,6 +53,33 @@ const collections: Collection[] = [
 ];
 
 const Collections = () => {
+  // Précharge en tâche de fond la première image de chaque œuvre de toutes les
+  // collections, afin que l'ouverture d'une collection soit quasi instantanée.
+  useEffect(() => {
+    const id = window.requestIdleCallback
+      ? window.requestIdleCallback(() => {
+          preloadImages(allArtworks.map((a) => a.images[0]?.src));
+        })
+      : window.setTimeout(() => {
+          preloadImages(allArtworks.map((a) => a.images[0]?.src));
+        }, 300);
+    return () => {
+      if (window.cancelIdleCallback && typeof id === "number") {
+        window.cancelIdleCallback(id);
+      } else {
+        window.clearTimeout(id as number);
+      }
+    };
+  }, []);
+
+  const prefetchCollection = (collectionId: string) => {
+    const srcs: string[] = [];
+    allArtworks
+      .filter((a) => a.collection === collectionId)
+      .forEach((a) => a.images.forEach((img) => srcs.push(img.src)));
+    preloadImages(srcs, "high");
+  };
+
   return (
     <Layout>
       <SEO
@@ -98,6 +125,9 @@ const Collections = () => {
                 {collection.available ? (
                   <Link
                     to={`/collections/${collection.id}`}
+                    onMouseEnter={() => prefetchCollection(collection.id)}
+                    onFocus={() => prefetchCollection(collection.id)}
+                    onTouchStart={() => prefetchCollection(collection.id)}
                     className="group block relative overflow-hidden bg-secondary/60 p-3 border border-accent/30 hover:border-accent shadow-sm hover:shadow-md transition-all duration-500"
                   >
                     <div className="relative aspect-square overflow-hidden bg-secondary/40 ring-1 ring-accent/20">
@@ -156,6 +186,9 @@ const Collections = () => {
                 {collection.available ? (
                   <Link
                     to={`/collections/${collection.id}`}
+                    onMouseEnter={() => prefetchCollection(collection.id)}
+                    onFocus={() => prefetchCollection(collection.id)}
+                    onTouchStart={() => prefetchCollection(collection.id)}
                     className="group block relative overflow-hidden bg-secondary/60 p-3 border border-accent/30 hover:border-accent shadow-sm hover:shadow-md transition-all duration-500"
                   >
                     <div className="relative aspect-square overflow-hidden bg-secondary/40 ring-1 ring-accent/20">

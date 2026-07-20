@@ -1,5 +1,6 @@
 import { useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { preloadImages } from "@/lib/imagePreload";
 
 interface LightboxImage {
   src: string;
