@@ -49,7 +49,7 @@ const ArtworkDetail = () => {
       .trim()
       .slice(0, 155) || `${artwork.title}, œuvre sculptée par Aurélie Villemur.`;
 
-  const jsonLd = {
+  const visualArtworkLd = {
     "@context": "https://schema.org",
     "@type": "VisualArtwork",
     name: artwork.title,
@@ -67,6 +67,23 @@ const ArtworkDetail = () => {
     url: `${SITE_URL}${path}/`,
     ...(artwork.year ? { dateCreated: artwork.year } : {}),
   };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Collections", item: `${SITE_URL}/collections/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: collection?.title ?? "Collection",
+        item: `${SITE_URL}/collections/${artwork.collection}/`,
+      },
+      { "@type": "ListItem", position: 3, name: artwork.title, item: `${SITE_URL}${path}/` },
+    ],
+  };
+
+  const jsonLd = [visualArtworkLd, breadcrumbLd];
 
   return (
     <Layout>
