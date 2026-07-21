@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
+import ResponsiveArtImage from "@/components/ResponsiveArtImage";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
 import { preloadImages } from "@/lib/imagePreload";
+import { getPicture } from "@/lib/responsiveImages";
 import {
   allArtworks,
   getArtworkBySlug,
@@ -85,6 +88,19 @@ const ArtworkDetail = () => {
 
   const jsonLd = [visualArtworkLd, breadcrumbLd];
 
+  // Preload LCP: image principale en AVIF si disponible, sinon WebP, sinon JPEG.
+  const lcpPic = getPicture(mainImage.src);
+  const lcpPreload = lcpPic
+    ? {
+        srcset: lcpPic.sources.avif || lcpPic.sources.webp || lcpPic.sources.jpg,
+        type: lcpPic.sources.avif
+          ? "image/avif"
+          : lcpPic.sources.webp
+          ? "image/webp"
+          : "image/jpeg",
+      }
+    : null;
+
   return (
     <Layout>
       <SEO
@@ -95,6 +111,18 @@ const ArtworkDetail = () => {
         image={`${SITE_URL}${mainImage.src}`}
         jsonLd={jsonLd}
       />
+      {lcpPreload && (
+        <Helmet>
+          <link
+            rel="preload"
+            as="image"
+            type={lcpPreload.type}
+            imageSrcSet={lcpPreload.srcset}
+            imageSizes="(max-width: 1024px) 100vw, 50vw"
+            fetchPriority="high"
+          />
+        </Helmet>
+      )}
 
       {/* Breadcrumb / back */}
       <section className="bg-background border-b border-border">
@@ -129,14 +157,15 @@ const ArtworkDetail = () => {
                     </span>
                   </div>
                 )}
-                <img
+                <ResponsiveArtImage
                   src={mainImage.src}
                   alt={mainImage.alt}
                   className="w-full h-auto max-h-[80vh] object-contain mix-blend-multiply"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority="high"
                   loading="eager"
-                  decoding="async"
-                  {...({ fetchpriority: "high" } as Record<string, string>)}
                 />
+
               </div>
             </div>
 
@@ -237,12 +266,13 @@ const ArtworkDetail = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {artwork.images.map((img, idx) => (
                 <div key={idx} className="bg-secondary/60 flex items-center justify-center p-3 min-h-[16rem]">
-                  <img
+                  <ResponsiveArtImage
                     src={img.src}
                     alt={img.alt}
-                    loading="lazy"
                     className="w-full h-auto max-h-[28rem] object-contain mix-blend-multiply transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
+
                 </div>
               ))}
             </div>
@@ -273,12 +303,13 @@ const ArtworkDetail = () => {
                         </span>
                       </div>
                     )}
-                    <img
+                    <ResponsiveArtImage
                       src={rel.images[0].src}
                       alt={rel.images[0].alt}
-                      loading="lazy"
                       className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
+
                   </div>
                   <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-accent">
                     {rel.title}
