@@ -210,11 +210,21 @@ for (const [id, info] of Object.entries(colMap)) {
   const path = `/collections/${id}`;
   const title = `Collection ${info.title} — Œuvres sculptées | Aurélie Villemur`;
   const description = info.description.slice(0, 160);
-  writePage(path, buildHead({ title, description, path }));
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Collections", item: `${BASE_URL}/collections/` },
+      { "@type": "ListItem", position: 2, name: info.title, item: `${BASE_URL}${path}/` },
+    ],
+  };
+  writePage(path, buildHead({ title, description, path, jsonLd: breadcrumbLd }));
 }
 
-/* ---------- Artwork pages ---------- */
+/* ---------- Artwork pages + image sitemap entries ---------- */
 let artworkCount = 0;
+const artworkImageEntries = []; // { path, images: [{ url, caption }] }
+
 for (const a of artworks) {
   if (!a.title || !a.collection) continue;
   const slug = slugify(a.title);
@@ -228,7 +238,7 @@ for (const a of artworks) {
       .slice(0, 155);
   const imageFile = a.firstImageVar ? imports[a.firstImageVar] : null;
   const imageUrl = imageFile ? findHashedAsset(imageFile) : null;
-  const jsonLd = {
+  const visualArtworkLd = {
     "@context": "https://schema.org",
     "@type": "VisualArtwork",
     name: a.title,
@@ -246,11 +256,70 @@ for (const a of artworks) {
     ...(imageUrl ? { image: `${BASE_URL}${imageUrl}` } : {}),
     ...(a.year ? { dateCreated: a.year } : {}),
   };
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Collections", item: `${BASE_URL}/collections/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: col?.title ?? "Collection",
+        item: `${BASE_URL}/collections/${a.collection}/`,
+      },
+      { "@type": "ListItem", position: 3, name: a.title, item: `${BASE_URL}${path}/` },
+    ],
+  };
   writePage(
     path,
-    buildHead({ title, description, path, type: "article", image: imageUrl, jsonLd }),
+    buildHead({
+      title,
+      description,
+      path,
+      type: "article",
+      image: imageUrl,
+      jsonLd: [visualArtworkLd, breadcrumbLd],
+    }),
   );
+  if (imageUrl) {
+    artworkImageEntries.push({
+      path: `${path}/`,
+      images: [{ url: `${BASE_URL}${imageUrl}`, caption: `${a.title} — ${col?.title ?? ""}`.trim() }],
+    });
+  }
   artworkCount++;
+}
+
+/* ---------- Rewrite dist/sitemap.xml with image extension ---------- */
+{
+  const sitemapPath = join(dist, "sitemap.xml");
+  if (existsSync(sitemapPath)) {
+    let xml = readFileSync(sitemapPath, "utf8");
+    // Ensure xmlns:image is on <urlset>
+    if (!xml.includes("xmlns:image")) {
+      xml = xml.replace(
+        /<urlset\s+xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"\s*>/,
+        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">`,
+      );
+    }
+    for (const entry of artworkImageEntries) {
+      const locNeedle = `<loc>${BASE_URL}${entry.path}</loc>`;
+      if (!xml.includes(locNeedle)) continue;
+      const imageBlock = entry.images
+        .map(
+          (img) =>
+            `    <image:image>\n      <image:loc>${img.url}</image:loc>\n      <image:caption>${esc(img.caption)}</image:caption>\n    </image:image>`,
+        )
+        .join("\n");
+      // Insert image block just before </url> of that entry
+      const urlRegex = new RegExp(
+        `(<url>\\s*<loc>${BASE_URL.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}${entry.path.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}<\\/loc>[\\s\\S]*?)(\\s*<\\/url>)`,
+      );
+      xml = xml.replace(urlRegex, `$1\n${imageBlock}$2`);
+    }
+    writeFileSync(sitemapPath, xml);
+    console.log(`[prerender] sitemap.xml augmented with ${artworkImageEntries.length} image entries`);
+  }
 }
 
 console.log(
