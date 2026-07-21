@@ -282,6 +282,43 @@ const Stages = () => {
       </section>
 
       {/* ==========================================================
+          UN MOMENT POUR SOI — narration : créativité, partage,
+          concentration et déconnexion. Bloc texte centré,
+          ornements Art Déco, même motif que les autres pages.
+          ========================================================== */}
+      <section className="py-fluid bg-secondary/30">
+        <div className="container mx-auto px-fluid max-w-3xl text-center">
+          <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in">
+            <div className="w-12 h-px bg-accent" />
+            <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
+            <div className="w-12 h-px bg-accent" />
+          </div>
+
+          <h2 className="font-display text-fluid-h2 font-semibold text-foreground mb-6 animate-fade-in">
+            Un moment pour soi
+          </h2>
+
+          <div
+            className="space-y-5 text-muted-foreground text-fluid-lead animate-fade-in"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <p>
+              Au-delà de la technique, un stage est une parenthèse : un temps
+              de concentration, de déconnexion et de partage autour de la
+              matière. On y éveille sa créativité, on affine son observation
+              et sa sensibilité artistique.
+            </p>
+            <p className="text-fluid-body">
+              Le cadre reste convivial et propice aux échanges, avec toute la
+              place laissée à l'expression de chacun. Une formule sur mesure
+              est toujours envisageable, selon votre projet et vos envies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ==========================================================
           CE QUI EST INCLUS — encadré synthétique
           ========================================================== */}
       <section className="py-fluid bg-secondary/30">
