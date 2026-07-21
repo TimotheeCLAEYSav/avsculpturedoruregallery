@@ -146,25 +146,38 @@ const Stages = () => {
       </section>
 
       {/* ==========================================================
-          INTRO ÉCLAIR — une phrase forte + trois piliers
-          Remplace le long paragraphe précédent.
+          INTRO NARRATIVE — quelques paragraphes inspirants
+          pour projeter le visiteur dans l'expérience humaine
+          et créative du stage, puis trois piliers visuels.
           ========================================================== */}
       <section className="py-fluid bg-background">
-        <div className="container mx-auto px-fluid max-w-4xl text-center">
+        <div className="container mx-auto px-fluid max-w-3xl">
           <div className="flex items-center justify-center gap-4 mb-6 animate-fade-in">
             <div className="w-12 h-px bg-accent" />
             <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
             <div className="w-12 h-px bg-accent" />
           </div>
-          <p className="font-display text-fluid-h2 font-semibold text-foreground mb-4 animate-fade-in">
-            Une immersion dans un savoir-faire artisanal.
-          </p>
-          <p
-            className="text-muted-foreground text-fluid-lead animate-fade-in"
+
+          <h2 className="font-display text-fluid-h2 font-semibold text-foreground text-center mb-8 animate-fade-in">
+            Le plaisir de créer de ses mains
+          </h2>
+
+          <div
+            className="space-y-6 text-muted-foreground text-fluid-body text-center animate-fade-in"
             style={{ animationDelay: "0.1s" }}
           >
-            Ouvert à tous, du premier geste au perfectionnement.
-          </p>
+            <p>
+              Ces stages sont une invitation à ralentir, à retrouver la
+              matière et à découvrir la joie de faire naître une forme sous
+              ses mains. Une véritable transmission d'un savoir-faire
+              artisanal, dans le respect du bois et des gestes hérités.
+            </p>
+            <p>
+              L'accompagnement est personnalisé, bienveillant et adapté à
+              chacun : chacun avance à son rythme, guidé pas à pas, du
+              premier geste jusqu'à la réalisation de sa propre sculpture.
+            </p>
+          </div>
 
           {/* Trois piliers courts, en ligne */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
@@ -177,8 +190,8 @@ const Stages = () => {
               return (
                 <div
                   key={item.label}
-                  className="flex flex-col items-center animate-fade-in"
-                  style={{ animationDelay: `${0.15 + i * 0.08}s` }}
+                  className="flex flex-col items-center text-center animate-fade-in"
+                  style={{ animationDelay: `${0.2 + i * 0.08}s` }}
                 >
                   <div className="flex items-center justify-center w-12 h-12 mb-3 border border-accent text-forest">
                     <Icon size={22} strokeWidth={1.5} />
