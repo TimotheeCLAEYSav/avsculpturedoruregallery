@@ -299,7 +299,7 @@ const Stages = () => {
           </h2>
 
           <div
-            className="space-y-5 text-muted-foreground text-fluid-lead animate-fade-in"
+            className="space-y-5 text-muted-foreground text-fluid-body animate-fade-in"
             style={{ animationDelay: "0.1s" }}
           >
             <p>
@@ -308,7 +308,7 @@ const Stages = () => {
               matière. On y éveille sa créativité, on affine son observation
               et sa sensibilité artistique.
             </p>
-            <p className="text-fluid-body">
+            <p>
               Le cadre reste convivial et propice aux échanges, avec toute la
               place laissée à l'expression de chacun. Une formule sur mesure
               est toujours envisageable, selon votre projet et vos envies.
