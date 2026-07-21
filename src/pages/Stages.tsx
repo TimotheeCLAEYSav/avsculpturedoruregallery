@@ -15,7 +15,7 @@ import {
   Users,
 } from "lucide-react";
 // Nouvelle photo d'établi : outils, gouges, maillet et espace de travail visibles.
-import heroAsset from "@/assets/stage-hero-atelier.jpg.asset.json";
+import heroImage from "@/assets/stage-hero-atelier.jpg";
 
 // -----------------------------------------------------------------------------
 // Contenus synthétiques — pensés pour une lecture en quelques secondes.
