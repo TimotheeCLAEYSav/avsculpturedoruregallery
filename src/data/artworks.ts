@@ -380,7 +380,7 @@ export const allArtworks: Artwork[] = [
     collection: "faune",
     categoryLabel: "Faune",
     description:
-      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nDimensions (mm): 120 x 20\n\n2026",
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nLa rencontre entre le papillon et la pivoine évoque également la sensibilité des estampes japonaises, où chaque motif végétal ou animal est saisi avec une précision attentive et une grande délicatesse. Un clin d'œil à l'art d'Hokusai, où la nature se révèle dans toute sa fragilité et sa présence poétique, sans volonté d'imitation.\n\nDimensions (mm): 120 x 20\n\n2026",
     materials: "Bois, feuille d'or 23 carats, peinture à l'huile",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate, rehauts à l'huile",
     dimensions: "120 x 20 mm",
