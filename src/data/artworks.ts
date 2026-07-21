@@ -363,7 +363,7 @@ export const allArtworks: Artwork[] = [
     collection: "faune",
     categoryLabel: "Faune",
     description:
-      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nCette pièce trouve également une part de son inspiration dans l'atmosphère poétique et onirique des compositions d'Henri Rousseau, où la faune et la flore s'épanouissent dans un monde végétal imaginaire. Un hommage à cette sensibilité artistique, sans visée de reproduction.\n\nDimensions (mm): 120 x 20\n\n2026",
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nCette pièce puise une part de son inspiration dans l'atmosphère poétique et onirique des compositions d'Henri Rousseau, où la faune et la flore s'épanouissent dans un monde végétal imaginaire. Un hommage à cette sensibilité artistique et à l'inspiration qu'elle continue de susciter.\n\nDimensions (mm): 120 x 20\n\n2026",
     materials: "Bois, feuille d'or 23 carats, peinture à l'huile",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate, rehauts à l'huile",
     dimensions: "120 x 20 mm",
@@ -380,7 +380,7 @@ export const allArtworks: Artwork[] = [
     collection: "faune",
     categoryLabel: "Faune",
     description:
-      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nLa rencontre entre le papillon et la pivoine évoque également la sensibilité des estampes japonaises, où chaque motif végétal ou animal est saisi avec une précision attentive et une grande délicatesse. Un clin d'œil à l'art d'Hokusai, où la nature se révèle dans toute sa fragilité et sa présence poétique, sans volonté d'imitation.\n\nDimensions (mm): 120 x 20\n\n2026",
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nLa rencontre entre le papillon et la pivoine évoque également la sensibilité des estampes japonaises, où chaque motif végétal ou animal est saisi avec une précision attentive et une grande délicatesse. Un clin d'œil à l'art d'Hokusai, où la nature se révèle dans toute sa fragilité et sa présence poétique.\n\nDimensions (mm): 120 x 20\n\n2026",
     materials: "Bois, feuille d'or 23 carats, peinture à l'huile",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate, rehauts à l'huile",
     dimensions: "120 x 20 mm",
@@ -397,7 +397,7 @@ export const allArtworks: Artwork[] = [
     collection: "faune",
     categoryLabel: "Faune",
     description:
-      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs.\n\nDimensions (mm): 120 x 20\n\n2026",
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs.\n\nLe moineau puise également son inspiration dans la délicatesse des estampes japonaises, notamment celles d'Imao Keinen, où les oiseaux sont saisis avec une sensibilité attentive et une grande finesse. Un hommage à cette tradition graphique et à l'inspiration qu'elle offre.\n\nDimensions (mm): 120 x 20\n\n2026",
     materials: "Bois, feuille d'or 23 carats",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate",
     dimensions: "120 x 20 mm",
@@ -522,7 +522,7 @@ export const allArtworks: Artwork[] = [
     collection: "flore",
     categoryLabel: "Flore",
     description:
-      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nCette œuvre s'inscrit dans la lignée des arts décoratifs, où la feuille d'acanthe devient motif ornemental. Son traitement évoque l'univers de William Morris, figure emblématique du mouvement Arts & Crafts, qui célébrait les formes végétales stylisées et l'ornement inspiré de la nature. Une référence sensible, non une reproduction.\n\nDimensions (mm): 120 x 20\n\n2026",
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nCette œuvre s'inscrit dans la lignée des arts décoratifs, où la feuille d'acanthe devient motif ornemental. Son traitement évoque l'univers de William Morris, figure emblématique du mouvement Arts & Crafts, qui célébrait les formes végétales stylisées et l'ornement inspiré de la nature. Une référence sensible et une source d'inspiration.\n\nDimensions (mm): 120 x 20\n\n2026",
     materials: "Bois, feuille d'or 23 carats, peinture à l'huile",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate, rehauts à l'huile",
     dimensions: "120 x 20 mm",
