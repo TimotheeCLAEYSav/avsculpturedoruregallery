@@ -363,7 +363,7 @@ export const allArtworks: Artwork[] = [
     collection: "faune",
     categoryLabel: "Faune",
     description:
-      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nDimensions (mm): 120 x 20\n\n2026",
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nCette pièce trouve également une part de son inspiration dans l'atmosphère poétique et onirique des compositions d'Henri Rousseau, où la faune et la flore s'épanouissent dans un monde végétal imaginaire. Un hommage à cette sensibilité artistique, sans visée de reproduction.\n\nDimensions (mm): 120 x 20\n\n2026",
     materials: "Bois, feuille d'or 23 carats, peinture à l'huile",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate, rehauts à l'huile",
     dimensions: "120 x 20 mm",
@@ -505,7 +505,7 @@ export const allArtworks: Artwork[] = [
     collection: "flore",
     categoryLabel: "Flore",
     description:
-      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs.\n\nDimensions (mm): 190 x 20\n\n2026",
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs.\n\nNorwich puise son inspiration dans l'ornementation végétale répétitive chère aux Arts & Crafts. L'esprit des papiers peints et textiles de William Morris, où la nature se déploie en dessins décoratifs raffinés, nourrit cette interprétation contemporaine. Une source d'inspiration, plutôt qu'une filiation directe.\n\nDimensions (mm): 190 x 20\n\n2026",
     materials: "Bois, feuille d'or 23 carats",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate",
     dimensions: "190 x 20 mm",
@@ -522,7 +522,7 @@ export const allArtworks: Artwork[] = [
     collection: "flore",
     categoryLabel: "Flore",
     description:
-      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nDimensions (mm): 120 x 20\n\n2026",
+      "Médaillon en bois doré à la détrempe à la feuille d'or 23 carats, reparé et bruni à l'agate, inspiré des cabinets de curiosités et des arts décoratifs. Pièce enrichie de rehauts à la peinture à l'huile.\n\nCette œuvre s'inscrit dans la lignée des arts décoratifs, où la feuille d'acanthe devient motif ornemental. Son traitement évoque l'univers de William Morris, figure emblématique du mouvement Arts & Crafts, qui célébrait les formes végétales stylisées et l'ornement inspiré de la nature. Une référence sensible, non une reproduction.\n\nDimensions (mm): 120 x 20\n\n2026",
     materials: "Bois, feuille d'or 23 carats, peinture à l'huile",
     techniques: "Dorure à la détrempe, réparure, brunissage à l'agate, rehauts à l'huile",
     dimensions: "120 x 20 mm",
