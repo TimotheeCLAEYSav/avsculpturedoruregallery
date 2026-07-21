@@ -54,7 +54,7 @@ const staticEntries = [
   { path: "/a-propos", changefreq: "monthly", priority: "0.8" },
   { path: "/collections", changefreq: "weekly", priority: "0.9" },
   { path: "/savoir-faire", changefreq: "monthly", priority: "0.8" },
-  
+  { path: "/stages", changefreq: "monthly", priority: "0.8" },
   { path: "/contact", changefreq: "yearly", priority: "0.6" },
 ];
 
