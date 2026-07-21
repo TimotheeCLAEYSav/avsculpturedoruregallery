@@ -91,7 +91,7 @@ const Stages = () => {
       <section
         className="relative flex items-center justify-center py-fluid"
         style={{
-          backgroundImage: `url(${heroAsset.url})`,
+          backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
           // Cadrage centré verticalement : garde établi + outils bien visibles
           backgroundPosition: "center 60%",
