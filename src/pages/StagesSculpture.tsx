@@ -59,13 +59,13 @@ const inclus = [
   "Formats adaptables selon votre projet",
 ];
 
-const Stages = () => {
+const StagesSculpture = () => {
   return (
     <Layout>
       <SEO
-        title="Stages d'initiation à la sculpture sur bois | Aurélie Villemur"
-        description="Stages de sculpture sur bois avec Aurélie Villemur, artisane d'art. Découverte des outils, du geste et réalisation d'un bas-relief. Tous niveaux, matériel fourni, accompagnement personnalisé."
-        path="/stages"
+        title="Stage d'initiation à la sculpture sur bois | Aurélie Villemur"
+        description="Stage d'initiation à la sculpture sur bois avec Aurélie Villemur, artisane d'art. Découverte des outils, du geste et réalisation d'un bas-relief. Tous niveaux, matériel fourni, accompagnement personnalisé."
+        path="/stages/sculpture-sur-bois"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Course",
