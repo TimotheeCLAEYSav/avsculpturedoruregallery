@@ -2,8 +2,9 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
 import { Link } from "react-router-dom";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Landmark, MapPin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 
 import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture3 from "@/assets/sculpture-3.jpg";
@@ -152,9 +153,59 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Section "En ce moment" — Exposition actuelle */}
+      <section className="py-fluid bg-secondary/40">
+        <div className="container mx-auto px-fluid">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in">
+            {/* Eyebrow discret */}
+            <p className="text-accent text-fluid-eyebrow tracking-[0.3em] uppercase mb-3">
+              En ce moment
+            </p>
+
+            {/* Ornement Art Déco */}
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="w-12 h-px bg-accent" />
+              <Landmark size={16} className="text-accent" aria-hidden="true" />
+              <div className="w-12 h-px bg-accent" />
+            </div>
+
+            <h2 className="font-display text-fluid-h2 font-semibold text-foreground mb-4">
+              Retrouvez mes œuvres à la Galerie Arty'Sanat
+            </h2>
+
+            <p className="text-muted-foreground text-fluid-body mb-4">
+              Une sélection de mes sculptures et œuvres en dorure est actuellement présentée à la Galerie Arty'Sanat, à Lourdes.
+            </p>
+            <p className="text-muted-foreground text-fluid-body mb-6">
+              Venez découvrir mon univers artistique dans un lieu dédié à la création contemporaine et aux métiers d'art.
+            </p>
+
+            <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase mb-8">
+              <MapPin size={14} className="text-accent" aria-hidden="true" />
+              Lourdes
+            </p>
+
+            <div>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-forest text-forest hover:bg-forest hover:text-primary-foreground"
+              >
+                <Link to="/collections" className="inline-flex items-center gap-2">
+                  Découvrir les œuvres exposées
+                  <ArrowRight size={18} />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section Expertise avec photos */}
       <section className="py-fluid bg-background">
         <div className="container mx-auto px-fluid">
+
           <SectionHeading
             title="Un savoir-faire d'exception"
             subtitle="Six domaines d'expertise au service de la beauté et du patrimoine"
