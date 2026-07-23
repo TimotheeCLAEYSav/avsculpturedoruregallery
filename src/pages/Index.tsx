@@ -2,8 +2,9 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
 import { Link } from "react-router-dom";
-import { ArrowRight, Landmark, MapPin, Star } from "lucide-react";
+import { ArrowRight, Landmark, MapPin, CalendarDays, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getFeaturedExhibition, formatExhibitionDate } from "@/data/exhibitions";
 
 
 import sculpture1 from "@/assets/sculpture-1.jpg";
