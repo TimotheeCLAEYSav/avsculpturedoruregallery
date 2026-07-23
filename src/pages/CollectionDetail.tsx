@@ -156,7 +156,7 @@ const CollectionDetail = () => {
                     objectPosition={artwork.images[0].objectPosition}
                     objectFit="contain"
                     status={artwork.status}
-                    exhibitions={artwork.exhibitions}
+                    exhibitions={resolveActiveExhibitions(artwork.exhibitions)}
                     priority={index < 3 ? "high" : "auto"}
                   />
 
