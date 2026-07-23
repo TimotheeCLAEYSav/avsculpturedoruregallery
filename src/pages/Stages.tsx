@@ -109,20 +109,23 @@ const Stages = () => {
                   className="group flex flex-col bg-background border border-border/60 transition-colors duration-500 hover:border-accent animate-fade-in overflow-hidden"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {/* Photographie du stage — même traitement graphique que le
-                      bandeau (hero) de la page dédiée : voile vert forêt et
-                      cadrage centré sur les outils. */}
-                  <div className="relative aspect-[4/3] border-b border-border/60 overflow-hidden">
+                  {/* Photographie du stage — cliquable, même traitement
+                      graphique que le bandeau (hero) de la page dédiée. */}
+                  <Link
+                    to={`/stages/${stage.slug}`}
+                    aria-label={`Découvrir le stage : ${stage.title}`}
+                    className="relative block aspect-[4/3] border-b border-border/60 overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  >
                     <img
                       src={stage.image}
                       alt={stage.title}
                       loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                       style={{ objectPosition: stage.imagePosition }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/70 to-primary/85" />
-                    <div className="absolute inset-4 border border-accent/40 pointer-events-none" />
-                  </div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/70 to-primary/85 transition-opacity duration-500 group-hover:opacity-90" />
+                    <div className="absolute inset-4 border border-accent/40 pointer-events-none transition-colors duration-500 group-hover:border-accent/70" />
+                  </Link>
 
                   <div className="flex flex-col flex-1 p-8">
                     <p className="text-forest text-fluid-eyebrow tracking-[0.25em] uppercase mb-3">
