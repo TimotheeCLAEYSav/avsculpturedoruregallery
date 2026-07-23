@@ -14,6 +14,7 @@ import {
   Users,
   Coins,
 } from "lucide-react";
+import heroImage from "@/assets/dorure-hero.jpg";
 
 // -----------------------------------------------------------------------------
 // Page « Initiation à la dorure à la feuille » — reprend la structure exacte
@@ -21,9 +22,9 @@ import {
 // -----------------------------------------------------------------------------
 
 const decouvertes = [
-  { icon: Sparkles, label: "Les différentes feuilles métalliques" },
+  { icon: Sparkles, label: "Les différentes feuilles" },
   { icon: Layers, label: "Préparer un support traditionnel" },
-  { icon: Coins, label: "Poser une feuille métallique" },
+  { icon: Coins, label: "Poser une feuille" },
   { icon: Hand, label: "Les gestes fondamentaux de la dorure" },
   { icon: Feather, label: "Manier les outils du doreur" },
   { icon: Palette, label: "Réaliser sa première création" },
@@ -48,7 +49,7 @@ const StagesDorure = () => {
           "@type": "Course",
           name: "Stage d'initiation à la dorure à la feuille",
           description:
-            "Découverte de la dorure traditionnelle : préparation des supports, pose de la feuille métallique et gestes fondamentaux du doreur. Initiation accessible aux débutants.",
+            "Découverte de la dorure traditionnelle : préparation des supports, pose de la feuille et gestes fondamentaux du doreur. Initiation accessible aux débutants.",
           provider: {
             "@type": "Person",
             name: "Aurélie Villemur",
@@ -64,10 +65,15 @@ const StagesDorure = () => {
           HERO — placeholder Art Déco en attendant une photographie
           ========================================================== */}
       <section
-        className="relative flex items-center justify-center py-fluid bg-primary"
-        style={{ minHeight: "clamp(28rem, 65vh, 44rem)" }}
+        className="relative flex items-center justify-center py-fluid"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 60%",
+          minHeight: "clamp(28rem, 65vh, 44rem)",
+        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/70 to-primary/85" />
 
         <div className="relative z-10 container mx-auto px-fluid text-center">
           <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in">
@@ -134,7 +140,7 @@ const StagesDorure = () => {
           >
             <p>
               La dorure à la feuille est un art du temps et de l'attention.
-              Avant même la pose de la feuille métallique, le support demande
+              Avant même la pose de la feuille, le support demande
               une préparation minutieuse : couches successives, ponçage patient
               et surfaces révélées peu à peu, jusqu'à obtenir cette douceur qui
               accueillera la lumière.

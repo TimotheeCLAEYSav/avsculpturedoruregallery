@@ -3,7 +3,9 @@ import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Hammer, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import sculptureImage from "@/assets/stage-hero-atelier.jpg";
+import dorureImage from "@/assets/dorure-hero.jpg";
 
 // -----------------------------------------------------------------------------
 // Page « Stages d'initiation » — hub qui présente les différentes disciplines.
@@ -18,15 +20,17 @@ const stages = [
     title: "Initiation à la sculpture sur bois",
     description:
       "Découvrez les gestes fondamentaux de la sculpture sur bois et réalisez votre première création en étant accompagné pas à pas.",
-    icon: Hammer,
+    image: sculptureImage,
+    imagePosition: "center 60%",
   },
   {
     slug: "dorure-a-la-feuille",
     eyebrow: "Métier d'art",
     title: "Initiation à la dorure à la feuille",
     description:
-      "Découvrez les techniques traditionnelles de préparation des supports et de pose de la feuille métallique à travers une initiation accessible aux débutants.",
-    icon: Sparkles,
+      "Découvrez les techniques traditionnelles de préparation des supports et de pose de la feuille à travers une initiation accessible aux débutants.",
+    image: dorureImage,
+    imagePosition: "center 60%",
   },
 ];
 
@@ -81,7 +85,7 @@ const Stages = () => {
           >
             Une invitation à ralentir, à découvrir la matière et à apprivoiser
             les gestes patients d'un métier d'art. Un temps suspendu, où la main
-            se forme au contact du bois, de l'outil ou de la feuille métallique,
+            se forme au contact du bois, de l'outil ou de la feuille,
             au fil d'une transmission attentive et sur mesure.
           </p>
         </div>
@@ -99,32 +103,25 @@ const Stages = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4 max-w-5xl mx-auto">
             {stages.map((stage, index) => {
-              const Icon = stage.icon;
               return (
                 <article
                   key={stage.slug}
                   className="group flex flex-col bg-background border border-border/60 transition-colors duration-500 hover:border-accent animate-fade-in overflow-hidden"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {/* Placeholder illustration Art Déco (en attente de photo) */}
-                  <div className="relative aspect-[4/3] bg-secondary/40 border-b border-border/60 flex items-center justify-center overflow-hidden">
-                    {/* Motif décoratif */}
+                  {/* Photographie du stage — même traitement graphique que le
+                      bandeau (hero) de la page dédiée : voile vert forêt et
+                      cadrage centré sur les outils. */}
+                  <div className="relative aspect-[4/3] border-b border-border/60 overflow-hidden">
+                    <img
+                      src={stage.image}
+                      alt={stage.title}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      style={{ objectPosition: stage.imagePosition }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/70 to-primary/85" />
                     <div className="absolute inset-4 border border-accent/40 pointer-events-none" />
-                    <div className="absolute inset-6 flex items-center justify-center">
-                      <div className="flex flex-col items-center gap-4 text-forest">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-px bg-accent" />
-                          <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
-                          <div className="w-10 h-px bg-accent" />
-                        </div>
-                        <Icon size={44} strokeWidth={1.25} />
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-px bg-accent" />
-                          <div className="w-1.5 h-1.5 rotate-45 bg-accent" />
-                          <div className="w-10 h-px bg-accent" />
-                        </div>
-                      </div>
-                    </div>
                   </div>
 
                   <div className="flex flex-col flex-1 p-8">
