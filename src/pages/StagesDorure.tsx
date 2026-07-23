@@ -140,7 +140,7 @@ const StagesDorure = () => {
           >
             <p>
               La dorure à la feuille est un art du temps et de l'attention.
-              Avant même la pose de la feuille métallique, le support demande
+              Avant même la pose de la feuille, le support demande
               une préparation minutieuse : couches successives, ponçage patient
               et surfaces révélées peu à peu, jusqu'à obtenir cette douceur qui
               accueillera la lumière.
