@@ -381,4 +381,4 @@ const StagesSculpture = () => {
   );
 };
 
-export default Stages;
+export default StagesSculpture;
