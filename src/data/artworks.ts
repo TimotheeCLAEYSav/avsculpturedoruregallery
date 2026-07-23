@@ -124,6 +124,17 @@ export interface ArtworkImage {
 
 export type ArtworkStatus = "available" | "sold";
 
+export interface Exhibition {
+  /** Nom de la galerie / lieu d'exposition. */
+  gallery: string;
+  /** Ville. */
+  city: string;
+  /** Optionnel : URL du site de la galerie. */
+  url?: string;
+  /** Optionnel : période d'exposition affichable. */
+  period?: string;
+}
+
 export interface Artwork {
   id: number;
   images: ArtworkImage[];
@@ -137,7 +148,19 @@ export interface Artwork {
   availability?: string;
   year?: string;
   status?: ArtworkStatus;
+  /**
+   * Expositions en cours de l'œuvre. Une œuvre peut être exposée
+   * simultanément dans plusieurs lieux — chaque entrée sera affichée.
+   */
+  exhibitions?: Exhibition[];
 }
+
+/** Exposition en cours à la Galerie Arty'Sanat (Lourdes). */
+export const ARTY_SANAT_LOURDES: Exhibition = {
+  gallery: "Galerie Arty'Sanat",
+  city: "Lourdes",
+};
+
 
 /** Generate a URL-safe slug from a title (accents removed). */
 export const slugify = (s: string): string =>
