@@ -161,9 +161,12 @@ const ArtworkDetail = () => {
                 </div>
               )}
 
-              {artwork.exhibitions && artwork.exhibitions.length > 0 && (
-                <ExhibitionBadge exhibitions={artwork.exhibitions} variant="detail" className="mb-6" />
-              )}
+              {(() => {
+                const active = resolveActiveExhibitions(artwork.exhibitions);
+                return active.length > 0 ? (
+                  <ExhibitionBadge exhibitions={active} variant="detail" className="mb-6" />
+                ) : null;
+              })()}
 
 
 
