@@ -42,14 +42,14 @@ const StagesDorure = () => {
     <Layout>
       <SEO
         title="Stage d'initiation à la dorure à la feuille | Aurélie Villemur"
-        description="Stage d'initiation à la dorure à la feuille avec Aurélie Villemur, artisane d'art à Toulouse. Découverte de la feuille d'or, préparation des supports et pose traditionnelle. Accessible aux débutants, matériel fourni."
+        description="Stage d'initiation à la dorure à la feuille avec Aurélie Villemur, artisane d'art à Toulouse. Préparation du support, découverte des feuilles et des outils, application de la mixtion et pose de la feuille. La dorure à la détrempe est également présentée de manière théorique."
         path="/stages/dorure-a-la-feuille"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Course",
           name: "Stage d'initiation à la dorure à la feuille",
           description:
-            "Découverte de la dorure traditionnelle : préparation des supports, pose de la feuille et gestes fondamentaux du doreur. Initiation accessible aux débutants.",
+            "Initiation à la dorure à la feuille : préparation du support, découverte des feuilles et des outils traditionnels, application de la mixtion et pose de la feuille. La dorure à la détrempe est présentée de manière théorique.",
           provider: {
             "@type": "Person",
             name: "Aurélie Villemur",
