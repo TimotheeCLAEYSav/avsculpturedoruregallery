@@ -155,54 +155,79 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section "En ce moment" — Exposition actuelle */}
-      <section className="py-fluid bg-secondary/40">
-        <div className="container mx-auto px-fluid">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            {/* Eyebrow discret */}
-            <p className="text-accent text-fluid-eyebrow tracking-[0.3em] uppercase mb-3">
-              En ce moment
-            </p>
+      {/* Section "En ce moment" / "Prochaine exposition" — pilotée par les dates */}
+      {featured && (
+        <section className="py-fluid bg-secondary/40">
+          <div className="container mx-auto px-fluid">
+            <div className="max-w-3xl mx-auto text-center animate-fade-in">
+              {/* Eyebrow discret — dynamique */}
+              <p className="text-accent text-fluid-eyebrow tracking-[0.3em] uppercase mb-3">
+                {featured.status === "active" ? "En ce moment" : "Prochaine exposition"}
+              </p>
 
-            {/* Ornement Art Déco */}
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-px bg-accent" />
-              <Landmark size={16} className="text-accent" aria-hidden="true" />
-              <div className="w-12 h-px bg-accent" />
-            </div>
+              {/* Ornement Art Déco */}
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="w-12 h-px bg-accent" />
+                <Landmark size={16} className="text-accent" aria-hidden="true" />
+                <div className="w-12 h-px bg-accent" />
+              </div>
 
-            <h2 className="font-display text-fluid-h2 font-semibold text-foreground mb-4">
-              Retrouvez mes œuvres à la Galerie Arty'Sanat
-            </h2>
+              {featured.status === "active" ? (
+                <>
+                  <h2 className="font-display text-fluid-h2 font-semibold text-foreground mb-4">
+                    Retrouvez mes œuvres à la {featured.exhibition.gallery}
+                  </h2>
+                  <p className="text-muted-foreground text-fluid-body mb-4">
+                    Une sélection de mes sculptures et œuvres en dorure est actuellement présentée à la {featured.exhibition.gallery}, à {featured.exhibition.city}.
+                  </p>
+                  <p className="text-muted-foreground text-fluid-body mb-6">
+                    Venez découvrir mon univers artistique dans un lieu dédié à la création contemporaine et aux métiers d'art.
+                  </p>
 
-            <p className="text-muted-foreground text-fluid-body mb-4">
-              Une sélection de mes sculptures et œuvres en dorure est actuellement présentée à la Galerie Arty'Sanat, à Lourdes.
-            </p>
-            <p className="text-muted-foreground text-fluid-body mb-6">
-              Venez découvrir mon univers artistique dans un lieu dédié à la création contemporaine et aux métiers d'art.
-            </p>
+                  <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase mb-8">
+                    <MapPin size={14} className="text-accent" aria-hidden="true" />
+                    {featured.exhibition.city}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h2 className="font-display text-fluid-h2 font-semibold text-foreground mb-4">
+                    À partir du {formatExhibitionDate(featured.exhibition.startDate)}, retrouvez mes œuvres à la {featured.exhibition.gallery}
+                  </h2>
+                  <p className="text-muted-foreground text-fluid-body mb-6">
+                    À l'occasion de l'ouverture officielle de la galerie, une sélection de mes sculptures et œuvres en dorure sera présentée à la {featured.exhibition.gallery}, à {featured.exhibition.city}.
+                  </p>
 
-            <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase mb-8">
-              <MapPin size={14} className="text-accent" aria-hidden="true" />
-              Lourdes
-            </p>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                    <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase">
+                      <MapPin size={14} className="text-accent" aria-hidden="true" />
+                      {featured.exhibition.city}
+                    </p>
+                    <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase">
+                      <CalendarDays size={14} className="text-accent" aria-hidden="true" />
+                      Ouverture officielle&nbsp;: {formatExhibitionDate(featured.exhibition.startDate)}
+                    </p>
+                  </div>
+                </>
+              )}
 
-            <div>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-forest text-forest hover:bg-forest hover:text-primary-foreground"
-              >
-                <Link to="/collections" className="inline-flex items-center gap-2">
-                  Découvrir les œuvres exposées
-                  <ArrowRight size={18} />
-                </Link>
-              </Button>
+              <div>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-forest text-forest hover:bg-forest hover:text-primary-foreground"
+                >
+                  <Link to="/collections" className="inline-flex items-center gap-2">
+                    Découvrir les œuvres exposées
+                    <ArrowRight size={18} />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Section Expertise avec photos */}
       <section className="py-fluid bg-background">
