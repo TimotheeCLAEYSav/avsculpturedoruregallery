@@ -14,6 +14,8 @@ const Collections = lazy(() => import("./pages/Collections"));
 const CollectionDetail = lazy(() => import("./pages/CollectionDetail"));
 const SavoirFaire = lazy(() => import("./pages/SavoirFaire"));
 const Stages = lazy(() => import("./pages/Stages"));
+const StagesSculpture = lazy(() => import("./pages/StagesSculpture"));
+const StagesDorure = lazy(() => import("./pages/StagesDorure"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ArtworkDetail = lazy(() => import("./pages/ArtworkDetail"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -41,6 +43,8 @@ const App = () => (
             <Route path="/oeuvres/:slug" element={<ArtworkDetail />} />
             <Route path="/savoir-faire" element={<SavoirFaire />} />
             <Route path="/stages" element={<Stages />} />
+            <Route path="/stages/sculpture-sur-bois" element={<StagesSculpture />} />
+            <Route path="/stages/dorure-a-la-feuille" element={<StagesDorure />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

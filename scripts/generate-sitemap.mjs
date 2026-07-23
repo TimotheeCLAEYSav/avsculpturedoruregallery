@@ -55,6 +55,8 @@ const staticEntries = [
   { path: "/collections", changefreq: "weekly", priority: "0.9" },
   { path: "/savoir-faire", changefreq: "monthly", priority: "0.8" },
   { path: "/stages", changefreq: "monthly", priority: "0.8" },
+  { path: "/stages/sculpture-sur-bois", changefreq: "monthly", priority: "0.7" },
+  { path: "/stages/dorure-a-la-feuille", changefreq: "monthly", priority: "0.7" },
   { path: "/contact", changefreq: "yearly", priority: "0.6" },
 ];
 

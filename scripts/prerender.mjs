@@ -191,9 +191,21 @@ const staticPages = [
   },
   {
     path: "/stages",
-    title: "Stages d'initiation à la sculpture sur bois | Aurélie Villemur",
+    title: "Stages d'initiation aux métiers d'art | Aurélie Villemur",
     description:
-      "Stages d'initiation à la sculpture sur bois avec Aurélie Villemur : découverte des outils, des essences et des gestes traditionnels. Débutant, initié, perfectionnement. Matériel fourni.",
+      "Découvrez les stages d'initiation proposés par Aurélie Villemur, artisane d'art : sculpture sur bois et dorure à la feuille. Transmission d'un savoir-faire traditionnel.",
+  },
+  {
+    path: "/stages/sculpture-sur-bois",
+    title: "Stage d'initiation à la sculpture sur bois | Aurélie Villemur",
+    description:
+      "Stage d'initiation à la sculpture sur bois avec Aurélie Villemur : découverte des outils, des essences et des gestes traditionnels. Débutant, initié, perfectionnement.",
+  },
+  {
+    path: "/stages/dorure-a-la-feuille",
+    title: "Stage d'initiation à la dorure à la feuille | Aurélie Villemur",
+    description:
+      "Stage d'initiation à la dorure à la feuille avec Aurélie Villemur, artisane d'art à Toulouse. Feuille d'or, préparation des supports et pose traditionnelle. Accessible aux débutants.",
   },
   {
     path: "/contact",
