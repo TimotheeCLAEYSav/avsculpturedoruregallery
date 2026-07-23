@@ -7,6 +7,7 @@ import Lightbox from "@/components/Lightbox";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { preloadImages } from "@/lib/imagePreload";
+import { resolveActiveExhibitions } from "@/data/exhibitions";
 
 
 import {
