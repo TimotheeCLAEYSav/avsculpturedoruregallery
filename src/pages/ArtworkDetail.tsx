@@ -285,11 +285,14 @@ const ArtworkDetail = () => {
                         </span>
                       </div>
                     )}
-                    {rel.exhibitions && rel.exhibitions.length > 0 && (
-                      <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
-                        <ExhibitionBadge exhibitions={rel.exhibitions} variant="card" />
-                      </div>
-                    )}
+                    {(() => {
+                      const relActive = resolveActiveExhibitions(rel.exhibitions);
+                      return relActive.length > 0 ? (
+                        <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
+                          <ExhibitionBadge exhibitions={relActive} variant="card" />
+                        </div>
+                      ) : null;
+                    })()}
                     <img
                       src={rel.images[0].src}
                       alt={rel.images[0].alt}
