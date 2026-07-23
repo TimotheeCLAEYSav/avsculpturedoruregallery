@@ -120,7 +120,7 @@ const StagesSculpture = () => {
             className="font-display text-fluid-h1 font-semibold text-primary-foreground mb-6 animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            Stages de sculpture sur bois
+            Initiation à la sculpture sur bois
           </h1>
 
           <p
