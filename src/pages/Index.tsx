@@ -72,6 +72,7 @@ const expertiseAreas = [
 ];
 
 const Index = () => {
+  const featured = getFeaturedExhibition();
   return (
     <Layout>
       <SEO
