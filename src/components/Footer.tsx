@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/stages" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Stages
+                  Initiations
                 </Link>
               </li>
               <li>
