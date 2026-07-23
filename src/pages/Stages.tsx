@@ -3,7 +3,9 @@ import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Hammer, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import sculptureImage from "@/assets/stage-hero-atelier.jpg";
+import dorureImage from "@/assets/dorure-hero.jpg";
 
 // -----------------------------------------------------------------------------
 // Page « Stages d'initiation » — hub qui présente les différentes disciplines.
@@ -18,15 +20,17 @@ const stages = [
     title: "Initiation à la sculpture sur bois",
     description:
       "Découvrez les gestes fondamentaux de la sculpture sur bois et réalisez votre première création en étant accompagné pas à pas.",
-    icon: Hammer,
+    image: sculptureImage,
+    imagePosition: "center 60%",
   },
   {
     slug: "dorure-a-la-feuille",
     eyebrow: "Métier d'art",
     title: "Initiation à la dorure à la feuille",
     description:
-      "Découvrez les techniques traditionnelles de préparation des supports et de pose de la feuille métallique à travers une initiation accessible aux débutants.",
-    icon: Sparkles,
+      "Découvrez les techniques traditionnelles de préparation des supports et de pose de la feuille à travers une initiation accessible aux débutants.",
+    image: dorureImage,
+    imagePosition: "center 60%",
   },
 ];
 
