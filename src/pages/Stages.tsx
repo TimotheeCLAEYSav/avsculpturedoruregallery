@@ -85,7 +85,7 @@ const Stages = () => {
           >
             Une invitation à ralentir, à découvrir la matière et à apprivoiser
             les gestes patients d'un métier d'art. Un temps suspendu, où la main
-            se forme au contact du bois, de l'outil ou de la feuille métallique,
+            se forme au contact du bois, de l'outil ou de la feuille,
             au fil d'une transmission attentive et sur mesure.
           </p>
         </div>
