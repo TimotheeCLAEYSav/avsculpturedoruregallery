@@ -49,7 +49,7 @@ const StagesDorure = () => {
           "@type": "Course",
           name: "Stage d'initiation à la dorure à la feuille",
           description:
-            "Découverte de la dorure traditionnelle : préparation des supports, pose de la feuille métallique et gestes fondamentaux du doreur. Initiation accessible aux débutants.",
+            "Découverte de la dorure traditionnelle : préparation des supports, pose de la feuille et gestes fondamentaux du doreur. Initiation accessible aux débutants.",
           provider: {
             "@type": "Person",
             name: "Aurélie Villemur",
