@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { isPreloaded } from "@/lib/imagePreload";
+import ExhibitionBadge from "@/components/ExhibitionBadge";
+import type { Exhibition } from "@/data/artworks";
 
 interface ImageCardProps {
   src: string;
@@ -13,9 +15,11 @@ interface ImageCardProps {
   objectFit?: "cover" | "contain";
   status?: "available" | "sold";
   priority?: "high" | "auto";
+  exhibitions?: Exhibition[];
 }
 
-const ImageCard = ({ src, alt, title, category, onClick, onMouseEnter, size = "medium", objectPosition = "center", objectFit = "cover", status, priority = "auto" }: ImageCardProps) => {
+const ImageCard = ({ src, alt, title, category, onClick, onMouseEnter, size = "medium", objectPosition = "center", objectFit = "cover", status, priority = "auto", exhibitions }: ImageCardProps) => {
+
   const aspectClasses = {
     small: "aspect-square",
     medium: "aspect-[4/5]",
@@ -60,6 +64,15 @@ const ImageCard = ({ src, alt, title, category, onClick, onMouseEnter, size = "m
           </span>
         </div>
       )}
+
+      {/* Badge exposition en cours (discret, ancré en bas-gauche pour ne pas masquer l'œuvre) */}
+      {exhibitions && exhibitions.length > 0 && (
+        <div className="absolute bottom-4 left-4 z-20 pointer-events-none">
+          <ExhibitionBadge exhibitions={exhibitions} variant="card" />
+        </div>
+      )}
+
+
 
 
       {/* Passe-partout + image — aspect-ratio réservé pour éviter tout CLS */}
