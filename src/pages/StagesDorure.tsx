@@ -140,16 +140,25 @@ const StagesDorure = () => {
           >
             <p>
               La dorure à la feuille est un art du temps et de l'attention.
-              Avant même la pose de la feuille, le support demande
-              une préparation minutieuse : couches successives, ponçage patient
-              et surfaces révélées peu à peu, jusqu'à obtenir cette douceur qui
+              Avant même la pose de la feuille, le support demande une
+              préparation minutieuse : couches successives, ponçage patient et
+              surfaces révélées peu à peu, jusqu'à obtenir cette douceur qui
               accueillera la lumière.
             </p>
             <p>
-              Puis vient le geste du doreur : léger, précis, presque retenu.
-              La feuille d'or, d'une finesse extrême, se pose, se lisse et
-              s'anime. C'est un dialogue entre la matière et la main, où la
-              patience devient elle-même une matière première.
+              Vient ensuite l'application de la mixtion, ce vernis délicat sur
+              lequel la feuille viendra adhérer. Le geste du doreur se fait
+              alors léger, précis, presque retenu : la feuille d'or, d'une
+              finesse extrême, se pose, se lisse et s'anime. C'est un dialogue
+              entre la matière et la main, où la patience devient elle-même une
+              matière première.
+            </p>
+            <p>
+              La dorure à la détrempe sera également présentée afin de
+              comprendre les différentes approches traditionnelles de la
+              dorure, mais la réalisation pratique du stage sera principalement
+              axée sur la dorure à la mixtion, mieux adaptée au temps d'une
+              initiation.
             </p>
           </div>
 
