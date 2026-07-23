@@ -7,6 +7,7 @@ import Lightbox from "@/components/Lightbox";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { preloadImages } from "@/lib/imagePreload";
+import { resolveActiveExhibitions } from "@/data/exhibitions";
 
 
 import {
@@ -156,7 +157,7 @@ const CollectionDetail = () => {
                     objectPosition={artwork.images[0].objectPosition}
                     objectFit="contain"
                     status={artwork.status}
-                    exhibitions={artwork.exhibitions}
+                    exhibitions={resolveActiveExhibitions(artwork.exhibitions)}
                     priority={index < 3 ? "high" : "auto"}
                   />
 

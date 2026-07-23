@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { isPreloaded } from "@/lib/imagePreload";
 import ExhibitionBadge from "@/components/ExhibitionBadge";
-import type { Exhibition } from "@/data/artworks";
+import type { ExhibitionConfig as Exhibition } from "@/data/exhibitions";
 
 interface ImageCardProps {
   src: string;

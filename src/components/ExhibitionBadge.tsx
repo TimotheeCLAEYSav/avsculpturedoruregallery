@@ -1,5 +1,5 @@
 import { Landmark } from "lucide-react";
-import type { Exhibition } from "@/data/artworks";
+import type { ExhibitionConfig as Exhibition } from "@/data/exhibitions";
 
 interface ExhibitionBadgeProps {
   exhibitions: Exhibition[];

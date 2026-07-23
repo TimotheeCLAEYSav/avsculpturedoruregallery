@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
 import ExhibitionBadge from "@/components/ExhibitionBadge";
+import { resolveActiveExhibitions } from "@/data/exhibitions";
 
 import { preloadImages } from "@/lib/imagePreload";
 import {
@@ -160,9 +161,12 @@ const ArtworkDetail = () => {
                 </div>
               )}
 
-              {artwork.exhibitions && artwork.exhibitions.length > 0 && (
-                <ExhibitionBadge exhibitions={artwork.exhibitions} variant="detail" className="mb-6" />
-              )}
+              {(() => {
+                const active = resolveActiveExhibitions(artwork.exhibitions);
+                return active.length > 0 ? (
+                  <ExhibitionBadge exhibitions={active} variant="detail" className="mb-6" />
+                ) : null;
+              })()}
 
 
 
@@ -281,11 +285,14 @@ const ArtworkDetail = () => {
                         </span>
                       </div>
                     )}
-                    {rel.exhibitions && rel.exhibitions.length > 0 && (
-                      <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
-                        <ExhibitionBadge exhibitions={rel.exhibitions} variant="card" />
-                      </div>
-                    )}
+                    {(() => {
+                      const relActive = resolveActiveExhibitions(rel.exhibitions);
+                      return relActive.length > 0 ? (
+                        <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
+                          <ExhibitionBadge exhibitions={relActive} variant="card" />
+                        </div>
+                      ) : null;
+                    })()}
                     <img
                       src={rel.images[0].src}
                       alt={rel.images[0].alt}
