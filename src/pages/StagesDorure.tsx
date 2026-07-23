@@ -22,12 +22,12 @@ import heroImage from "@/assets/dorure-hero.jpg";
 // -----------------------------------------------------------------------------
 
 const decouvertes = [
-  { icon: Sparkles, label: "Les différentes feuilles" },
-  { icon: Layers, label: "Préparer un support traditionnel" },
-  { icon: Coins, label: "Poser une feuille" },
-  { icon: Hand, label: "Les gestes fondamentaux de la dorure" },
-  { icon: Feather, label: "Manier les outils du doreur" },
-  { icon: Palette, label: "Réaliser sa première création" },
+  { icon: Sparkles, label: "Découvrir les différents types de feuilles" },
+  { icon: Layers, label: "Préparer un support avant la dorure" },
+  { icon: Feather, label: "Manier les outils traditionnels du doreur" },
+  { icon: Palette, label: "Comprendre et appliquer la mixtion" },
+  { icon: Coins, label: "Poser la feuille avec les gestes traditionnels" },
+  { icon: Hand, label: "Découvrir les principes de la dorure à la détrempe" },
 ];
 
 const inclus = [
