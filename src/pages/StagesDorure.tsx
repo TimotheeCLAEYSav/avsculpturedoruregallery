@@ -14,6 +14,7 @@ import {
   Users,
   Coins,
 } from "lucide-react";
+import heroImage from "@/assets/dorure-hero.jpg";
 
 // -----------------------------------------------------------------------------
 // Page « Initiation à la dorure à la feuille » — reprend la structure exacte
@@ -21,9 +22,9 @@ import {
 // -----------------------------------------------------------------------------
 
 const decouvertes = [
-  { icon: Sparkles, label: "Les différentes feuilles métalliques" },
+  { icon: Sparkles, label: "Les différentes feuilles" },
   { icon: Layers, label: "Préparer un support traditionnel" },
-  { icon: Coins, label: "Poser une feuille métallique" },
+  { icon: Coins, label: "Poser une feuille" },
   { icon: Hand, label: "Les gestes fondamentaux de la dorure" },
   { icon: Feather, label: "Manier les outils du doreur" },
   { icon: Palette, label: "Réaliser sa première création" },
