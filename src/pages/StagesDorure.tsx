@@ -65,10 +65,15 @@ const StagesDorure = () => {
           HERO — placeholder Art Déco en attendant une photographie
           ========================================================== */}
       <section
-        className="relative flex items-center justify-center py-fluid bg-primary"
-        style={{ minHeight: "clamp(28rem, 65vh, 44rem)" }}
+        className="relative flex items-center justify-center py-fluid"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 60%",
+          minHeight: "clamp(28rem, 65vh, 44rem)",
+        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/70 to-primary/85" />
 
         <div className="relative z-10 container mx-auto px-fluid text-center">
           <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in">
