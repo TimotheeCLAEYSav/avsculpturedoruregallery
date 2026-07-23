@@ -22,12 +22,12 @@ import heroImage from "@/assets/dorure-hero.jpg";
 // -----------------------------------------------------------------------------
 
 const decouvertes = [
-  { icon: Sparkles, label: "Les différentes feuilles" },
-  { icon: Layers, label: "Préparer un support traditionnel" },
-  { icon: Coins, label: "Poser une feuille" },
-  { icon: Hand, label: "Les gestes fondamentaux de la dorure" },
-  { icon: Feather, label: "Manier les outils du doreur" },
-  { icon: Palette, label: "Réaliser sa première création" },
+  { icon: Sparkles, label: "Découvrir les différents types de feuilles" },
+  { icon: Layers, label: "Préparer un support avant la dorure" },
+  { icon: Feather, label: "Manier les outils traditionnels du doreur" },
+  { icon: Palette, label: "Comprendre et appliquer la mixtion" },
+  { icon: Coins, label: "Poser la feuille avec les gestes traditionnels" },
+  { icon: Hand, label: "Découvrir les principes de la dorure à la détrempe" },
 ];
 
 const inclus = [
@@ -42,14 +42,14 @@ const StagesDorure = () => {
     <Layout>
       <SEO
         title="Stage d'initiation à la dorure à la feuille | Aurélie Villemur"
-        description="Stage d'initiation à la dorure à la feuille avec Aurélie Villemur, artisane d'art à Toulouse. Découverte de la feuille d'or, préparation des supports et pose traditionnelle. Accessible aux débutants, matériel fourni."
+        description="Stage d'initiation à la dorure à la feuille avec Aurélie Villemur, artisane d'art à Toulouse. Préparation du support, découverte des feuilles et des outils, application de la mixtion et pose de la feuille. La dorure à la détrempe est également présentée de manière théorique."
         path="/stages/dorure-a-la-feuille"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Course",
           name: "Stage d'initiation à la dorure à la feuille",
           description:
-            "Découverte de la dorure traditionnelle : préparation des supports, pose de la feuille et gestes fondamentaux du doreur. Initiation accessible aux débutants.",
+            "Initiation à la dorure à la feuille : préparation du support, découverte des feuilles et des outils traditionnels, application de la mixtion et pose de la feuille. La dorure à la détrempe est présentée de manière théorique.",
           provider: {
             "@type": "Person",
             name: "Aurélie Villemur",
@@ -140,16 +140,25 @@ const StagesDorure = () => {
           >
             <p>
               La dorure à la feuille est un art du temps et de l'attention.
-              Avant même la pose de la feuille, le support demande
-              une préparation minutieuse : couches successives, ponçage patient
-              et surfaces révélées peu à peu, jusqu'à obtenir cette douceur qui
+              Avant même la pose de la feuille, le support demande une
+              préparation minutieuse : couches successives, ponçage patient et
+              surfaces révélées peu à peu, jusqu'à obtenir cette douceur qui
               accueillera la lumière.
             </p>
             <p>
-              Puis vient le geste du doreur : léger, précis, presque retenu.
-              La feuille d'or, d'une finesse extrême, se pose, se lisse et
-              s'anime. C'est un dialogue entre la matière et la main, où la
-              patience devient elle-même une matière première.
+              Vient ensuite l'application de la mixtion, ce vernis délicat sur
+              lequel la feuille viendra adhérer. Le geste du doreur se fait
+              alors léger, précis, presque retenu : la feuille d'or, d'une
+              finesse extrême, se pose, se lisse et s'anime. C'est un dialogue
+              entre la matière et la main, où la patience devient elle-même une
+              matière première.
+            </p>
+            <p>
+              La dorure à la détrempe sera également présentée afin de
+              comprendre les différentes approches traditionnelles de la
+              dorure, mais la réalisation pratique du stage sera principalement
+              axée sur la dorure à la mixtion, mieux adaptée au temps d'une
+              initiation.
             </p>
           </div>
 
