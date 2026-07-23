@@ -156,8 +156,10 @@ const CollectionDetail = () => {
                     objectPosition={artwork.images[0].objectPosition}
                     objectFit="contain"
                     status={artwork.status}
+                    exhibitions={artwork.exhibitions}
                     priority={index < 3 ? "high" : "auto"}
                   />
+
                   <div className="mt-2 flex flex-col items-center gap-1">
                     {artwork.images.length > 1 && (
                       <span className="text-xs text-muted-foreground italic">

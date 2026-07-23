@@ -4,6 +4,8 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
+import ExhibitionBadge from "@/components/ExhibitionBadge";
+
 import { preloadImages } from "@/lib/imagePreload";
 import {
   allArtworks,
@@ -158,6 +160,12 @@ const ArtworkDetail = () => {
                 </div>
               )}
 
+              {artwork.exhibitions && artwork.exhibitions.length > 0 && (
+                <ExhibitionBadge exhibitions={artwork.exhibitions} variant="detail" className="mb-6" />
+              )}
+
+
+
               {artwork.description && (
                 <p className="text-muted-foreground leading-relaxed whitespace-pre-line mb-8">
                   {artwork.description}
@@ -273,12 +281,18 @@ const ArtworkDetail = () => {
                         </span>
                       </div>
                     )}
+                    {rel.exhibitions && rel.exhibitions.length > 0 && (
+                      <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
+                        <ExhibitionBadge exhibitions={rel.exhibitions} variant="card" />
+                      </div>
+                    )}
                     <img
                       src={rel.images[0].src}
                       alt={rel.images[0].alt}
                       loading="lazy"
                       className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
                     />
+
                   </div>
                   <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-accent">
                     {rel.title}
