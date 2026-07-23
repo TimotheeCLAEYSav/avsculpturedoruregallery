@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
 import ExhibitionBadge from "@/components/ExhibitionBadge";
+import { resolveActiveExhibitions } from "@/data/exhibitions";
 
 import { preloadImages } from "@/lib/imagePreload";
 import {
