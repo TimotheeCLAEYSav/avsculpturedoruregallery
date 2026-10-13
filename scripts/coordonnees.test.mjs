@@ -23,6 +23,6 @@ test("Coordonnées uses raw oak, 23 carat gold leaf and patina", () => {
   assert.match(entry ?? "", /materials: "Bois de chêne brut, feuille d'or 23 carats, patine"/);
 });
 test("All six photos retain their supplied order", () => {
-  const photos = [...(entry ?? "").matchAll(/src: coordonnees(\d)\.url/g)].map(match => Number(match[1]));
+  const photos = [...(entry ?? "").matchAll(/src: coordonnees(\d),/g)].map(match => Number(match[1]));
   assert.deepEqual(photos, [1, 2, 3, 4, 5, 6]);
 });

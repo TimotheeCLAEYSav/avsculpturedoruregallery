@@ -114,6 +114,13 @@ import ecureuil2 from "@/assets/ecureuil-2.jpg";
 import ecureuil3 from "@/assets/ecureuil-3.jpg";
 import ecureuil4 from "@/assets/ecureuil-4.jpg";
 import ecureuil5 from "@/assets/ecureuil-5.jpg";
+// Coordonnées : les photographies suivent l'ordre fourni par l'artiste.
+import coordonnees1 from "@/assets/coordonnees-1.jpg";
+import coordonnees2 from "@/assets/coordonnees-2.jpg";
+import coordonnees3 from "@/assets/coordonnees-3.jpg";
+import coordonnees4 from "@/assets/coordonnees-4.jpg";
+import coordonnees5 from "@/assets/coordonnees-5.jpg";
+import coordonnees6 from "@/assets/coordonnees-6.jpg";
 
 export interface ArtworkImage {
   src: string;
@@ -660,6 +667,28 @@ export const allArtworks: Artwork[] = [
     techniques: "Sculpture, patine",
     dimensions: "270 x 125 x 120 mm",
     availability: "Disponible à la vente — commandes sur demande",
+  },
+  {
+    id: 24,
+    images: [
+      { src: coordonnees1, alt: "Coordonnées - lampe allumée sur pied sculpté en chêne et feuille d'or 23 carats", objectFit: "contain" },
+      { src: coordonnees2, alt: "Coordonnées - lampe allumée, vue de dessus et reflets sur le chêne", objectFit: "contain" },
+      { src: coordonnees3, alt: "Coordonnées - lampe éteinte, vue de face du pied sculpté et doré", objectFit: "contain" },
+      { src: coordonnees4, alt: "Coordonnées - lampe éteinte, vue latérale du chêne et de la sculpture dorée", objectFit: "contain" },
+      { src: coordonnees5, alt: "Coordonnées - détail des motifs sculptés et de la feuille d'or 23 carats", objectFit: "contain" },
+      { src: coordonnees6, alt: "Coordonnées - lampe allumée en situation sur un meuble en bois", objectFit: "contain" },
+    ],
+    title: "Coordonnées",
+    collection: "abstrait",
+    categoryLabel: "Abstrait",
+    description:
+      "Lampe sur pied sculpté. Bois de chêne brut, feuille d'or 23 carats, patine\n\nDimensions (mm): 260 x 125 x 125\n\nCommande sur demande.",
+    materials: "Bois de chêne brut, feuille d'or 23 carats, patine",
+    techniques: "Sculpture sur bois, dorure à la feuille, patine",
+    dimensions: "260 x 125 x 125 mm",
+    availability: "Commande sur demande",
+    // La pièce photographiée est vendue ; une commande reste possible.
+    status: "sold",
   },
 ];
 
