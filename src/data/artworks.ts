@@ -411,6 +411,7 @@ export const allArtworks: Artwork[] = [
       { src: papillonPivoine3, alt: "Le papillon et la pivoine - en situation murale" },
     ],
     title: "Le papillon et la pivoine",
+    status: "sold",
     exhibitions: ARTY_SANAT_LOURDES,
 
     collection: "faune",
