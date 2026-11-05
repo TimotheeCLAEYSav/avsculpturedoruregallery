@@ -154,7 +154,7 @@ export interface Artwork {
 }
 
 /** ID de l'exposition Arty'Sanat — conservé pour compatibilité. */
-const ARTY_SANAT_LOURDES = ["artysanat-2026"];
+const ARTY_SANAT = ["artysanat-2026"];
 
 
 /** Generate a URL-safe slug from a title (accents removed). */
@@ -224,7 +224,7 @@ export const allArtworks: Artwork[] = [
       { src: fridaDetail3, alt: "Frida Kahlo - détail chevelure" },
     ],
     title: "Frida Kahlo",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "femme",
     categoryLabel: "Femme",
@@ -243,7 +243,7 @@ export const allArtworks: Artwork[] = [
       { src: basRelief3, alt: "Le voyage - détail doré" },
     ],
     title: "Le Voyage",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "femme",
     categoryLabel: "Femme",
@@ -292,7 +292,7 @@ export const allArtworks: Artwork[] = [
       { src: lotusPoly9, alt: "Lotus Polychrome - ambiance décor" },
     ],
     title: "Lotus (Polychrome)",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "femme",
     categoryLabel: "Femme",
@@ -314,7 +314,7 @@ export const allArtworks: Artwork[] = [
       { src: faune2, alt: "Le scarabée - autre vue" },
     ],
     title: "Le Scarabée",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "faune",
     categoryLabel: "Faune",
@@ -335,7 +335,7 @@ export const allArtworks: Artwork[] = [
       { src: papillon5, alt: "Papillon de nuit - détail broderie" },
     ],
     title: "Papillon de nuit",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "faune",
     categoryLabel: "Faune",
@@ -354,7 +354,7 @@ export const allArtworks: Artwork[] = [
       { src: leopard3, alt: "Le Léopard - en situation murale" },
     ],
     title: "Le Léopard",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "faune",
     categoryLabel: "Faune",
@@ -373,7 +373,7 @@ export const allArtworks: Artwork[] = [
       { src: paradis3, alt: "L'Oiseau du Paradis - en situation murale" },
     ],
     title: "L'Oiseau du Paradis",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "faune",
     categoryLabel: "Faune",
@@ -392,7 +392,7 @@ export const allArtworks: Artwork[] = [
       { src: flamant3, alt: "Le Flamant rose - en situation murale" },
     ],
     title: "Le Flamant rose",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "faune",
     categoryLabel: "Faune",
@@ -412,7 +412,7 @@ export const allArtworks: Artwork[] = [
     ],
     title: "Le papillon et la pivoine",
     status: "sold",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "faune",
     categoryLabel: "Faune",
@@ -431,7 +431,7 @@ export const allArtworks: Artwork[] = [
       { src: moineau3, alt: "Le moineau - en situation murale" },
     ],
     title: "Le moineau",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "faune",
     categoryLabel: "Faune",
@@ -466,7 +466,7 @@ export const allArtworks: Artwork[] = [
     id: 5,
     images: [{ src: flore1, alt: "La pivoine - sculpture florale" }],
     title: "La Pivoine",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "flore",
     categoryLabel: "Flore",
@@ -507,7 +507,7 @@ export const allArtworks: Artwork[] = [
       { src: ifs8, alt: "Les Ifs - détail sculpté du bois" },
     ],
     title: "Les Ifs",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "flore",
     categoryLabel: "Flore",
@@ -528,7 +528,7 @@ export const allArtworks: Artwork[] = [
       { src: refletPivoine5, alt: "Le reflet de la pivoine - avec broderie papillon" },
     ],
     title: "Le reflet de la pivoine",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "flore",
     categoryLabel: "Flore",
@@ -547,7 +547,7 @@ export const allArtworks: Artwork[] = [
       { src: norwich3, alt: "Norwich - en situation murale" },
     ],
     title: "Norwich",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "flore",
     categoryLabel: "Flore",
@@ -566,7 +566,7 @@ export const allArtworks: Artwork[] = [
       { src: acanthe3, alt: "Acanthe - en situation murale" },
     ],
     title: "Acanthe",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "flore",
     categoryLabel: "Flore",
@@ -587,7 +587,7 @@ export const allArtworks: Artwork[] = [
       { src: miroir5, alt: "Miroir Louis XVI - détail coin" },
     ],
     title: "Miroir Louis XVI",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "contour",
     categoryLabel: "Contour",
@@ -609,7 +609,7 @@ export const allArtworks: Artwork[] = [
       { src: miroirLp6, alt: "Miroir Louis Philippe - en situation avec plante" },
     ],
     title: "Miroir de style Louis Philippe",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "contour",
     categoryLabel: "Contour",
@@ -658,7 +658,7 @@ export const allArtworks: Artwork[] = [
       { src: mosaique10, alt: "Mosaïque - vue d'ensemble éteintes en contexte" },
     ],
     title: "Mosaïque",
-    exhibitions: ARTY_SANAT_LOURDES,
+    exhibitions: ARTY_SANAT,
 
     collection: "abstrait",
     categoryLabel: "Abstrait",
