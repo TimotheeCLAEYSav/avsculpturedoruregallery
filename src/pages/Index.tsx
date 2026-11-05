@@ -160,14 +160,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section "En ce moment" / "Prochaine exposition" — pilotée par les dates */}
-      {featured && (
+      {/* Section actualité — salon FRAGMENTS #6 (dates dans src/data/exhibitions.ts) */}
+      {fragments && fragmentsStatus !== "ended" && (
         <section className="py-fluid bg-secondary/40">
           <div className="container mx-auto px-fluid">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              {/* Eyebrow discret — dynamique */}
+              {/* Eyebrow discret — bascule automatiquement le jour de l'ouverture */}
               <p className="text-accent text-fluid-eyebrow tracking-[0.3em] uppercase mb-3">
-                {featured.status === "active" ? "En ce moment" : "Prochaine exposition"}
+                {fragmentsStatus === "active" ? "En ce moment" : "Bientôt"}
               </p>
 
               {/* Ornement Art Déco */}
@@ -177,45 +177,35 @@ const Index = () => {
                 <div className="w-12 h-px bg-accent" />
               </div>
 
-              {featured.status === "active" ? (
-                <>
-                  <h2 className="font-display text-fluid-h2 font-semibold text-foreground mb-4">
-                    Retrouvez mes œuvres à la {featured.exhibition.gallery}
-                  </h2>
-                  <p className="text-muted-foreground text-fluid-body mb-4">
-                    Une sélection de mes sculptures et œuvres en dorure est actuellement présentée à la {featured.exhibition.gallery}, à {featured.exhibition.city}.
-                  </p>
-                  <p className="text-muted-foreground text-fluid-body mb-6">
-                    Venez découvrir mon univers artistique dans un lieu dédié à la création contemporaine et aux métiers d'art.
-                  </p>
+              <h2 className="font-display text-fluid-h2 font-semibold text-foreground mb-4">
+                FRAGMENTS #6
+              </h2>
 
-                  <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase mb-8">
-                    <MapPin size={14} className="text-accent" aria-hidden="true" />
-                    {featured.exhibition.city}
-                  </p>
-                </>
-              ) : (
-                <>
-                  <h2 className="font-display text-fluid-h2 font-semibold text-foreground mb-4">
-                    À partir du {formatExhibitionDate(featured.exhibition.startDate)}, retrouvez mes œuvres à la {featured.exhibition.gallery}
-                  </h2>
-                  <p className="text-muted-foreground text-fluid-body mb-6">
-                    À l'occasion de l'ouverture officielle de la galerie, une sélection de mes sculptures et œuvres en dorure sera présentée à la {featured.exhibition.gallery}, à {featured.exhibition.city}.
-                  </p>
+              <p className="text-muted-foreground text-fluid-body mb-4">
+                J'ai le plaisir de vous annoncer ma participation à FRAGMENTS #6, le salon régional des métiers d'art organisé par la Chambre de Métiers et de l'Artisanat d'Occitanie.
+              </p>
+              <p className="text-muted-foreground text-fluid-body mb-4">
+                Pendant quatre jours, 77 artisans d'art venus des 13 départements d'Occitanie vous invitent à découvrir la richesse et la diversité de leurs métiers. Je serai heureuse de vous y présenter mon univers, entre sculpture et dorure sur bois, modelage et travail du plâtre. Des pièces façonnées à la main. Ce sera aussi l'occasion de vous faire découvrir mon travail autour des techniques artisanales, de la création contemporaine à la restauration du patrimoine.
+              </p>
+              <p className="text-muted-foreground text-fluid-body mb-6">
+                Merci à la CMA Occitanie de nous accueillir et de nous permettre de faire découvrir la richesse et l'excellence de nos savoir-faire.
+              </p>
 
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                    <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase">
-                      <MapPin size={14} className="text-accent" aria-hidden="true" />
-                      {featured.exhibition.city}
-                    </p>
-                    <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase">
-                      <CalendarDays size={14} className="text-accent" aria-hidden="true" />
-                      Ouverture officielle&nbsp;: {formatExhibitionDate(featured.exhibition.startDate)}
-                    </p>
-                  </div>
-                </>
-              )}
+              {/* Lieu et dates mis en valeur */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase">
+                  <MapPin size={14} className="text-accent" aria-hidden="true" />
+                  {fragments.gallery} · {fragments.city}
+                </p>
+                <p className="inline-flex items-center gap-2 text-primary text-fluid-eyebrow tracking-[0.2em] uppercase">
+                  <CalendarDays size={14} className="text-accent" aria-hidden="true" />
+                  {fragments.endDate
+                    ? formatExhibitionDateRange(fragments.startDate, fragments.endDate)
+                    : formatExhibitionDate(fragments.startDate)}
+                </p>
+              </div>
 
+              {/* Bouton vers le site officiel du salon (nouvel onglet) */}
               <div>
                 <Button
                   asChild
@@ -223,10 +213,15 @@ const Index = () => {
                   variant="outline"
                   className="border-forest text-forest hover:bg-forest hover:text-primary-foreground"
                 >
-                  <Link to="/collections" className="inline-flex items-center gap-2">
-                    Découvrir les œuvres exposées
-                    <ArrowRight size={18} />
-                  </Link>
+                  <a
+                    href={fragments.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    Découvrir le salon
+                    <ExternalLink size={18} />
+                  </a>
                 </Button>
               </div>
             </div>
