@@ -37,6 +37,17 @@ export const EXHIBITIONS: ExhibitionConfig[] = [
     startDate: "2026-07-28",
     endDate: null,
   },
+  {
+    // Salon FRAGMENTS #6 — mis en avant sur la page d'accueil.
+    // Le bloc d'actualité apparaît avant le salon (« Bientôt »), passe
+    // en « En ce moment » pendant, puis disparaît après le 29/11/2026.
+    id: "fragments-6",
+    gallery: "Hôtel-Dieu Saint-Jacques",
+    city: "Toulouse",
+    startDate: "2026-11-26",
+    endDate: "2026-11-29",
+    url: "https://fragmentsoccitanie.fr/",
+  },
 ];
 
 /** Statut d'une exposition à un instant donné. */
@@ -56,6 +67,22 @@ export const formatExhibitionDate = (iso: string): string => {
     month: "long",
     year: "numeric",
   });
+};
+
+/**
+ * Formate une plage de dates en français.
+ * Même mois : « 26 – 29 novembre 2026 ». Sinon : « 26 novembre – 3 décembre 2026 ».
+ */
+export const formatExhibitionDateRange = (startIso: string, endIso: string): string => {
+  const start = parseISODate(startIso);
+  const end = parseISODate(endIso);
+  const sameMonth =
+    start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear();
+  if (sameMonth) {
+    const monthYear = end.toLocaleDateString("fr-FR", { month: "long", year: "numeric" });
+    return `${start.getDate()} – ${end.getDate()} ${monthYear}`;
+  }
+  return `${formatExhibitionDate(startIso)} – ${formatExhibitionDate(endIso)}`;
 };
 
 /** Retourne le statut d'une exposition à la date `now` (par défaut : maintenant). */
