@@ -33,7 +33,7 @@ export const EXHIBITIONS: ExhibitionConfig[] = [
   {
     id: "artysanat-2026",
     gallery: "Galerie Arty'Sanat",
-    city: "Lourdes",
+    city: "Toulouse",
     startDate: "2026-07-28",
     endDate: null,
   },
