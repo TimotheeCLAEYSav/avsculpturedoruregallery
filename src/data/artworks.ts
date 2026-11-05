@@ -204,6 +204,7 @@ export const allArtworks: Artwork[] = [
       { src: enigma3, alt: "Enigma - vue de dos" },
     ],
     title: "Enigma",
+    exhibitions: ARTY_SANAT,
     collection: "femme",
     categoryLabel: "Femme",
     description:
