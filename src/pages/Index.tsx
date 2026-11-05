@@ -2,9 +2,9 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
 import { Link } from "react-router-dom";
-import { ArrowRight, Landmark, MapPin, CalendarDays, Star } from "lucide-react";
+import { ArrowRight, Landmark, MapPin, CalendarDays, Star, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getFeaturedExhibition, formatExhibitionDate } from "@/data/exhibitions";
+import { EXHIBITIONS, getExhibitionStatus, formatExhibitionDate, formatExhibitionDateRange } from "@/data/exhibitions";
 
 
 import sculpture1 from "@/assets/sculpture-1.jpg";
@@ -72,7 +72,12 @@ const expertiseAreas = [
 ];
 
 const Index = () => {
-  const featured = getFeaturedExhibition();
+  // Salon FRAGMENTS #6 — bloc d'actualité de la page d'accueil.
+  // Piloté par les dates dans src/data/exhibitions.ts : le bloc affiche
+  // « Bientôt » avant l'ouverture, « En ce moment » pendant le salon,
+  // puis disparaît automatiquement une fois l'événement terminé.
+  const fragments = EXHIBITIONS.find((ex) => ex.id === "fragments-6");
+  const fragmentsStatus = fragments ? getExhibitionStatus(fragments) : null;
   return (
     <Layout>
       <SEO
