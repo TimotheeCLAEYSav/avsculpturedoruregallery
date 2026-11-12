@@ -413,8 +413,6 @@ export const allArtworks: Artwork[] = [
     ],
     title: "Le papillon et la pivoine",
     status: "sold",
-    exhibitions: ARTY_SANAT,
-
     collection: "faune",
     categoryLabel: "Faune",
     description:
@@ -486,6 +484,7 @@ export const allArtworks: Artwork[] = [
       { src: hokusai2, alt: "Plongeon - détail" },
     ],
     title: "Plongeon",
+    exhibitions: ARTY_SANAT,
     collection: "flore",
     categoryLabel: "Flore",
     description:

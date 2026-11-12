@@ -4,3 +4,8 @@
 - [x] Add the sold artwork and made-to-order details to Abstrait.
 - [x] Verify the collection, photo navigation and artwork detail page.
 - [x] Mark Le papillon et la pivoine as sold and verify its existing badge.
+
+# Exposition badges
+- [x] Add "Exposée · Toulouse" badge to Enigma.
+- [x] Remove "Exposée · Toulouse" badge from Le papillon et la pivoine (sold).
+- [x] Add "Exposée · Toulouse" badge to Plongeon.
