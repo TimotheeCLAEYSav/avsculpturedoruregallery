@@ -636,6 +636,7 @@ export const allArtworks: Artwork[] = [
     title: "Lumière 1#",
     collection: "abstrait",
     categoryLabel: "Abstrait",
+    exhibitions: ARTY_SANAT,
     description:
       "Lampe sur pied sculpté. Abat-jour chiné, tilleul, feuille de cuivre, patine.\n\nDimensions (mm): 270 x 180 (diamètre)\n\nDisponible à la vente\n\nCommandes sur demande",
     materials: "Tilleul, feuille de cuivre, abat-jour chiné",
